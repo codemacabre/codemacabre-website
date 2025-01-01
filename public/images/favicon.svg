@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   version="1.1"
+   width="300"
+   height="300"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <style>
+    .bar {
+      fill: #222222;
+    }
+    @media (prefers-color-scheme: dark) {
+      .bar {
+        fill: #fafafa;
+      }
+    }
+  </style>
+  <rect
+     x="5.8782015"
+     y="115.91584"
+     width="260"
+     height="90"
+     class="bar"
+     transform="rotate(-4)" />
+</svg>

@@ -1,0 +1,28 @@
+---
+const path = new URL(Astro.request.url).pathname;
+---
+<header>
+  <nav>
+    <a class="title" href="/">Code&nbsp;Macabre</a>
+    <ul class="menu">
+      <li>
+          <a
+            class={path === '/projects' ? 'selected' : ''}
+            href="/projects">Projects</a>
+      </li>
+      <li>
+        /
+          <a
+            class={path === '/notes' ? 'selected' : ''}
+            href="/notes">Notes</a>
+      </li>
+      <li>
+        /
+          <a
+            class={path === '/about' ? 'selected' : ''}
+            href="/about">About</a>
+      </li>
+    </ul>
+  </nav>
+</header>
+

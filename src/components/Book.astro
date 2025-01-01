@@ -1,0 +1,17 @@
+---
+import { Image } from "astro:assets";
+
+const { author, cover, title } = Astro.props; 
+---
+<li class="card">
+  <Image class="greyscale" src={cover.src} width={cover.width / 2 } height={cover.height / 2} alt={cover.alt} />
+  <p>
+    <strong>{title}</strong>
+   by 
+   {author.length > 1 ? (
+     author.map((entity) => 
+      entity === author[author.length - 1] ? <>and {entity}</> : <>{entity}, </>
+    )
+  ) : <>{author}</>}
+  </p>
+</li>

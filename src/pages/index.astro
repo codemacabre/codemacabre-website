@@ -1,0 +1,32 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Note from '../components/Note.astro';
+const allNotes = await getCollection('notes');
+const allProjects = await getCollection('projects');
+const sortedNotes = allNotes.sort((a, b) => {
+  return new Date(b.data.date).getTime() - new Date(a.data.date).getTime();
+});
+---
+<BaseLayout>
+  <h1 class="sr-only">Code Macabre</h1>
+  <h2>
+    Featured project
+  </h2>
+  {allProjects.map(project =>
+    project.data.featured && (
+      <a class="feature" href={`/projects/${project.slug}/`}>
+        <span class="title">{project.data.title}</span>
+        <span class="dates">(<time datetime={project.data.date.toString()}>{project.data.date.getFullYear()}</time>{project.data.endDate && <> - <time datetime={project.data.endDate.toString()}>{project.data.endDate.getFullYear()}</time></>})</span>
+      </a>
+    )
+  )}
+  <p class="right"><a href="/projects">See more projects</a></p>
+  <h2>
+    Latest notes
+  </h2>
+  <ul class="wider front-page">
+    {sortedNotes.map((note) => <Note category={note.data.category} date={note.data.date} description={note.data.description} title={note.data.title} url={`/notes/${note.slug}/`} />)}
+  </ul>
+  <p class="right"><a href="/notes">See more notes</a></p>
+</BaseLayout>

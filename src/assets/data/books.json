@@ -1,0 +1,74 @@
+[
+  {
+    "author": ["S. A. Barnes"],
+    "cover": {
+      "alt": "Ghost Station book cover. A space-suited figure walks across an abandoned room, with empty spacesuits hanging on the wall. A couple of drops of blood are on the floor in the foreground.",
+      "src": "/images/books/ghost-station.jpg",
+      "width": 200,
+      "height": 200
+    },
+    "format": ["ebook"],
+    "dateRead": "2024",
+    "title": "Ghost Station"
+  }, 
+  {
+    "author": ["Ola Ellnestam", "Daniel Brolund"],
+    "cover": {
+      "alt": "The Mikado Method book cover. An illustration of Japanese Emperor Seiwa sitting cross-legged in white clothes against a yellow-ochre background.",
+      "src": "/images/books/mikado-method.jpg",
+      "width": 200,
+      "height": 251
+    },
+    "format": ["ebook", "paperback"],
+    "dateRead": "2024",
+    "title": "The Mikado Method"
+  },
+  {
+    "author": ["Martha Wells"],
+    "cover": {
+      "alt": "System Collapse cover. The Murderbot character crouches in a field of crops, towered over by a gigantic many-limbed bot.",
+      "src": "/images/books/system-collapse.jpg",
+      "width": 200,
+      "height": 200
+    },
+    "format": ["audiobook"],
+    "dateRead": "2024",
+    "title": "System Collapse"
+  },
+  {
+    "author": ["Ben West"],
+    "cover": {
+      "alt": "This Book Could Save Your Life book cover. The title is in white on a plain black background. The subtitle, 'Breaking the silence around the mental health emergency' is in black text on an orange strip at the top.",
+      "src": "/images/books/book-save-life.jpg",
+      "width": 200,
+      "height": 200
+    },
+    "format": ["audiobook"],
+    "dateRead": "2024",
+    "title": "This Book Could Save Your Life"
+  },
+  {
+    "author": ["Marianna Spring"],
+    "cover": {
+      "alt": "Among the Trolls book cover. A white woman with long brown hair sits nonchalantly among various exasperated, angry and yelling people.",
+      "src": "/images/books/among-the-trolls.jpg",
+      "width": 200,
+      "height": 314
+    },
+    "format": ["hardback"],
+    "dateRead": "2024",
+    "title": "Among the Trolls"
+  },
+  {
+    "author": ["Danny Caine"],
+    "cover": {
+      "alt": "How to Resist Amazon and Why cover. A turquoise fist is raised in defiance clutching a scrap of paper against a bright yellow background. The word Amazon in the title has the iconic Amazon arrow downturned into a sort of sad face.",
+      "src": "/images/books/resist-amazon.jpg",
+      "width": 200,
+      "height": 200
+    },
+    "format": ["audiobook"],
+    "dateRead": "2024",
+    "title": "How to Resist Amazon and Why"
+  }
+]

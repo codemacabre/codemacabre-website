@@ -1,0 +1,56 @@
+---
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+import '../styles/global.css';
+import '../styles/prism.css';
+
+const { pageTitle } = Astro.props;
+---
+
+<html lang='en'>
+	<head>
+		<meta charset='utf-8' />
+		<link rel='icon' type='image/svg+xml' href='/images/favicon.svg?v=3' />
+		<meta name='viewport' content='width=device-width' />
+		<meta name='generator' content={Astro.generator} />
+		<title>{pageTitle ? `${pageTitle} / Code Macabre` : 'Code Macabre'}</title>
+	</head>
+	<body>
+    <Header />
+    <main>
+      <slot />
+    </main>
+    <Footer />
+	</body>
+</html>
+
+<script>
+  let copyButtonLabel = 'Copy Code';
+  let codeBlocks = Array.from(document.querySelectorAll('pre'));
+
+  for (let codeBlock of codeBlocks) {
+    let wrapper = document.createElement('div');
+    wrapper.style.position = 'relative';
+
+    let copyButton = document.createElement('button');
+    copyButton.className = 'code-copy';
+    copyButton.innerHTML = `<span class="sr-only">${copyButtonLabel}</span>`;
+
+    codeBlock.setAttribute('tabindex', '0');
+    codeBlock.appendChild(copyButton);
+
+    codeBlock?.parentNode?.insertBefore(wrapper, codeBlock);
+    wrapper.appendChild(codeBlock);
+
+    copyButton.addEventListener('click', async () => {
+      await copyCode(codeBlock);
+    });
+  }
+
+  async function copyCode(block) {
+    let code = block.querySelector('code');
+    let text = code.innerText;
+
+    await navigator.clipboard.writeText(text);
+  }
+</script>

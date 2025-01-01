@@ -1,0 +1,29 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+import Book from "../components/Book.astro";
+
+import booksData from '../assets/data/books.json';
+const years = Array
+  .from(new Set(booksData.map((book) => book.dateRead)))
+  .sort((a, b) => {
+    return new Date(b).getTime() - new Date(a).getTime();
+  });
+
+const pageTitle = 'Reading';
+---
+<BaseLayout pageTitle={pageTitle}>
+<h2>{pageTitle}</h2>
+<p>The audiobooks, ebooks, paperbacks, and hardbacks I've read each year, as of 2024. I tend to prefer physical books, but when buying digital books, I favour DRM-free ebooks and <a href="https://libro.fm/referral?rf_code=lfm227162">audiobooks</a>.</p>
+
+{years.map((year) =>
+  <h3>{year}</h3>
+  <ul>
+    {booksData.map((book) =>
+      book.dateRead === year &&
+        <Book cover={book.cover} title={book.title} author={book.author} />
+    )}
+  </ul>
+)}
+</BaseLayout>
