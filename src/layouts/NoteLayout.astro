@@ -1,7 +1,17 @@
 ---
 import BaseLayout from './BaseLayout.astro';
+import Tag from '../components/Tag.astro';
 const { frontmatter } = Astro.props;
 ---
 <BaseLayout pageTitle={frontmatter.title}>
-  <slot />
+  <h1>{frontmatter.title}</h1>
+  <p>
+    <Tag text={frontmatter.category} />
+    <span class="dates">
+      Written <time datetime={frontmatter.date.toString()}>{new Date(frontmatter.date).toISOString().slice(0,10)}</time>{frontmatter.update && <> (updated <time datetime={frontmatter.update.toString()}>{new Date(frontmatter.update).toISOString().slice(0,10)}</time>)</>}
+    </span>
+  </p>
+  <article>
+    <slot />
+  </article>
 </BaseLayout>
