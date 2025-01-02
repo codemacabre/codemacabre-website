@@ -7,19 +7,19 @@ const path = new URL(Astro.request.url).pathname;
     <ul class="menu">
       <li>
           <a
-            class={path === '/projects' ? 'selected' : ''}
+            class={path.includes('/projects') ? 'selected' : ''}
             href="/projects">Projects</a>
       </li>
       <li>
         /
           <a
-            class={path === '/notes' ? 'selected' : ''}
+            class={path.includes('/notes') ? 'selected' : ''}
             href="/notes">Notes</a>
       </li>
       <li>
         /
           <a
-            class={path === '/about' ? 'selected' : ''}
+            class={path.includes('/about') ? 'selected' : ''}
             href="/about">About</a>
       </li>
     </ul>
