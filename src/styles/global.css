@@ -701,7 +701,9 @@ img {
   
   header {
     grid-column: 1 / 9;
+    overflow: hidden;
     padding: 1rem;
+    width: calc(100% - 2rem);
     
     & a.title {
       font-size: 12vw;
@@ -710,7 +712,7 @@ img {
 
     & nav {
       margin: 0;
-      max-width: calc(100% - 2rem);
+      width: unset;
     }
 
     & ul.menu {
