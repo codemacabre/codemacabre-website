@@ -65,7 +65,7 @@ header {
     font-size: clamp(2rem, 10vw, 3rem);
     margin: 0;
     transform: rotate(-2deg);
-    padding: 0.4rem;
+    padding: 0.4rem 0.8rem;
     position: absolute;
     left: 2rem;
     top: 1rem;
@@ -89,25 +89,32 @@ header {
     width: 100%;
 
     & .hamburger {
-      background: url('/images/menu.svg') center center / 1.2rem no-repeat;
+      background: var(--haze);
       cursor: pointer;
       display: none;
-      filter: invert(5%) sepia(52%) saturate(0%) hue-rotate(222deg) brightness(94%) contrast(83%);
-      height: 50px;
-      padding: 0 0.5rem 0.5rem 0.5rem;
+      padding: 0.5rem 0.5rem 0.25rem 0.5rem;
       position: absolute;
       right: 1rem;
       top: 1rem;
-      width: 50px;
       z-index: 10;
-    }
-    
-    & .hamburger .slice {
-      background: #000000;
-      margin: 12.5px 0 0 0;
-      display: block;
-      height: 3px;
-      width: 100%;
+      
+      &::after {
+        background: url('/images/menu.svg') center center / 1.2rem no-repeat;
+        content: '';
+        display: inline-block;
+        filter: invert(5%) sepia(52%) saturate(0%) hue-rotate(222deg) brightness(94%) contrast(83%);
+        height: 32px;
+        margin: 0;
+        padding: 0;
+        width: 32px;
+      }
+      
+      &:active,
+      &:hover {
+        &::after {
+          filter: invert(100%) sepia(94%) saturate(23%) hue-rotate(324deg) brightness(106%) contrast(96%);
+        }
+      }
     }
     
     & #main-menu-toggle {
@@ -759,9 +766,30 @@ img {
       }
     
       & #main-menu-toggle:checked ~ .hamburger {
-        background: url('/images/xmark.svg') center center / 1.2rem no-repeat;
         position: fixed;
         right: 1rem;
+
+        &::after {
+          background: url('/images/xmark.svg') center center / 1.2rem no-repeat;
+          content: '';
+          display: inline-block;
+          filter: invert(5%) sepia(52%) saturate(0%) hue-rotate(222deg) brightness(94%) contrast(83%);
+          height: 32px;
+          margin: 0;
+          padding: 0;
+          width: 32px;
+        }
+        
+        &:active,
+        &:hover {
+          &::after {
+            filter: invert(100%) sepia(94%) saturate(23%) hue-rotate(324deg) brightness(106%) contrast(96%);
+          }
+        }
+      }
+
+      & #main-menu-toggle:hover ~ .hamburger {
+        background-color: var(--dark);
       }
     
       & #main-menu-toggle:focus ~ .hamburger {
