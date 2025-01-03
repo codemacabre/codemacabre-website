@@ -30,7 +30,7 @@ const { pageTitle } = Astro.props;
 
   for (let codeBlock of codeBlocks) {
     let wrapper = document.createElement('div');
-    wrapper.style.position = 'relative';
+    wrapper.className = 'code-wrapper'
 
     let copyButton = document.createElement('button');
     copyButton.className = 'code-copy';

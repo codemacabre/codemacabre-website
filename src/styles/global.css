@@ -154,6 +154,7 @@ main {
   justify-self: left;
   margin: 1rem auto;
   max-width: 75ch;
+  width: calc(100% - 2rem);
 }
 
 footer {
@@ -562,6 +563,10 @@ a {
       }
     }
   }
+}
+
+.code-wrapper {
+  position: relative;
 }
 
 .code-copy {
