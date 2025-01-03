@@ -10,14 +10,19 @@ const path = new URL(Astro.request.url).pathname;
       <span class="sr-only">Menu</span>
     </label>
     <ul class="menu">
-      <li>
-        <a class={path.includes("/projects") ? "selected" : ""} href="/projects">Projects</a>
+      <li class="mobile-only">
+        <a class={path === '/' ? 'selected' : ''} href="/">Home</a>
       </li>
       <li>
-        <a class={path.includes("/notes") ? "selected" : ""} href="/notes">Notes</a>
+        <a class={path.includes('/projects') ? 'selected' : ''} href="/projects">Projects</a>
       </li>
       <li>
-        <a class={path.includes("/about") ? "selected" : ""} href="/about">About</a>
+        <span class="wide-only">/</span>
+        <a class={path.includes('/notes') ? 'selected' : ''} href="/notes">Notes</a>
+      </li>
+      <li>
+        <span class="wide-only">/</span>
+        <a class={path.includes('/about') ? 'selected' : ''} href="/about">About</a>
       </li>
     </ul>
   </nav>

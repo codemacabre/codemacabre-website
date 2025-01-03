@@ -126,6 +126,10 @@ header {
 
         & li {
           display: inline;
+
+          &.mobile-only {
+            display: none;
+          }
         }
       }
     }
@@ -724,6 +728,23 @@ img {
         top: 0;
         width: calc(100vw - 2rem);
         z-index: 5;
+
+        & li {
+          margin: 1rem 0 0 0;
+
+          &:first-of-type {
+            margin: 0;
+          }
+
+          &.mobile-only {
+            display: block;
+          }
+
+          & .wide-only {
+            display: none;
+          }
+        }
+
       }
 
       & .hamburger {
