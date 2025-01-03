@@ -1,10 +1,10 @@
 # Code Macabre website
 
-[![Eleventy](https://img.shields.io/badge/Astro-BC52EE?logo=astro&logoColor=ffffff)](https://astro.build/)
+[![Astro](https://img.shields.io/badge/Astro-BC52EE?logo=astro&logoColor=ffffff)](https://astro.build/)
 
 ## Overview
 
-This repo contains the Code Macabre website, my personal, portfolio, and freelance site.
+This repo contains my personal website.
 
 ## Design & Development
 
@@ -12,4 +12,4 @@ This site is a constant work-in-progress. Every effort will be made to ensure it
 
 ## Acknowledgements
 
-Design, code and content © [Myles Lewando](https://codemacabre.com).
+Design, code, and content © [Myles Lewando](https://codemacabre.com).
