@@ -668,6 +668,10 @@ img {
       transition: 200ms;
     }
   }
+
+  &.extra-space {
+    margin: 2rem 0 1rem 0;
+  }
 }
 
 .video-container {
