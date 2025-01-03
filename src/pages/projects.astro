@@ -1,7 +1,8 @@
 ---
 import { getCollection } from "astro:content";
-import BaseLayout from '../layouts/BaseLayout.astro';
-import Project from '../components/Project.astro';
+import BaseLayout from '~/layouts/BaseLayout.astro';
+import Project from '~/components/Project.astro';
+
 const allProjects = await getCollection('projects');
 const sortedProjects = allProjects.sort((a, b) => {
   return new Date(b.data.date).getTime() - new Date(a.data.date).getTime();

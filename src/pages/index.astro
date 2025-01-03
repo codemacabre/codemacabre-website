@@ -1,7 +1,8 @@
 ---
 import { getCollection } from 'astro:content';
-import BaseLayout from '../layouts/BaseLayout.astro';
-import Note from '../components/Note.astro';
+import BaseLayout from '~/layouts/BaseLayout.astro';
+import Note from '~/components/Note.astro';
+
 const allNotes = await getCollection('notes');
 const allProjects = await getCollection('projects');
 const sortedNotes = allNotes.sort((a, b) => {
