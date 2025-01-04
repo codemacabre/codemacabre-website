@@ -3,7 +3,7 @@ category: "evergreen"
 date: 2024-07-08
 description: "A guide to creating directed acyclic graphs in D3."
 title: DAGs in D3
-update: 2024-12-16
+update: 2025-01-04
 ---
 import { Image } from 'astro:assets';
 import Callout from '~/components/Callout.astro';
@@ -38,7 +38,7 @@ Note the `<script>` tags; this is where we will write our JavaScript.
 
 ## 2. Import libraries
 
-The two libraries we'll neeed are `d3` itself and `dagre-d3`. If we were using a build tool, we'd use `npm` to install these, but for simplicity, let's use a CDN.
+The two libraries we'll need are `d3` itself and `dagre-d3`. If we were using a build tool, we'd use `npm` to install these, but for simplicity, let's use a CDN.
 
 Add the following above our empty `<script>` tag:
 
@@ -261,9 +261,7 @@ Our final code should look like this:
 ```
 
 <Callout>
-  For an example of this using [Vite](https://vitejs.dev/) to bundle the code, check out my [basic-dagre](https://github.com/codemacabre/basic-dagre) repo on GitHub. The graph itself is identical, but it has a few tooling benefits, like ESLint and Prettier.
+  For an example of this using [Vite](https://vitejs.dev/) to bundle the code, check out my [basic-dagre](https://github.com/codemacabre/basic-dagre) repo on GitHub.
 </Callout>
 
-Experiment!
-
-Add more nodes and edges, see how complex you can make it without breaking it. The [dagre-d3 wiki](https://github.com/dagrejs/dagre-d3/wiki), as well as the original [dagre wiki](https://github.com/dagrejs/dagre/wiki) are both helpful in understanding what you can do with this powerful library.
+For further information, and to make more complex graphs, take a look at the [dagre-d3 wiki](https://github.com/dagrejs/dagre-d3/wiki), as well as the original [dagre wiki](https://github.com/dagrejs/dagre/wiki).
