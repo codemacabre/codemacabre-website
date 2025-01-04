@@ -5,6 +5,17 @@ import Tag from '~/components/Tag.astro';
 const { frontmatter } = Astro.props;
 ---
 <BaseLayout pageTitle={frontmatter.title}>
+  <Fragment slot="head">
+    <meta property="og:title" content={frontmatter.title} />
+    <meta property="og:description" content={frontmatter.description} />
+    <meta property="og:url" content={Astro.url} />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://codemacabre.com/images/self.png" />
+    
+    <meta name="twitter:title" content={frontmatter.title} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://codemacabre.com/images/self.png" />
+  </Fragment>
   <h1>{frontmatter.title}</h1>
   <p>
     <Tag text={frontmatter.status} />

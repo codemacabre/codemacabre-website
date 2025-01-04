@@ -22,7 +22,17 @@ const { pageTitle } = Astro.props;
     <link rel="preload" href="/images/menu.svg" as="image" />
     <link rel="preload" href="/images/xmark.svg" as="image" />
 
-    <slot name="head" />
+    <slot name="head">
+      <meta property="og:title" content="Code Macabre" />
+      <meta property="og:description" content="The notes and projects of Myles Lewando, data visualisation developer and designer." />
+      <meta property="og:url" content={Astro.url} />
+      <meta property="og:type" content="website" />
+      <meta property="og:image" content="https://codemacabre.com/images/self.png" />
+      
+      <meta name="twitter:title" content="Code Macabre" />
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:image" content="https://codemacabre.com/images/self.png" />
+    </slot>
 		
     <title>{pageTitle ? `${pageTitle} / Code Macabre` : 'Code Macabre'}</title>
 	</head>
