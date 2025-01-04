@@ -7,13 +7,24 @@ import '~/styles/prism.css';
 const { pageTitle } = Astro.props;
 ---
 
-<html lang='en'>
+<html lang="en">
 	<head>
-		<meta charset='utf-8' />
-		<link rel='icon' type='image/svg+xml' href='/images/favicon.svg?v=3' />
-		<meta name='viewport' content='width=device-width' />
-		<meta name='generator' content={Astro.generator} />
-		<title>{pageTitle ? `${pageTitle} / Code Macabre` : 'Code Macabre'}</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="generator" content={Astro.generator} />
+    <meta name="description" content="The notes and projects of Myles Lewando, data visualisation developer and designer.">
+    <meta name="author" content="Myles Lewando">
+    <meta name="color-scheme" content="light only">
+    <meta name="theme-color" content="#222222">
+    
+    <link rel="canonical" href={Astro.url}>
+		<link rel="icon" type="image/svg+xml" href="/images/favicon.svg?v=3" />
+    <link rel="preload" href="/images/menu.svg" as="image" />
+    <link rel="preload" href="/images/xmark.svg" as="image" />
+
+    <slot name="head" />
+		
+    <title>{pageTitle ? `${pageTitle} / Code Macabre` : 'Code Macabre'}</title>
 	</head>
 	<body>
     <Header />
@@ -36,7 +47,6 @@ const { pageTitle } = Astro.props;
     copyButton.className = 'code-copy';
     copyButton.innerHTML = `<span class="sr-only">${copyButtonLabel}</span>`;
 
-    codeBlock.setAttribute('tabindex', '0');
     codeBlock.appendChild(copyButton);
 
     codeBlock?.parentNode?.insertBefore(wrapper, codeBlock);

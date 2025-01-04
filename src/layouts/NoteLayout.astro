@@ -5,6 +5,20 @@ import Tag from '~/components/Tag.astro';
 const { frontmatter } = Astro.props;
 ---
 <BaseLayout pageTitle={frontmatter.title}>
+  <Fragment slot="head">
+    <meta property="og:site_name" content="Code Macabre" />
+    <meta property="og:title" content={frontmatter.title} />
+    <meta property="og:description" content={frontmatter.description} />
+    <meta property="og:url" content={Astro.url} />
+    <meta property="og:type" content="article" />
+    <meta property="og:image" content="https://codemacabre.com/images/self.png" />
+    <meta property="og:image:width" content="400" />
+    <meta property="og:image:height" content="400" />
+    
+    <meta name="twitter:title" content={frontmatter.title} />
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:image" content="https://codemacabre.com/images/self.png" />
+  </Fragment>
   <h1>{frontmatter.title}</h1>
   <p>
     <Tag text={frontmatter.category} />

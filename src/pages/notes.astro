@@ -9,7 +9,11 @@ const sortedNotes = allNotes.sort((a, b) => {
 });
 const pageTitle = 'Notes';
 ---
+
 <BaseLayout pageTitle={pageTitle}>
+  <Fragment slot="head">
+    <link rel="preload" href="/images/rss.svg" as="image" />
+  </Fragment>
   <div class="heading-and">
     <h1>{pageTitle}</h1>
     <a class="rss right" href="/rss.xml">
