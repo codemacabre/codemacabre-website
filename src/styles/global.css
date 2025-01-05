@@ -262,7 +262,25 @@ p {
   text-decoration: line-through;
 }
 
-ul, ol {
+.footnotes {
+  font-size: 0.8rem;
+}
+
+ol {
+  list-style-position: inside;
+  margin: 2rem 0 0 2rem;
+  text-indent: -1rem;
+
+  & li {
+    margin: 0;
+
+    & p {
+      display: inline;
+    }
+  }
+}
+
+ul {
   list-style-position: inside;
   margin: 0 0 0 2rem;
   text-indent: -1rem;
@@ -403,7 +421,6 @@ ul, ol {
 i, em {
   font-family: 'source-code-pro-italic', monospace;
   font-style: normal;
-  white-space: nowrap;
 }
 
 strong {
