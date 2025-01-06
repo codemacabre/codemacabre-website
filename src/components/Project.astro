@@ -3,11 +3,9 @@ const { date, description, endDate, title, url } = Astro.props
 ---
 <li>
   <a class="title" href={url}>{title}</a>
-  <div class="meta">
-    <span class="dates">
-      (<time datetime={date.toString()}>{date.getFullYear()}</time>{endDate && <>&nbsp;-&nbsp;<time datetime={endDate.toString()}>{endDate.getFullYear()}</time></>})
-    </span>
-  </div>
+  <span class="dates">
+    (<time datetime={date.toString()}>{date.getFullYear()}</time>{endDate && <>&nbsp;-&nbsp;<time datetime={endDate.toString()}>{endDate.getFullYear()}</time></>})
+  </span>
   <p class="description">{description}</p>
 </li>
 
