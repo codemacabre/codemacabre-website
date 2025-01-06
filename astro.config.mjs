@@ -5,6 +5,10 @@ export default defineConfig({
   site: 'https://codemacabre.com',
   integrations: [mdx()],
   markdown: {
-    syntaxHighlight: 'prism'
+    syntaxHighlight: 'prism',
+    remarkRehype: {
+      clobberPrefix: 'note-',
+      footnoteBackContent: '↑',
+    },
   }
 });
