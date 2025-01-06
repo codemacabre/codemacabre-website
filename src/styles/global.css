@@ -262,8 +262,22 @@ p {
   text-decoration: line-through;
 }
 
+sub, sup {
+  font-size: 0.6rem;
+}
+
 .footnotes {
   font-size: 0.8rem;
+  margin: 0;
+
+  & ol {
+    margin: 1rem 0 0 2rem;
+    text-indent: -2rem;
+
+    & li a {
+      font-family: 'source-code-pro', monospace;
+    }
+  }
 }
 
 ol {
@@ -272,10 +286,11 @@ ol {
   text-indent: -1rem;
 
   & li {
-    margin: 0;
+    margin: 0 0 1rem 0;
 
     & p {
       display: inline;
+      line-height: 1.2rem;
     }
   }
 }
