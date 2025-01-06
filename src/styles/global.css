@@ -92,27 +92,28 @@ header {
       background: var(--haze);
       cursor: pointer;
       display: none;
-      padding: 0.5rem 0.5rem 0.25rem 0.5rem;
+      height: 32px;
+      padding: 0.6rem 0.5rem 0.3rem 0.5rem;
       position: absolute;
       right: 1rem;
       top: 1rem;
+      width: 32px;
       z-index: 10;
-      
-      &::after {
-        background: url('/images/menu.svg') center center / 1.2rem no-repeat;
-        content: '';
-        display: inline-block;
-        filter: invert(5%) sepia(52%) saturate(0%) hue-rotate(222deg) brightness(94%) contrast(83%);
-        height: 32px;
-        margin: 0;
-        padding: 0;
-        width: 32px;
+
+      & .slice {
+        background: var(--dark);
+        border-radius: 1rem;
+        margin: 4px auto 0 auto;
+        display: block;
+        height: 3px;
+        overflow: hidden;
+        width: 1.2rem;
       }
-      
+
       &:active,
       &:hover {
-        &::after {
-          filter: invert(100%) sepia(94%) saturate(23%) hue-rotate(324deg) brightness(106%) contrast(96%);
+        & .slice {
+          background: var(--haze);
         }
       }
     }
@@ -471,8 +472,10 @@ strong {
 
 blockquote {
   font-family: 'source-code-pro-italic', monospace;
-  margin: 0 4rem -2rem 4rem;
+  margin: 0 4rem;
   padding: 1rem 0;
+  position: relative;
+  z-index: 1;
 
   & .byline {
     float: right;
@@ -484,26 +487,33 @@ blockquote {
     }
   }
 
-  &::before {
-    background: url('/images/quote.svg') bottom left / 2rem no-repeat;
-    content: '';
-    display: inline-flex;
-    filter: invert(100%) sepia(0%) saturate(1568%) hue-rotate(143deg) brightness(116%) contrast(73%);
-    margin: 0 0 -2rem -2.6rem;
-    height: 2rem;
-    width: 2rem;
-  }
-  
-  &::after {
-    background: url('/images/quote.svg') bottom left / 2rem no-repeat;
-    transform: rotate(180deg);
-    content: '';
-    display: inline-flex;
-    filter: invert(100%) sepia(0%) saturate(1568%) hue-rotate(143deg) brightness(116%) contrast(73%);
-    margin: 0 0 2rem 2.6rem;
-    height: 2rem;
-    width: 100%;
-  }
+  /* &::before {
+    color: var(--murk);
+    content: open-quote;
+    font-size: 4rem;
+    font-style: normal;
+    font-weight: 600;
+    left: -3rem;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 0.5rem;
+    z-index: -1;
+  } */
+
+  /* &::after {
+    color: var(--murk);
+    content: close-quote;
+    font-size: 4rem;
+    font-style: normal;
+    font-weight: 600;
+    right: -3rem;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    bottom: -1rem;
+    z-index: -1;
+  } */
 }
 
 hr {
@@ -581,28 +591,6 @@ a {
     color: var(--haze);
     transition: 200ms;
   }
-  
-  &.rss {
-    margin: 1rem 0 0 0;
-    
-    &::after {
-      background: url('/images/rss.svg') bottom right / 0.6rem no-repeat;
-      content: '';
-      display: inline-block;
-      filter: invert(5%) sepia(52%) saturate(0%) hue-rotate(222deg) brightness(94%) contrast(83%);
-      height: 1rem;
-      margin: 0;
-      padding: 0;
-      width: 0.8rem;
-    }
-    
-    &:active,
-    &:hover {
-      &::after {
-        filter: invert(100%) sepia(94%) saturate(23%) hue-rotate(324deg) brightness(106%) contrast(96%);
-      }
-    }
-  }
 }
 
 .code-wrapper {
@@ -615,29 +603,15 @@ a {
   border: none;
   border-radius: 0;
   cursor: pointer;
-  height: 1.6rem;
-  padding: 3px 0 0 0;
+  padding: 0.2rem 0.4rem;
   right: 6px;
   top: 6px;
-  width: 1.6rem;
-
-  &::after {
-    background: url('/images/copy.svg') center center / 0.8rem no-repeat;
-    content: '';
-    display: inline-block;
-    filter: invert(5%) sepia(52%) saturate(0%) hue-rotate(222deg) brightness(94%) contrast(83%);
-    height: 1rem;
-    margin: 0;
-    padding: 0;
-    width: 0.8rem;
-  }
 
   &:active,
   &:hover {
     background: var(--dark);
-    &::after {
-      filter: invert(100%) sepia(94%) saturate(23%) hue-rotate(324deg) brightness(106%) contrast(96%);
-    }
+    color: var(--haze);
+    transition: 200ms;
   }
 
   &:focus {
@@ -700,10 +674,8 @@ img {
 
   &.greyscale {
     filter: grayscale(1);
-    transition: 200ms;
 
-    &:hover,
-    &:focus {
+    &:hover {
       filter: grayscale(0);
       transition: 200ms;
     }
@@ -802,22 +774,16 @@ img {
         position: fixed;
         right: 1rem;
 
-        &::after {
-          background: url('/images/xmark.svg') center center / 1.2rem no-repeat;
-          content: '';
-          display: inline-block;
-          filter: invert(5%) sepia(52%) saturate(0%) hue-rotate(222deg) brightness(94%) contrast(83%);
-          height: 32px;
-          margin: 0;
-          padding: 0;
-          width: 32px;
+        & .slice:nth-child(1) {
+          transform: translateY(7px) rotate(45deg);
         }
         
-        &:active,
-        &:hover {
-          &::after {
-            filter: invert(100%) sepia(94%) saturate(23%) hue-rotate(324deg) brightness(106%) contrast(96%);
-          }
+        & .slice:nth-child(2) {
+          opacity: 0;
+        }
+        
+        & .slice:nth-child(3) {
+          transform: translateY(-7px) rotate(-45deg);
         }
       }
 

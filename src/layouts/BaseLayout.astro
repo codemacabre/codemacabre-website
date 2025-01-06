@@ -19,8 +19,6 @@ const { pageTitle } = Astro.props;
     
     <link rel="canonical" href={Astro.url}>
 		<link rel="icon" type="image/svg+xml" href="/images/favicon.svg?v=3" />
-    <link rel="preload" href="/images/menu.svg" as="image" />
-    <link rel="preload" href="/images/xmark.svg" as="image" />
 
     <slot name="head">
       <meta property="og:title" content="Code Macabre" />
@@ -46,7 +44,7 @@ const { pageTitle } = Astro.props;
 </html>
 
 <script>
-  let copyButtonLabel = 'Copy Code';
+  let copyButtonLabel = 'Copy';
   let codeBlocks = Array.from(document.querySelectorAll('pre'));
 
   for (let codeBlock of codeBlocks) {
@@ -55,7 +53,7 @@ const { pageTitle } = Astro.props;
 
     let copyButton = document.createElement('button');
     copyButton.className = 'code-copy';
-    copyButton.innerHTML = `<span class="sr-only">${copyButtonLabel}</span>`;
+    copyButton.innerHTML = `<span>${copyButtonLabel}</span>`;
 
     codeBlock.appendChild(copyButton);
 
@@ -63,14 +61,20 @@ const { pageTitle } = Astro.props;
     wrapper.appendChild(codeBlock);
 
     copyButton.addEventListener('click', async () => {
-      await copyCode(codeBlock);
+      await copyCode(codeBlock, copyButton);
     });
   }
 
-  async function copyCode(block) {
+  async function copyCode(block, button) {
     let code = block.querySelector('code');
     let text = code.innerText;
 
     await navigator.clipboard.writeText(text);
+
+    button.innerText = "Copied";
+
+    setTimeout(() => {
+      button.innerText = copyButtonLabel;
+    }, 1000);
   }
 </script>

@@ -11,16 +11,82 @@ const pageTitle = 'Notes';
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-  <Fragment slot="head">
-    <link rel="preload" href="/images/rss.svg" as="image" />
-  </Fragment>
   <div class="heading-and">
     <h1>{pageTitle}</h1>
     <a class="rss right" href="/rss.xml">
       RSS
+      <div class="rss-icon">
+        <span class="inner-circle"></span>
+        <span class="middle-arc"></span>
+        <span class="outer-arc"></span>
+      </div>
     </a>
 </div>
   <ul class="wider">
     {sortedNotes.map((note) => <Note category={note.data.category} date={note.data.date} description={note.data.description} title={note.data.title} url={`/notes/${note.slug}/`} />)}
   </ul>  
 </BaseLayout>
+
+<style>
+  .rss {
+    margin: 1rem 0 0 0;
+
+    .rss-icon {
+      display: inline-block;
+      height: 1rem;
+      width: 1rem;
+      position: relative;
+      overflow: hidden;
+  
+      & .inner-circle {
+        position: absolute;
+        height: 2px;
+        width: 2px;
+        background: var(--dark);
+        border-radius: 50%;
+        bottom: 0;
+        left: 0;
+      }
+  
+      & .middle-arc {
+        position: absolute;
+        height: 12px;
+        width: 12px;
+        border-radius: 50%;
+        background: transparent;
+        border: 1px solid var(--dark);
+        left: -7px;
+        bottom: -7px;
+      }
+  
+      & .outer-arc {
+        position: absolute;
+        height: 20px;
+        width: 20px;
+        border-radius: 50%;
+        background: transparent;
+        border: 1px solid var(--dark);
+        left: -11px;
+        bottom: -11px;
+      }
+    }
+
+    &:active,
+    &:hover {
+      & .inner-circle {
+        background: var(--haze);
+        transition: 200ms;
+      }
+  
+      & .middle-arc {
+        border: 1px solid var(--haze);
+        transition: 200ms;
+      }
+  
+      & .outer-arc {
+        border: 1px solid var(--haze);
+        transition: 200ms;
+      }
+    }
+  }
+</style>
