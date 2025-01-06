@@ -816,7 +816,13 @@ img {
 
   main {
     grid-column: 2 / 8;
-    min-height: calc(100vh - 18rem);  }
+    min-height: calc(100vh - 18rem);
+
+    & .meta {
+      display: block;
+      margin: 0.4rem 0 0 0;
+    }
+  }
 }
 
 @media screen and (max-width: 480px) {
