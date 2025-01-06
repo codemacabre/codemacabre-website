@@ -1,12 +1,18 @@
 ---
 import Tag from '~/components/Tag.astro';
+
 const { category, date, description, title, url } = Astro.props
+const options: Intl.DateTimeFormatOptions = {
+  year: 'numeric',
+  month: 'short',
+  day: '2-digit',
+};
 ---
 <li>
   <a class="title" href={url}>{title}</a>
   <span class="meta">
     <Tag text={category} />
-    <span class="dates">(<time datetime={date.toString()}>{new Date(date).toISOString().slice(0,10)}</time>)</span>
+    <span class="dates">(<time datetime={date.toString()}>{new Date(date).toLocaleDateString('en-GB', options)}</time>)</span>
   </span>
   <p class="description">{description}</p>
 </li>

@@ -3,6 +3,11 @@ import BaseLayout from '~/layouts/BaseLayout.astro';
 import Tag from '~/components/Tag.astro';
 
 const { frontmatter } = Astro.props;
+const options: Intl.DateTimeFormatOptions = {
+  year: 'numeric',
+  month: 'short',
+  day: '2-digit',
+};
 ---
 <BaseLayout pageTitle={frontmatter.title}>
   <Fragment slot="head">
@@ -17,10 +22,10 @@ const { frontmatter } = Astro.props;
     <meta name="twitter:image" content="https://codemacabre.com/images/self.png" />
   </Fragment>
   <h1>{frontmatter.title}</h1>
-  <p>
+  <p class="meta">
     <Tag text={frontmatter.category} />
     <span class="dates">
-      Written <time datetime={frontmatter.date.toString()}>{new Date(frontmatter.date).toISOString().slice(0,10)}</time>{frontmatter.update && <> (updated <time datetime={frontmatter.update.toString()}>{new Date(frontmatter.update).toISOString().slice(0,10)}</time>)</>}
+      <span>Written on <time datetime={frontmatter.date.toString()}>{new Date(frontmatter.date).toLocaleDateString('en-GB', options)}</time></span>{frontmatter.update && <>, updated on <time datetime={frontmatter.update.toString()}>{new Date(frontmatter.update).toLocaleDateString('en-GB', options)}</time></>}
     </span>
   </p>
   <article>
