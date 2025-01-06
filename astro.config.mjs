@@ -9,6 +9,9 @@ export default defineConfig({
     remarkRehype: {
       clobberPrefix: 'note-',
       footnoteBackContent: '↑',
+      footnoteLabelProperties: {
+        className: ''
+      }
     },
   }
 });
