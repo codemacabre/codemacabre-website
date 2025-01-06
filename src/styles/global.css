@@ -487,33 +487,35 @@ blockquote {
     }
   }
 
-  /* &::before {
+  &::before {
     color: var(--murk);
     content: open-quote;
     font-size: 4rem;
     font-style: normal;
     font-weight: 600;
     left: -3rem;
-    padding: 0;
     margin: 0;
+    padding: 0;
     position: absolute;
     top: 0.5rem;
+    transform: skew(8deg);
     z-index: -1;
-  } */
+  }
 
-  /* &::after {
+  &::after {
+    bottom: -1rem;
     color: var(--murk);
     content: close-quote;
     font-size: 4rem;
     font-style: normal;
     font-weight: 600;
-    right: -3rem;
-    padding: 0;
     margin: 0;
+    padding: 0;
     position: absolute;
-    bottom: -1rem;
+    right: -3rem;
+    transform: skew(8deg);
     z-index: -1;
-  } */
+  }
 }
 
 hr {
