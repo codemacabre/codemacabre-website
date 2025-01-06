@@ -498,7 +498,7 @@ blockquote {
     padding: 0;
     position: absolute;
     top: 0.5rem;
-    transform: skew(8deg);
+    transform: skew(10deg);
     z-index: -1;
   }
 
@@ -513,7 +513,7 @@ blockquote {
     padding: 0;
     position: absolute;
     right: -3rem;
-    transform: skew(8deg);
+    transform: skew(10deg);
     z-index: -1;
   }
 }
