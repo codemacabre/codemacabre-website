@@ -605,6 +605,8 @@ a {
   border: none;
   border-radius: 0;
   cursor: pointer;
+  font-family: 'source-code-pro', monospace;
+  font-size: 0.8rem;
   padding: 0.2rem 0.4rem;
   right: 6px;
   top: 6px;
