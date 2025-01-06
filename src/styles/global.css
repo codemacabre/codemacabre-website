@@ -133,6 +133,8 @@ header {
 
         & li {
           display: inline;
+          margin: 0;
+          padding: 0;
 
           &.mobile-only {
             display: none;
