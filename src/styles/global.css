@@ -265,19 +265,26 @@ p {
 }
 
 .footnotes {
-  font-size: 0.8rem;
   margin: 0;
 
   & ol {
+    font-size: 0.8rem;
+    list-style-position: inside;
     margin: 1rem 0 0 2rem;
     text-indent: -2rem;
 
-    & li a.data-footnote-backref {
-      display: inline-block;
-      margin: -0.2rem 0 0 0;
-      padding: 0 0.4rem 0.2rem 0.4rem;
-      text-indent: 0;;
-      vertical-align: middle;
+    & li {
+      & p {
+        text-indent: 0;
+      }
+      
+      & a.data-footnote-backref {
+        display: inline-block;
+        margin: -0.2rem 0 0 0;
+        padding: 0 0.4rem 0.2rem 0.4rem;
+        text-indent: 0;
+        vertical-align: middle;
+      }
     }
   }
 }
@@ -293,6 +300,7 @@ ol {
     & p {
       display: inline;
       line-height: 1.2rem;
+      margin: 0;
     }
   }
 }
