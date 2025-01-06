@@ -17,11 +17,8 @@ const sortedNotes = allNotes.sort((a, b) => {
   {allProjects.map(project =>
     project.data.featured && (
       <a class="feature" href={`/projects/${project.slug}/`}>
-        <span class="title">{project.data.title}</span>
-        <div class="meta">
-          <span class="dates">
-            (<time datetime={project.data.date.toString()}>{project.data.date.getFullYear()}</time>{project.data.endDate && <>&nbsp;-&nbsp;<time datetime={project.data.endDate.toString()}>{project.data.endDate.getFullYear()}</time></>})
-          </span>
+        <div>
+          <span class="title">{project.data.title}</span><span class="dates">(<time datetime={project.data.date.toString()}>{project.data.date.getFullYear()}</time>{project.data.endDate && <>&nbsp;-&nbsp;<time datetime={project.data.endDate.toString()}>{project.data.endDate.getFullYear()}</time></>})</span>
         </div>
       </a>
     )

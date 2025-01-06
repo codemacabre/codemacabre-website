@@ -580,11 +580,13 @@ a {
   }
 
   &.feature {
-    align-items: center;
+    align-items: flex-start;
     background-color: var(--dark);
     border: none;
     color: var(--haze);
     display: flex;
+    flex-direction: column;
+    justify-content: center;
     margin: 0 0 1rem 0;
     min-height: 100px;
     padding: 1rem;
@@ -601,6 +603,10 @@ a {
     & .title {
       font-size: 1.6rem;
       margin: 0 1rem 0 0;
+    }
+
+    & p {
+      margin: 0;
     }
   }
 
