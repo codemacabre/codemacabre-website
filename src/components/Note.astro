@@ -10,10 +10,10 @@ const options: Intl.DateTimeFormatOptions = {
 ---
 <li>
   <a class="title" href={url}>{title}</a>
-  <span class="meta">
+  <div class="meta">
     <Tag text={category} />
     <span class="dates">(<time datetime={date.toString()}>{new Date(date).toLocaleDateString('en-GB', options)}</time>)</span>
-  </span>
+  </div>
   <p class="description">{description}</p>
 </li>
 

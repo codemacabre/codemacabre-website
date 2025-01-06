@@ -17,10 +17,10 @@ const { frontmatter } = Astro.props;
     <meta name="twitter:image" content="https://codemacabre.com/images/self.png" />
   </Fragment>
   <h1>{frontmatter.title}</h1>
-  <p>
+  <p class="meta project-page">
     <Tag text={frontmatter.status} />
     <span class="dates">
-      <time datetime={frontmatter.date.toString()}>{frontmatter.date.getFullYear()}</time>{frontmatter.endDate && <> - <time datetime={frontmatter.endDate.toString()}>{frontmatter.endDate.getFullYear()}</time></>}
+      <time datetime={frontmatter.date.toString()}>{frontmatter.date.getFullYear()}</time>{frontmatter.endDate && <>&nbsp;-&nbsp;<time datetime={frontmatter.endDate.toString()}>{frontmatter.endDate.getFullYear()}</time></>}
     </span>
   </p>
   <article>

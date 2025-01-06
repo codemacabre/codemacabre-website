@@ -419,9 +419,27 @@ ul {
   padding: 0.2rem 0.4rem;
 }
 
+.meta {
+  display: inline;
+}
+
+.meta.note-page,
+.meta.project-page {
+  display: inline-block;
+  margin: 0.5rem 0 0 0;
+  outline: 1px dashed var(--dark);
+  padding: 1rem;
+  width: 100%;
+}
+
 .dates {
+  display: inline;
   font-family: 'source-code-pro-italic', monospace;
   font-size: 0.8rem;
+
+  & .update::before {
+    content: ', ';
+  }
 }
 
 .custom-tag {
@@ -818,9 +836,28 @@ img {
     grid-column: 2 / 8;
     min-height: calc(100vh - 18rem);
 
-    & .meta {
+    .meta {
       display: block;
       margin: 0.4rem 0 0 0;
+    }
+
+    .meta.note-page {
+       & .dates {
+        margin: 1rem 0 0 0;
+        display: block;
+
+        & .update {
+          display: block;
+
+          &::first-letter {
+            text-transform: capitalize;
+          }
+
+          &::before {
+            content: '';
+          }
+        }
+      }
     }
   }
 }

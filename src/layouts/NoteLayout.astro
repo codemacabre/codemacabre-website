@@ -22,12 +22,12 @@ const options: Intl.DateTimeFormatOptions = {
     <meta name="twitter:image" content="https://codemacabre.com/images/self.png" />
   </Fragment>
   <h1>{frontmatter.title}</h1>
-  <p class="meta">
+  <div class="meta note-page">
     <Tag text={frontmatter.category} />
-    <span class="dates">
-      <span>Written on <time datetime={frontmatter.date.toString()}>{new Date(frontmatter.date).toLocaleDateString('en-GB', options)}</time></span>{frontmatter.update && <>, updated on <time datetime={frontmatter.update.toString()}>{new Date(frontmatter.update).toLocaleDateString('en-GB', options)}</time></>}
-    </span>
-  </p>
+    <div class="dates">
+      <span>Written on <time datetime={frontmatter.date.toString()}>{new Date(frontmatter.date).toLocaleDateString('en-GB', options)}</time></span>{frontmatter.update && <span class="update">updated on <time datetime={frontmatter.update.toString()}>{new Date(frontmatter.update).toLocaleDateString('en-GB', options)}</time></span>}
+      </div>
+    </div>
   <article>
     <slot />
   </article>
