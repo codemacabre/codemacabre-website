@@ -585,6 +585,7 @@ a {
     border: none;
     color: var(--haze);
     display: flex;
+    margin: 0 0 1rem 0;
     min-height: 100px;
     padding: 1rem;
     width: calc(100% - 2rem);
