@@ -30,9 +30,8 @@ booksData.forEach((book) => {
   <p>
     This is the portfolio and personal site of me, Myles Lewando (he&#8288;/&#8288;him), a developer, designer, and data visualisation and accessibility specialist.
   </p>
-  <p>
-    I began freelancing as a web developer in 2016, then formally changed career to become a full-time developer in 2019. My background is in education, data visualisation (particularly geospatial), and design. I am dedicated to inclusive, ethical technology, and data justice.
-  </p>
+  <p>I began freelancing as a web developer in 2016, then formally changed career to become a full-time developer in 2019. My background is in education, data visualisation (particularly geospatial), and design.</p>
+  <p>Inclusive, ethical technology and upholding data justice principles are core to my work and values.</p>
   <Image
     class="small center circle"
     src={selfImage}
@@ -40,8 +39,8 @@ booksData.forEach((book) => {
   />
   <h3 id="now">Now</h3>
   <p>
-    I've been working as a {selfData.organisation.position} at <a href={selfData.organisation.url}>{selfData.organisation.name}</a> since {selfData.organisation.startDate}. I've <a href="/notes">written {notesWritten} {notesWritten === 1 ? 'note' : 'notes'}</a> and <a href="/reading">read {booksRead} {booksRead === 1 ? 'book' : 'books'}</a> so far this year.
-  </p>
+    I've been working as a {selfData.organisation.position} at <a href={selfData.organisation.url}>{selfData.organisation.name}</a> since {selfData.organisation.startDate}.</p>
+  <p>So far this year, I've <a href="/notes">written {notesWritten} {notesWritten === 1 ? 'note' : 'notes'}</a> and <a href="/reading">read {booksRead} {booksRead === 1 ? 'book' : 'books'}</a>.</p>
   <h3 id="fun-facts">Fun facts</h3>
   <p>My household includes a menagerie of multi-legged pets of various species, including:</p>
   <ul class="indented">
@@ -53,4 +52,6 @@ booksData.forEach((book) => {
   </p>
   <h3 id="contact">Contact</h3>
   <p>Get in touch via <span class="mail">email</span><noscript> at contact (at) codemacabre (dot) com</noscript>, or reach out on <a href="https://social.coop/@codemacabre">Mastodon</a> or <a href="https://www.linkedin.com/in/codemacabre/">LinkedIn</a>.</p>
+  <h3 class="sr-only">Disclaimer</h3>
+  <p class="callout">The views, opinions, and projects on this site are my own, and do not necessarily reflect those of my employer.</p>
 </BaseLayout>
