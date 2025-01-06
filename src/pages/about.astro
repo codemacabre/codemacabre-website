@@ -28,7 +28,7 @@ booksData.forEach((book) => {
   <h2>{pageTitle}</h2>
   <p>Welcome to Code Macabre!</p>
   <p>
-    This is the portfolio and personal site of me, Myles Lewando (he/him), a developer, designer, and data visualisation and accessibility specialist.
+    This is the portfolio and personal site of me, Myles Lewando (he&#8288;/&#8288;him), a developer, designer, and data visualisation and accessibility specialist.
   </p>
   <p>
     I began freelancing as a web developer in 2016, then formally changed career to become a full-time developer in 2019. My background is in education, data visualisation (particularly geospatial), and design. I am dedicated to inclusive, ethical technology, and data justice.
@@ -40,12 +40,12 @@ booksData.forEach((book) => {
   />
   <h3 id="now">Now</h3>
   <p>
-    I work as a {selfData.organisation.position} at <a href={selfData.organisation.url}>{selfData.organisation.name}</a>. I've <a href="/notes">written {notesWritten} {notesWritten === 1 ? 'note' : 'notes'}</a> and <a href="/reading">read {booksRead} {booksRead === 1 ? 'book' : 'books'}</a> so far this year.
+    I've been working as a {selfData.organisation.position} at <a href={selfData.organisation.url}>{selfData.organisation.name}</a> since {selfData.organisation.startDate}. I've <a href="/notes">written {notesWritten} {notesWritten === 1 ? 'note' : 'notes'}</a> and <a href="/reading">read {booksRead} {booksRead === 1 ? 'book' : 'books'}</a> so far this year.
   </p>
   <h3 id="fun-facts">Fun facts</h3>
   <p>My household includes a menagerie of multi-legged pets of various species, including:</p>
   <ul class="indented">
-    {selfData.pets.map((pet) => <li>{pet.count}x {pet.species_en} ({pet.species_la})</li>)}
+    {selfData.pets.map((pet) => <li>{pet.count}x {pet.species_en} <em>({pet.species_la})</em></li>)}
   </ul>
   <p>&hellip;and one human child.</p>
   <p>
