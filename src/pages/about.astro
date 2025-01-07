@@ -1,6 +1,6 @@
 ---
 import { Image } from 'astro:assets';
-import { getCollection } from "astro:content";
+import { getCollection } from 'astro:content';
 import BaseLayout from '~/layouts/BaseLayout.astro';
 import selfImage from '~/assets/images/self.png';
 import selfData from '~/assets/data/self.json';
@@ -19,7 +19,7 @@ allNotes.forEach((note) => {
 });
 
 booksData.forEach((book) => {
-  if (Number(book.dateRead) === new Date().getFullYear()) {
+  if (Number(book.year) === new Date().getFullYear()) {
     booksRead++;
   }
 });
