@@ -419,6 +419,10 @@ ul {
   padding: 0.2rem 0.4rem;
 }
 
+.capitalise {
+  text-transform: capitalize;
+}
+
 .meta {
   display: inline;
 }
@@ -843,22 +847,18 @@ img {
     grid-column: 2 / 8;
     min-height: calc(100vh - 18rem);
 
-    .meta {
+    & .meta {
       display: block;
       margin: 0.4rem 0 0 0;
     }
 
-    .meta.note-page {
+    & .meta.note-page {
        & .dates {
         margin: 1rem 0 0 0;
         display: block;
 
         & .update {
           display: block;
-
-          &::first-letter {
-            text-transform: capitalize;
-          }
 
           &::before {
             content: '';
