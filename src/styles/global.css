@@ -135,10 +135,6 @@ header {
           display: inline;
           margin: 0;
           padding: 0;
-
-          &.mobile-only {
-            display: none;
-          }
         }
       }
     }
@@ -260,6 +256,10 @@ p {
 ::selection {
   color: var(--haze);
   background-color: var(--dark);
+}
+
+.mobile-only {
+  display: none;
 }
 
 .strike {
