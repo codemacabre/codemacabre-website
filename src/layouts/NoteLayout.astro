@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '~/layouts/BaseLayout.astro';
+import Backlinks from '~/components/Backlinks.astro';
 import Tag from '~/components/Tag.astro';
 
 const { frontmatter } = Astro.props;
@@ -25,10 +26,11 @@ const options: Intl.DateTimeFormatOptions = {
   <div class="meta note-page">
     <Tag text={frontmatter.category} />
     <div class="dates">
-      <span>Written on <time datetime={frontmatter.date.toString()}>{new Date(frontmatter.date).toLocaleDateString('en-GB', options)}</time></span>{frontmatter.update && <span class="update"><span class="capitalise">updated</span> on <time datetime={frontmatter.update.toString()}>{new Date(frontmatter.update).toLocaleDateString('en-GB', options)}</time></span>}
+      <span>Written on <time datetime={frontmatter.date.toString()}>{new Date(frontmatter.date).toLocaleDateString('en-GB', options)}</time></span>{frontmatter.update && <span class="update">Updated on <time datetime={frontmatter.update.toString()}>{new Date(frontmatter.update).toLocaleDateString('en-GB', options)}</time></span>}
       </div>
     </div>
   <article>
     <slot />
   </article>
+  <Backlinks frontmatter={frontmatter} slug={Astro.props.slug} />
 </BaseLayout>

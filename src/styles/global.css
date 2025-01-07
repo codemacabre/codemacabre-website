@@ -266,6 +266,16 @@ p {
   text-decoration: line-through;
 }
 
+.backlinks {
+  & ul {
+    font-size: 0.8rem;
+
+    & li {
+      padding: 0 0 0 0.5rem;
+    }
+  }
+}
+
 .footnotes {
   margin: 0;
 
@@ -419,10 +429,6 @@ ul {
   padding: 0.2rem 0.4rem;
 }
 
-.capitalise {
-  text-transform: capitalize;
-}
-
 .meta {
   display: inline;
 }
@@ -441,8 +447,16 @@ ul {
   font-family: 'source-code-pro-italic', monospace;
   font-size: 0.8rem;
 
-  & .update::before {
-    content: ', ';
+  time {
+    text-transform: capitalize;
+  }
+
+  & .update {
+    text-transform: lowercase;
+
+    &::before {
+      content: ', ';
+    }
   }
 }
 
@@ -854,11 +868,12 @@ img {
 
     & .meta.note-page {
        & .dates {
+         display: block;
         margin: 1rem 0 0 0;
-        display: block;
 
         & .update {
           display: block;
+          text-transform: none;
 
           &::before {
             content: '';

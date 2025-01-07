@@ -1,0 +1,68 @@
+---
+import fs from 'fs';
+import path from 'path';
+
+interface ContentModule {
+  frontmatter: {
+    title: string;
+  };
+}
+
+const { pathname } = Astro.url;
+const currentNoteUrl = pathname;
+const allNotes = import.meta.glob('../content/notes/*.mdx', { eager: false });
+
+let notes = await Promise.all(
+  Object.entries(allNotes).map(async ([key, loader]) => {
+    const url = key.replace('../content/notes/', '/notes/').replace('.mdx', '/');
+    const contentModule = await loader() as ContentModule;
+    const filePath = path.resolve('./src/content/notes', key.replace('../content/notes/', ''));
+    const rawContent = fs.readFileSync(filePath, 'utf-8');
+    return {
+      frontmatter: contentModule.frontmatter,
+      url,
+      rawContent,
+    };
+  })
+);
+
+const backlinksMap = {};
+const linkRegex = /\[.*?\]\((.*?)\)/g;
+
+notes.forEach(note => {
+  const { url, rawContent, frontmatter } = note;
+  const matches = [...rawContent.matchAll(linkRegex)];
+  
+  if (matches) {
+    matches.forEach(match => {
+      const linkedUrl = match[1];
+
+      if (linkedUrl) {
+        if (!backlinksMap[linkedUrl]) {
+          backlinksMap[linkedUrl] = [];
+        }
+        backlinksMap[linkedUrl].push({
+          url,
+          title: frontmatter.title,
+        });
+      }
+    });
+  }
+});
+
+const currentBacklinks = backlinksMap[currentNoteUrl] || [];
+---
+<section class="backlinks">
+  {currentBacklinks.length > 0 && (
+    <h2>Backlinks</h2>
+    <ul>
+      {currentBacklinks.map(backlink => {
+        return (
+          <li>
+            <a href={backlink.url}>{backlink.title}</a>
+          </li>
+        )
+      })}
+    </ul>
+  )}
+</section>
