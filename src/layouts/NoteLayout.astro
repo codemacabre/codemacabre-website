@@ -12,7 +12,7 @@ const options: Intl.DateTimeFormatOptions = {
 ---
 <BaseLayout pageTitle={frontmatter.title}>
   <Fragment slot="head">
-    <meta property="og:title" content={frontmatter.title} />
+    <meta property="og:title" content={`${frontmatter.title} / Code Macabre`} />
     <meta property="og:description" content={frontmatter.description} />
     <meta property="og:url" content={Astro.url} />
     <meta property="og:type" content="article" />
