@@ -14,5 +14,8 @@
     "@astrojs/prism": "^3.2.0",
     "@astrojs/rss": "^4.0.9",
     "astro": "^5.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.5"
   }
 }
