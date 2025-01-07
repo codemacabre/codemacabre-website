@@ -16,7 +16,7 @@ const pageTitle = 'Reading';
 
 {years.map((year) =>
   <h3>{year}</h3>
-  <ul>
+  <ul class="card-container">
     {booksData.map((book) =>
       book.year.includes(year) &&
         <Book author={book.author} cover={book.cover} rating={book.rating} reread={book.reread} title={book.title} />

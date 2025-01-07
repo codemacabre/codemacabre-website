@@ -345,9 +345,9 @@ ul {
 
   }
 
-  .card {
+  &.card-container {
     list-style: none;
-    margin: 1rem 0 1rem -1.2rem;
+    margin: 1rem 0;
   }
 
   & li {
@@ -384,7 +384,7 @@ ul {
   }
 
   .card-content {
-    padding: 1rem 1rem 1rem 0;
+    padding: 1rem 0;
   }
   
   .banner-container {
@@ -459,7 +459,7 @@ ul {
   font-family: 'source-code-pro-italic', monospace;
   font-size: 0.8rem;
 
-  time {
+  & time {
     text-transform: capitalize;
   }
 
