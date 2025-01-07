@@ -378,9 +378,13 @@ ul {
 
   }
 
-   .card-heading {
+  .card-heading {
     display: block;
     margin-right: 3rem;
+  }
+
+  .card-content {
+    padding: 1rem 1rem 1rem 0;
   }
   
   .banner-container {

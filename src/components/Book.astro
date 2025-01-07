@@ -12,7 +12,7 @@ const { author, cover, rating, reread, title } = Astro.props;
     height={cover.height / 2}
     alt={cover.alt}
   />
-  <div>
+  <div class="card-content">
     <p>
       <span class="title">{title}</span> by {
         author.length === 1
