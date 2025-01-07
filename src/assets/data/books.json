@@ -8,9 +8,11 @@
       "height": 200
     },
     "format": ["ebook"],
-    "dateRead": "2024",
-    "title": "Ghost Station"
-  }, 
+    "rating": 3,
+    "reread": false,
+    "title": "Ghost Station",
+    "year": "2024"
+  },
   {
     "author": ["Ola Ellnestam", "Daniel Brolund"],
     "cover": {
@@ -20,8 +22,10 @@
       "height": 251
     },
     "format": ["ebook", "paperback"],
-    "dateRead": "2024",
-    "title": "The Mikado Method"
+    "rating": 3,
+    "reread": false,
+    "title": "The Mikado Method",
+    "year": "2024"
   },
   {
     "author": ["Martha Wells"],
@@ -32,8 +36,10 @@
       "height": 200
     },
     "format": ["audiobook"],
-    "dateRead": "2024",
-    "title": "System Collapse"
+    "rating": 4,
+    "reread": false,
+    "title": "System Collapse",
+    "year": "2024"
   },
   {
     "author": ["Ben West"],
@@ -44,8 +50,10 @@
       "height": 200
     },
     "format": ["audiobook"],
-    "dateRead": "2024",
-    "title": "This Book Could Save Your Life"
+    "rating": 2,
+    "reread": false,
+    "title": "This Book Could Save Your Life",
+    "year": "2024"
   },
   {
     "author": ["Marianna Spring"],
@@ -56,8 +64,10 @@
       "height": 314
     },
     "format": ["hardback"],
-    "dateRead": "2024",
-    "title": "Among the Trolls"
+    "rating": 4,
+    "reread": false,
+    "title": "Among the Trolls",
+    "year": "2024"
   },
   {
     "author": ["Danny Caine"],
@@ -68,7 +78,9 @@
       "height": 200
     },
     "format": ["audiobook"],
-    "dateRead": "2024",
-    "title": "How to Resist Amazon and Why"
+    "rating": 3,
+    "reread": false,
+    "title": "How to Resist Amazon and Why",
+    "year": "2024"
   }
 ]

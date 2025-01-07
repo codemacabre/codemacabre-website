@@ -1,11 +1,10 @@
 ---
-import { getCollection } from "astro:content";
 import BaseLayout from '~/layouts/BaseLayout.astro';
-import Book from "~/components/Book.astro";
+import Book from '~/components/Book.astro';
 import booksData from '~/assets/data/books.json';
 
 const years = Array
-  .from(new Set(booksData.map((book) => book.dateRead)))
+  .from(new Set(booksData.map((book) => book.year)))
   .sort((a, b) => {
     return new Date(b).getTime() - new Date(a).getTime();
   });
@@ -19,8 +18,8 @@ const pageTitle = 'Reading';
   <h3>{year}</h3>
   <ul>
     {booksData.map((book) =>
-      book.dateRead === year &&
-        <Book cover={book.cover} title={book.title} author={book.author} />
+      book.year.includes(year) &&
+        <Book author={book.author} cover={book.cover} rating={book.rating} reread={book.reread} title={book.title} />
     )}
   </ul>
 )}
