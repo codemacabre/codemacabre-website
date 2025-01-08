@@ -35,17 +35,17 @@ const options: Intl.DateTimeFormatOptions = {
         Tagged with
         {
           tags.length === 1 ? (
-            <a class="custom-tag" href={`/notes/tags/${tags[0]}`}>{tags[0].replace(' ', '\u00A0')}</a>
+            <a class="custom-tag" href={`/notes/tags/${tags[0].toLowerCase()}`}>{tags[0].replace(' ', '\u00A0')}</a>
           ) : frontmatter.tags.length === 2 ? (
             <>
-              <a class="custom-tag" href={`/notes/tags/${tags[0]}`}>{tags[0].replace(' ', '\u00A0')}</a> and 
-              <a class="custom-tag" href={`/notes/tags/${tags[1]}`}>{tags[1].replace(' ', '\u00A0')}</a>
+              <a class="custom-tag" href={`/notes/tags/${tags[0].toLowerCase()}`}>{tags[0].replace(' ', '\u00A0')}</a> and 
+              <a class="custom-tag" href={`/notes/tags/${tags[1].toLowerCase()}`}>{tags[1].replace(' ', '\u00A0')}</a>
             </>
           ) : (
             <>
               {tags.map((tag, index) => (
                 <>
-                  <a class="custom-tag" href={`/notes/tags/${tag}`}>{tag.replace(' ', '\u00A0')}</a>{index < tags.length - 2 ? ', ' : index === tags.length - 2 ? ', and ' : ''}
+                  <a class="custom-tag" href={`/notes/tags/${tag.toLowerCase()}`}>{tag.replace(' ', '\u00A0')}</a>{index < tags.length - 2 ? ', ' : index === tags.length - 2 ? ', and ' : ''}
                 </>
               ))}
             </>
