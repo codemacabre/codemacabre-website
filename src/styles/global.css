@@ -126,6 +126,7 @@ header {
     & ul {
       &.menu {
         list-style: none;
+        margin: 0;
         position: absolute;
         right: 2rem;
         text-indent: 0;
