@@ -1,0 +1,10 @@
+---
+const { text, url } = Astro.props
+---
+{
+  url ? (
+    <span class="custom-tag"><a href={url}>{text}</a></span>
+  ) : (
+    <span class="custom-tag">{text}</span>
+  )
+}

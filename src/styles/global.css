@@ -458,7 +458,7 @@ ul {
   }
 }
 
-.category {
+.custom-tag {
   background: var(--murk);
   font-size: 0.8rem;
   padding: 0.2rem 0.4rem;
@@ -732,30 +732,17 @@ a {
     margin: -0.4rem 0 0 0;
     padding: 0;
     
-    & .tag {
+    & .custom-tag {
+      background: var(--haze);
       font-family: 'source-code-pro', monospace;
       margin: 0;
-      padding: 0;
+      padding: 0 0.2rem 0.1rem 0.2rem;
       text-transform: lowercase;
 
-      &::after {
-        content: ', ';
-      }
-
-      &:last-of-type {
-        &::after {
-          content: '';
-        }
-      }
-
-      & a {
-        padding: 0 0.2rem 0.1rem 0.2rem;
-      }
-
-      &:nth-last-child(2) {
-        &::after {
-          content: ', and '
-        }
+      &:active,
+      &:focus,
+      &:hover {
+        background: var(--dark);
       }
     }
   }

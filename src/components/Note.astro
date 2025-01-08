@@ -1,5 +1,5 @@
 ---
-import Category from '~/components/Category.astro';
+import Tag from '~/components/Tag.astro';
 
 const { category, date, description, title, url } = Astro.props
 const options: Intl.DateTimeFormatOptions = {
@@ -11,7 +11,7 @@ const options: Intl.DateTimeFormatOptions = {
 <li>
   <a class="title" href={url}>{title}</a>
   <div class="meta">
-    <Category text={category} />
+    <Tag text={category} />
     <span class="dates">(<time datetime={date.toString()}>{new Date(date).toLocaleDateString('en-GB', options)}</time>)</span>
   </div>
   <p class="description">{description}</p>

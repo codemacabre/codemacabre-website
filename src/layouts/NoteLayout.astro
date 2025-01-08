@@ -1,7 +1,7 @@
 ---
 import BaseLayout from '~/layouts/BaseLayout.astro';
 import Backlinks from '~/components/Backlinks.astro';
-import Category from '~/components/Category.astro';
+import Tag from '~/components/Tag.astro';
 
 const { frontmatter } = Astro.props;
 const options: Intl.DateTimeFormatOptions = {
@@ -24,13 +24,31 @@ const options: Intl.DateTimeFormatOptions = {
   </Fragment>
   <h1>{frontmatter.title}</h1>
   <div class="meta note-page">
-    <Category text={frontmatter.category} />
+    <Tag text={frontmatter.category} />
     <div class="dates">
       <span>Written on <time datetime={frontmatter.date.toString()}>{new Date(frontmatter.date).toLocaleDateString('en-GB', options)}</time></span>{frontmatter.update && <span class="update">Updated on <time datetime={frontmatter.update.toString()}>{new Date(frontmatter.update).toLocaleDateString('en-GB', options)}</time></span>}
     </div>
     <div class="tags">
       <p>
-        Tagged with {frontmatter.tags.map((tag) => <span class="tag"><a href={`/notes/tags/${tag}`}>{tag.replace(' ', '\u00A0')}</a></span>)}
+        Tagged with
+        {
+          frontmatter.tags.length === 1 ? (
+            <a class="custom-tag" href={`/notes/tags/${frontmatter.tags[0]}`}>{frontmatter.tags[0].replace(' ', '\u00A0')}</a>
+          ) : frontmatter.tags.length === 2 ? (
+            <>
+              <a class="custom-tag" href={`/notes/tags/${frontmatter.tags[0]}`}>{frontmatter.tags[0].replace(' ', '\u00A0')}</a> and 
+              <a class="custom-tag" href={`/notes/tags/${frontmatter.tags[1]}`}>{frontmatter.tags[1].replace(' ', '\u00A0')}</a>
+            </>
+          ) : (
+            <>
+              {frontmatter.tags.map((tag, index) => (
+                <>
+                  <a class="custom-tag" href={`/notes/tags/${tag}`}>{tag.replace(' ', '\u00A0')}</a>{index < frontmatter.tags.length - 2 ? ', ' : index === frontmatter.tags.length - 2 ? ', and ' : ''}
+                </>
+              ))}
+            </>
+          )
+        }
       </p>
     </div>
   </div>
