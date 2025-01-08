@@ -432,6 +432,12 @@ ul {
   outline: 1px dashed var(--dark);
   padding: 1rem;
   width: calc(100% - 2rem);
+
+  & .dates {
+    display: block;
+    line-height: 1.4rem;
+    margin: 1rem 0 0 0;
+  }
 }
 
 .dates {
@@ -452,7 +458,7 @@ ul {
   }
 }
 
-.custom-tag {
+.category {
   background: var(--murk);
   font-size: 0.8rem;
   padding: 0.2rem 0.4rem;
@@ -716,6 +722,45 @@ a {
   }
 }
 
+.tags {
+  font-size: 0.8rem;
+  margin: 1.2rem 0 0 0;
+  
+  & p {
+    font-family: 'source-code-pro-italic', monospace;
+    line-height: 1.4rem;
+    margin: -0.4rem 0 0 0;
+    padding: 0;
+    
+    & .tag {
+      font-family: 'source-code-pro', monospace;
+      margin: 0;
+      padding: 0;
+      text-transform: lowercase;
+
+      &::after {
+        content: ', ';
+      }
+
+      &:last-of-type {
+        &::after {
+          content: '';
+        }
+      }
+
+      & a {
+        padding: 0 0.2rem 0.1rem 0.2rem;
+      }
+
+      &:nth-last-child(2) {
+        &::after {
+          content: ', and '
+        }
+      }
+    }
+  }
+}
+
 .gallery {
   display: flex;
   flex-wrap: wrap;
@@ -911,9 +956,6 @@ img {
 
     & .meta.note-page {
        & .dates {
-         display: block;
-        margin: 1rem 0 0 0;
-
         & .update {
           display: block;
           text-transform: none;

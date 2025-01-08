@@ -1,6 +1,6 @@
 ---
 import BaseLayout from '~/layouts/BaseLayout.astro';
-import Tag from '~/components/Tag.astro';
+import Category from '~/components/Category.astro';
 
 const { frontmatter } = Astro.props;
 ---
@@ -18,7 +18,7 @@ const { frontmatter } = Astro.props;
   </Fragment>
   <h1>{frontmatter.title}</h1>
   <p class="meta project-page">
-    <Tag text={frontmatter.status} />
+    <Category text={frontmatter.status} />
     <span class="dates">
       <time datetime={frontmatter.date.toString()}>{frontmatter.date.getFullYear()}</time>{frontmatter.endDate && <>&nbsp;-&nbsp;<time datetime={frontmatter.endDate.toString()}>{frontmatter.endDate.getFullYear()}</time></>}
     </span>
