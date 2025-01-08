@@ -45,8 +45,8 @@ body {
   justify-content: center;
   grid-template-columns: repeat(8, 1fr);
   grid-template-rows: auto auto 1fr;
-  margin: 4rem 0 0 0;
-  min-height: calc(100vh - 4rem);
+  margin: 6rem 0 0 0;
+  min-height: calc(100vh - 6rem);
   min-width: 320px;
   overflow-x: hidden;
 }
@@ -68,8 +68,8 @@ header {
     transform: rotate(-2deg);
     padding: 0.4rem 0.8rem;
     position: absolute;
-    left: 2rem;
-    top: 1rem;
+    left: 1rem;
+    top: 1.2rem;
 
     &:link,
     &:visited {
@@ -815,8 +815,8 @@ img {
 
 @media screen and (max-width: 1000px) {
   body {
-    margin: 4rem 0 0 0;
-    min-height: calc(100vh - 4rem);
+    margin: 6rem 0 0 0;
+    min-height: calc(100vh - 6rem);
   }
 
   header {
