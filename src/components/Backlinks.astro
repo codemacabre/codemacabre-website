@@ -2,14 +2,18 @@
 import fs from 'fs';
 import path from 'path';
 
+import Note from '~/components/Note.astro';
+
 interface ContentModule {
   frontmatter: {
+    category: string;
+    date: string;
+    description: string;
     title: string;
   };
 }
 
 const { pathname } = Astro.url;
-const currentNoteUrl = pathname;
 const allNotes = import.meta.glob('../content/notes/*.mdx', { eager: false });
 
 let notes = await Promise.all(
@@ -42,25 +46,26 @@ notes.forEach(note => {
           backlinksMap[linkedUrl] = [];
         }
         backlinksMap[linkedUrl].push({
-          url,
+          category: frontmatter.category,
+          date: frontmatter.date,
+          description: frontmatter.description,
           title: frontmatter.title,
+          url
         });
       }
     });
   }
 });
 
-const currentBacklinks = backlinksMap[currentNoteUrl] || [];
+const currentBacklinks = backlinksMap[pathname] || [];
 ---
 <section class="backlinks">
   {currentBacklinks.length > 0 && (
     <h2>Backlinks</h2>
-    <ul>
+    <ul class="pages-list">
       {currentBacklinks.map(backlink => {
         return (
-          <li>
-            <a href={backlink.url}>{backlink.title}</a>
-          </li>
+          <Note category={backlink.category} date={backlink.date} description={backlink.description} title={backlink.title} url={backlink.url} />
         )
       })}
     </ul>

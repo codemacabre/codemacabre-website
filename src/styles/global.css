@@ -268,8 +268,6 @@ p {
 
 .backlinks {
   & ul {
-    font-size: 0.8rem;
-
     & li {
       padding: 0 0 0 0.5rem;
     }
@@ -313,14 +311,10 @@ ol {
 
 ul {
   list-style-position: outside;
-  margin: 0 0 0 1.2rem;
+  margin: 2rem 0 2rem 1.2rem;
 
-  &.wider {
-    margin: 2rem 0 2rem 1.2rem;
-
-    &.front-page {
-      margin: 1rem 0 2rem 1.2rem;
-    }
+  &.pages-list {
+    margin: 1rem 0 2rem 1.2rem;
 
     & li {
       margin: 1rem 0;
@@ -334,17 +328,6 @@ ul {
     }
   }
 
-  &.widest {
-    margin: 0;
-
-    & .callout {
-      & p {
-        margin: 0;
-      }
-    }
-
-  }
-
   &.card-container {
     list-style: none;
     margin: 1rem 0;
@@ -354,10 +337,6 @@ ul {
     line-height: 2rem;
     margin: 0.5rem 0 0 0;
     padding: 0 0 0 0.5rem;
-    
-    &.flat {
-      margin: 0.5rem 0 0 -2rem;
-    }
   }
 }
 
@@ -519,6 +498,68 @@ strong {
   justify-content: space-between;
   margin: 0;
   padding: 0;
+}
+
+.rss {
+  margin: 1rem 0 0 0;
+
+  .rss-icon {
+    display: inline-block;
+    height: 1rem;
+    width: 1rem;
+    position: relative;
+    overflow: hidden;
+
+    & .inner-circle {
+      position: absolute;
+      height: 2px;
+      width: 2px;
+      background: var(--dark);
+      border-radius: 50%;
+      bottom: 0;
+      left: 0;
+    }
+
+    & .middle-arc {
+      position: absolute;
+      height: 12px;
+      width: 12px;
+      border-radius: 50%;
+      background: transparent;
+      border: 1px solid var(--dark);
+      left: -7px;
+      bottom: -7px;
+    }
+
+    & .outer-arc {
+      position: absolute;
+      height: 20px;
+      width: 20px;
+      border-radius: 50%;
+      background: transparent;
+      border: 1px solid var(--dark);
+      left: -11px;
+      bottom: -11px;
+    }
+  }
+
+  &:active,
+  &:hover {
+    & .inner-circle {
+      background: var(--haze);
+      transition: 200ms;
+    }
+
+    & .middle-arc {
+      border: 1px solid var(--haze);
+      transition: 200ms;
+    }
+
+    & .outer-arc {
+      border: 1px solid var(--haze);
+      transition: 200ms;
+    }
+  }
 }
 
 blockquote {
