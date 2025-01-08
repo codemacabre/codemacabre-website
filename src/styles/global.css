@@ -438,6 +438,10 @@ ul {
     line-height: 1.4rem;
     margin: 1rem 0 0 0;
   }
+
+  & .tags {
+    margin: 0.4rem 0 0 0;
+  }
 }
 
 .dates {
@@ -724,7 +728,6 @@ a {
 
 .tags {
   font-size: 0.8rem;
-  margin: 1.2rem 0 0 0;
   
   & p {
     font-family: 'source-code-pro-italic', monospace;
@@ -943,6 +946,10 @@ img {
 
     & .meta.note-page {
        & .dates {
+        display: block;
+        line-height: 1.4rem;
+        margin: 1rem 0 0 0;
+
         & .update {
           display: block;
           text-transform: none;
@@ -951,6 +958,10 @@ img {
             content: '';
           }
         }
+      }
+
+      & .tags {
+        margin: 1.2rem 0 0 0;
       }
     }
   }
