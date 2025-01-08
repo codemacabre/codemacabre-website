@@ -432,7 +432,9 @@ ul {
   outline: 1px dashed var(--dark);
   padding: 1rem;
   width: calc(100% - 2rem);
+}
 
+.meta.note-page {
   & .dates {
     display: block;
     line-height: 1.4rem;
@@ -441,6 +443,14 @@ ul {
 
   & .tags {
     margin: 0.4rem 0 0 0;
+  }
+}
+
+.meta.project-page {
+  & .dates {
+    display: inline;
+    line-height: 1.4rem;
+    margin: 1rem 0 0 0;
   }
 }
 
