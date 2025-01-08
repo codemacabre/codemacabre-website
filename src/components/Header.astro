@@ -1,5 +1,5 @@
 ---
-const path = new URL(Astro.request.url).pathname;
+const { pathname } = Astro.url;
 ---
 <header>
   <nav>
@@ -11,21 +11,68 @@ const path = new URL(Astro.request.url).pathname;
       <span class="slice"></span>
       <span class="sr-only">Menu</span>
     </label>
-    <ul class="menu">
+    <ul class="menu" id="main-menu">
       <li class="mobile-only">
-        <a class={path === '/' ? 'selected' : ''} href="/">Home</a>
+        <a class={pathname === '/' ? 'selected' : ''} href="/">Home</a>
       </li>
       <li>
-        <a class={path.includes('/projects') ? 'selected' : ''} href="/projects">Projects</a>
-      </li>
-      <li>
-        <span class="wide-only">/</span>
-        <a class={path.includes('/notes') ? 'selected' : ''} href="/notes">Notes</a>
+        <a class={pathname.includes('/projects') ? 'selected' : ''} href="/projects">Projects</a>
       </li>
       <li>
         <span class="wide-only">/</span>
-        <a class={path.includes('/about') ? 'selected' : ''} href="/about">About</a>
+        <a class={pathname.includes('/notes') ? 'selected' : ''} href="/notes">Notes</a>
+      </li>
+      <li>
+        <span class="wide-only">/</span>
+        <a class={pathname.includes('/about') ? 'selected' : ''} href="/about">About</a>
       </li>
     </ul>
   </nav>
 </header>
+
+<script>
+  const menuInput = document.querySelector('#main-menu-toggle') as HTMLInputElement;
+  const menu = document.querySelector('#main-menu') as HTMLUListElement;
+
+  menuInput.addEventListener('change', () => {
+    if (menuInput.checked) {
+      menu.setAttribute('aria-hidden', 'false');
+      trapFocus(menu);
+    } else {
+      menu.setAttribute('aria-hidden', 'true');
+      menuInput.focus();
+    }
+  });
+
+  menuInput.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') {
+      menuInput.checked = !menuInput.checked;
+    }
+  });
+
+  const trapFocus = (menu) => {
+    const focusableElements = menu.querySelectorAll('a');
+    
+    const menuItems = [menuInput, ...focusableElements];
+    const firstMenuItem = menuItems[0];
+    const lastMenuItem = menuItems[menuItems.length - 1];
+
+    firstMenuItem.focus();
+
+    menu.addEventListener('keydown', (e) => {
+      if (e.key === 'Tab') {
+        if (e.shiftKey) {
+          if (document.activeElement === firstMenuItem) {
+            e.preventDefault();
+            lastMenuItem.focus();
+          }
+        } else {
+          if (document.activeElement === lastMenuItem) {
+            e.preventDefault();
+            firstMenuItem.focus();
+          }
+        }
+      }
+    });
+  }
+</script>
