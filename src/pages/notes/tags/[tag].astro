@@ -9,9 +9,12 @@ export async function getStaticPaths() {
 
   return uniqueTags.map((tag) => {
     const filteredNotes = allNotes.filter((note: any) => note.data.tags.includes(tag));
+    const sortedNotes = filteredNotes.sort((a, b) => {
+      return new Date(b.data.date).getTime() - new Date(a.data.date).getTime();
+    });
     return {
       params: { tag },
-      props: { notes: filteredNotes }
+      props: { notes: sortedNotes }
     };
   });
 }
