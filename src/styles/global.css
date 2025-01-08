@@ -862,8 +862,8 @@ img {
 
 @media screen and (max-width: 1000px) {
   body {
-    margin: 6rem 0 0 0;
-    min-height: calc(100vh - 6rem);
+    margin: 4rem 0 0 0;
+    min-height: calc(100vh - 4rem);
   }
 
   header {
@@ -973,7 +973,7 @@ img {
       }
 
       & .tags {
-        margin: 1.2rem 0 0 0;
+        margin: 1rem 0 0 0;
       }
     }
   }
