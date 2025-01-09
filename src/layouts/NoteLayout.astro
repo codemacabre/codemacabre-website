@@ -45,7 +45,7 @@ const options: Intl.DateTimeFormatOptions = {
             <>
               {tags.map((tag, index) => (
                 <>
-                  <a class="custom-tag" href={`/notes/tags/${tag.toLowerCase()}`}>{tag}</a>{index < tags.length - 2 ? ', ' : index === tags.length - 2 ? ', and ' : ''}
+                  <a class="custom-tag" href={`/tags/${tag.toLowerCase()}`}>{tag}</a>{index < tags.length - 2 ? ', ' : index === tags.length - 2 ? ', and ' : ''}
                 </>
               ))}
             </>

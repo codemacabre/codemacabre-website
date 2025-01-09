@@ -24,18 +24,10 @@ const { notes } = Astro.props;
 ---
 <BaseLayout pageTitle={`Notes tagged with '${tag.toLowerCase()}'`}>
   <div class="heading-and">
-    <h1>Notes</h1>
-    <a class="rss right" href="/rss.xml">
-      RSS
-      <div class="rss-icon">
-        <span class="inner-circle"></span>
-        <span class="middle-arc"></span>
-        <span class="outer-arc"></span>
-      </div>
-    </a>
+    <h1>Notes tagged with '{tag.toLowerCase()}'</h1>
   </div>
-  <p>All notes tagged with '{tag.toLowerCase()}'.</p>
   <ul class="pages-list">
     {notes.map((note) => <Note category={note.data.category} date={note.data.date} description={note.data.description} title={note.data.title} url={`/notes/${note.slug}/`} />)}
   </ul>
+  <p class="right"><a href="/tags/">See all tags</a></p>
 </BaseLayout>
