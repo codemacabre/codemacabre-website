@@ -705,9 +705,19 @@ a {
     outline: 1px dashed var(--dark);
   }
 
+  &:has(code) {
+    padding: 0;
+  }
+  
+  & code {
+    border-bottom: 1px dashed var(--dark);
+  }
+    
+
   &:active code,
+  &:focus code,
   &:hover code {
-    background-color: var(--gloom);
+    background-color: var(--dark);
     color: var(--haze);
     transition: 200ms;
   }
