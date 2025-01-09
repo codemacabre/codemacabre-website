@@ -13,7 +13,6 @@ A backlink connects notes that reference other notes. Making [Astro](https://ast
 
 ```js
 import { getCollection } from 'astro:content';
-import Note from '~/components/Note.astro';
 
 const { pathname } = Astro.url;
 const allNotes = await getCollection('notes');
