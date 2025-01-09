@@ -11,10 +11,12 @@ const sortedTags = uniqueTags.sort((a, b) => a.localeCompare(b));
   <div class="heading-and">
     <h1>All tags</h1>
   </div>
-  <p class="tags">Notes have been tagged with
+  <div class="tags">
+  <p class="tag-page">Notes have been tagged with
     {sortedTags.map((tag, index) => (
       <>
         <a class="custom-tag" href={`/tags/${tag.toLowerCase()}`}>{tag}</a>{index < sortedTags.length - 2 ? ', ' : index === sortedTags.length - 2 ? ', and ' : ''}
       </>
     ))}.</p>
+  </div>
 </BaseLayout>

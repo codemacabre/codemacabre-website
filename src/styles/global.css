@@ -774,20 +774,30 @@ a {
     line-height: 1.4rem;
     margin: -0.4rem 0 0 0;
     padding: 0;
-  }
-    
-  & .custom-tag {
-    background: var(--haze);
-    font-family: 'source-code-pro', monospace;
-    font-size: 1rem;
-    margin: 0;
-    padding: 0 0.2rem 0.1rem 0.2rem;
-    text-transform: lowercase;
 
-    &:active,
-    &:focus,
-    &:hover {
-      background: var(--dark);
+    & .custom-tag {
+      background: transparent;
+      font-family: 'source-code-pro', monospace;
+      font-size: 1rem;
+      margin: 0;
+      padding: 0 0.2rem 0.1rem 0.2rem;
+      text-transform: lowercase;
+  
+      &:active,
+      &:focus,
+      &:hover {
+        background: var(--dark);
+      }
+    }
+
+    &.tag-page {
+      font-family: 'source-code-pro', monospace;
+      line-height: 2rem;
+      margin: 1rem 0 0 0;
+
+      & .custom-tag {
+        padding: 0.2rem 0.4rem;
+      }
     }
   }
 }
