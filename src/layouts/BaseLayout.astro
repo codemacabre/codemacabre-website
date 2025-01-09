@@ -21,7 +21,7 @@ const { pageTitle } = Astro.props;
 		<link rel="icon" type="image/svg+xml" href="/images/favicon.svg?v=3" />
 
     <slot name="head">
-      <meta property="og:title" content={pageTitle ? `${pageTitle} / Code Macabre` : 'Code Macabre'} />
+      <meta property="og:title" content={pageTitle ? pageTitle : 'Code Macabre'} />
       <meta property="og:description" content="The notes and projects of Myles Lewando, data visualisation developer and designer." />
       <meta property="og:url" content={Astro.url} />
       <meta property="og:type" content="website" />
