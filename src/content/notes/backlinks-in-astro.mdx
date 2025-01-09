@@ -4,6 +4,7 @@ date: 2025-01-08
 description: "A guide to automatic backlinking in Astro"
 tags: ["astro", "code", "guide", "pkm"]
 title: Backlinks in Astro
+update: 2025-01-09
 ---
 
 As part of my ongoing effort to [plant a digital garden](/notes/digital-garden/), one feature I wanted to implement was backlinking.
@@ -11,22 +12,19 @@ As part of my ongoing effort to [plant a digital garden](/notes/digital-garden/)
 A backlink connects notes that reference other notes. Making [Astro](https://astro.build) automatically add backlinks to each referenced note involved a lot of research and experimentation, but I finally achieved it with the following code:
 
 ```js
-import fs from 'fs';
-import path from 'path';
+import { getCollection } from 'astro:content';
+import Note from '~/components/Note.astro';
 
 const { pathname } = Astro.url;
-const allNotes = import.meta.glob('../content/notes/*.mdx', { eager: false });
+const allNotes = await getCollection('notes');
+console.log(Object.entries(allNotes))
 
 let notes = await Promise.all(
-  Object.entries(allNotes).map(async ([key, loader]) => {
-    const url = key.replace('../content/notes/', '/notes/').replace('.mdx', '/');
-    const contentModule = await loader();
-    const filePath = path.resolve('./src/content/notes', key.replace('../content/notes/', ''));
-    const rawContent = fs.readFileSync(filePath, 'utf-8');
+  Object.entries(allNotes).map(([key, note]) => {
     return {
-      frontmatter: contentModule.frontmatter,
-      url,
-      rawContent,
+      frontmatter: note.data,
+      rawContent: note.body,
+      url: `/notes/${note.slug}`
     };
   })
 );
@@ -47,10 +45,7 @@ notes.forEach(note => {
           backlinksMap[linkedUrl] = [];
         }
         backlinksMap[linkedUrl].push({
-          category: frontmatter.category,
-          date: frontmatter.date,
-          description: frontmatter.description,
-          title: frontmatter.title,
+          frontmatter,
           url
         });
       }

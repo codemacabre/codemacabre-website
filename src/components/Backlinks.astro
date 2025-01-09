@@ -1,31 +1,17 @@
 ---
-import fs from 'fs';
-import path from 'path';
-
+import { getCollection } from 'astro:content';
 import Note from '~/components/Note.astro';
 
-interface ContentModule {
-  frontmatter: {
-    category: string;
-    date: string;
-    description: string;
-    title: string;
-  };
-}
-
 const { pathname } = Astro.url;
-const allNotes = import.meta.glob('../content/notes/*.mdx', { eager: false });
+const allNotes = await getCollection('notes');
+console.log(Object.entries(allNotes))
 
 let notes = await Promise.all(
-  Object.entries(allNotes).map(async ([key, loader]) => {
-    const url = key.replace('../content/notes/', '/notes/').replace('.mdx', '/');
-    const contentModule = await loader() as ContentModule;
-    const filePath = path.resolve('./src/content/notes', key.replace('../content/notes/', ''));
-    const rawContent = fs.readFileSync(filePath, 'utf-8');
+  Object.entries(allNotes).map(([key, note]) => {
     return {
-      frontmatter: contentModule.frontmatter,
-      url,
-      rawContent,
+      frontmatter: note.data,
+      rawContent: note.body,
+      url: `/notes/${note.slug}`
     };
   })
 );
@@ -46,10 +32,7 @@ notes.forEach(note => {
           backlinksMap[linkedUrl] = [];
         }
         backlinksMap[linkedUrl].push({
-          category: frontmatter.category,
-          date: frontmatter.date,
-          description: frontmatter.description,
-          title: frontmatter.title,
+          frontmatter,
           url
         });
       }
@@ -65,7 +48,7 @@ const currentBacklinks = backlinksMap[pathname] || [];
     <ul class="pages-list">
       {currentBacklinks.map(backlink => {
         return (
-          <Note category={backlink.category} date={backlink.date} description={backlink.description} title={backlink.title} url={backlink.url} />
+          <Note category={backlink.frontmatter.category} date={backlink.frontmatter.date} description={backlink.frontmatter.description} title={backlink.frontmatter.title} url={backlink.url} />
         )
       })}
     </ul>
