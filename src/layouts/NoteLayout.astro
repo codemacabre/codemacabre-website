@@ -35,11 +35,11 @@ const options: Intl.DateTimeFormatOptions = {
         Tagged with
         {
           tags.length === 1 ? (
-            <a class="custom-tag" href={`/notes/tags/${tags[0].toLowerCase()}`}>{tags[0]}</a>
+            <a class="custom-tag" href={`/tags/${tags[0].toLowerCase()}`}>{tags[0]}</a>
           ) : frontmatter.tags.length === 2 ? (
             <>
-              <a class="custom-tag" href={`/notes/tags/${tags[0].toLowerCase()}`}>{tags[0]}</a> and 
-              <a class="custom-tag" href={`/notes/tags/${tags[1].toLowerCase()}`}>{tags[1]}</a>
+              <a class="custom-tag" href={`/tags/${tags[0].toLowerCase()}`}>{tags[0]}</a> and 
+              <a class="custom-tag" href={`/tags/${tags[1].toLowerCase()}`}>{tags[1]}</a>
             </>
           ) : (
             <>
