@@ -23,7 +23,9 @@ const allNotes = await getCollection('notes');
 
 ## 2. Extract links from note content
 
-Next, we need to find and extract any links in our notes. Regex is useful here, as markdown links follow a consistent format, `[text](url)`. We'll also create an empty object which we'll add every link our regex finds.
+Next, we need to find and extract any links in our notes. Regex is useful here, as markdown links follow a consistent format, `[text](url)`.
+
+We'll also create an empty object to hold the links our regex finds.
 
 ```js
 const linkRegex = /\[.*?\]\((.*?)\)/g;
@@ -50,7 +52,9 @@ if (links) {
 }
 ```
 
-We need to populate our `allLinks` object with each extracted link. First, we'll check the link doesn't already exist in the object, and initialise it with an array if not, then `push()` some data into the array. Within the `links.forEach()` loop, add the following:
+We need to populate our `allLinks` object with each extracted link. First, we'll check the link doesn't already exist in the object, and initialise it with an array if not, then `push()` some data into the array.
+
+Within the `links.forEach()` loop, add the following:
 
 ```js
 if (linkUrl) {
@@ -74,15 +78,17 @@ Now we have an object containing all the links in every note, we need to cross-r
 const { pathname } = Astro.url;
 ```
 
-We're destructuring the `pathname` from the current URL and we can create a new `backlinks` object built by checking for the current path.
+We're destructuring the `pathname` from the current URL and we can use it to create a new array built by checking for matching entries in `allLinks`.
 
 ```js
 const backlinks = allLinks[pathname] || [];
 ```
 
+Now we have an array of backlinks for each note.
+
 ## 4. Final code
 
-Here's the complete code for generating backlinks.
+Here's the complete code.
 
 ```js
 import { getCollection } from 'astro:content';
@@ -115,4 +121,4 @@ allNotes.forEach((note) => {
 const backlinks = allLinks[pathname] || [];
 ```
 
- Now we have this backlinks array, we could put this into the code fence at the top of a component, then iterate over the array to populate a list of backlinks for each note.
+ We could put this into the code fence at the top of a component, then iterate over the `backlinks` array to populate a list of backlinks for each note, which is exactly what I've done for my own notes.
