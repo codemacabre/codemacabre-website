@@ -4,7 +4,6 @@ import Note from '~/components/Note.astro';
 
 const { pathname } = Astro.url;
 const allNotes = await getCollection('notes');
-console.log(Object.entries(allNotes))
 
 let notes = await Promise.all(
   Object.entries(allNotes).map(([key, note]) => {
