@@ -33,7 +33,7 @@ const backlinks = allLinks[pathname] || [];
   {backlinks.length > 0 && (
     <h2>Backlinks</h2>
     <ul class="pages-list">
-      {backlinks.map(backlink => (
+      {backlinks.map((backlink) => (
         <Note category={backlink.frontmatter.category} date={backlink.frontmatter.date} title={backlink.frontmatter.title} url={backlink.url} />
       ))}
     </ul>

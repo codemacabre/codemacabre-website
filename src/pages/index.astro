@@ -14,7 +14,7 @@ const sortedNotes = allNotes.sort((a, b) => {
   <h2>
     Featured project
   </h2>
-  {allProjects.map(project =>
+  {allProjects.map((project) =>
     project.data.featured && (
       <a class="feature" href={`/projects/${project.slug}/`}>
         <div>

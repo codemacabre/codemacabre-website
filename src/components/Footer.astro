@@ -34,7 +34,7 @@ if (date) {
 // Insert email address
 const mail = document.querySelectorAll('.mail')
 if (mail.length > 0) {
-  mail.forEach(e => {
+  mail.forEach((e) => {
     const text = e.textContent
     e.innerHTML = addEmail(text)
   })

@@ -5,10 +5,10 @@ import Note from '~/components/Note.astro';
 
 export async function getStaticPaths() {
   const allNotes = await getCollection('notes');
-  const uniqueTags = [...new Set(allNotes.map((note: any) => note.data.tags).flat())];
+  const uniqueTags = [...new Set(allNotes.map((note) => note.data.tags).flat())];
 
   return uniqueTags.map((tag) => {
-    const filteredNotes = allNotes.filter((note: any) => note.data.tags.includes(tag));
+    const filteredNotes = allNotes.filter((note) => note.data.tags.includes(tag));
     const sortedNotes = filteredNotes.sort((a, b) => {
       return new Date(b.data.date).getTime() - new Date(a.data.date).getTime();
     });
@@ -36,6 +36,6 @@ const { notes } = Astro.props;
   </div>
   <p>All notes tagged with '{tag.toLowerCase()}'.</p>
   <ul class="pages-list">
-    {notes.map((note: any) => <Note category={note.data.category} date={note.data.date} description={note.data.description} title={note.data.title} url={`/notes/${note.slug}/`} />)}
+    {notes.map((note) => <Note category={note.data.category} date={note.data.date} description={note.data.description} title={note.data.title} url={`/notes/${note.slug}/`} />)}
   </ul>
 </BaseLayout>
