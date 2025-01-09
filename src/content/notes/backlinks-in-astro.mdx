@@ -32,7 +32,7 @@ const backlinksMap = {};
 const linkRegex = /\[.*?\]\((.*?)\)/g;
 
 notes.forEach(note => {
-  const { url, rawContent, frontmatter } = note;
+  const { frontmatter, rawContent, url } = note;
   const matches = [...rawContent.matchAll(linkRegex)];
   
   if (matches) {
