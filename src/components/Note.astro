@@ -14,6 +14,6 @@ const options: Intl.DateTimeFormatOptions = {
     <Tag text={category} />
     <span class="dates">(<time datetime={date.toString()}>{new Date(date).toLocaleDateString('en-GB', options)}</time>)</span>
   </div>
-  <p class="description">{description}</p>
+  { description && <p class="description">{description}</p>}
 </li>
 
