@@ -286,7 +286,9 @@ p {
     margin: 1rem 0 0 1.6rem;
     text-indent: 0;
 
-    & li {     
+    & li {
+      line-height: unset;
+
       & a.data-footnote-backref {
         display: inline-block;
         margin: -0.2rem 0 0 0;
@@ -299,10 +301,11 @@ p {
 
 ol {
   list-style-position: outside;
-  margin: 2rem 0 0 1.8rem;
+  margin: 2rem 0 2rem 1.8rem;
 
   & li {
-    margin: 0 0 1rem 0;
+    line-height: 2rem;
+    margin: 0.5rem 0 0 0;
 
     & p {
       display: inline;
