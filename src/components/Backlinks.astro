@@ -3,49 +3,37 @@ import { getCollection } from 'astro:content';
 import Note from '~/components/Note.astro';
 
 const { pathname } = Astro.url;
+const allLinks = {};
 const allNotes = await getCollection('notes');
-
-let notes = await Promise.all(
-  Object.entries(allNotes).map(([key, note]) => {
-    return {
-      frontmatter: note.data,
-      rawContent: note.body,
-      url: `/notes/${note.slug}`
-    };
-  })
-);
-
-const backlinksMap = {};
 const linkRegex = /\[.*?\]\((.*?)\)/g;
 
-notes.forEach(note => {
-  const { frontmatter, rawContent, url } = note;
-  const matches = [...rawContent.matchAll(linkRegex)];
+allNotes.forEach((note) => {
+  const links = [...note.body.matchAll(linkRegex)];
   
-  if (matches) {
-    matches.forEach(match => {
-      const linkedUrl = match[1];
+  if (links) {
+    links.forEach((link) => {
+      const linkUrl = link[1];
 
-      if (linkedUrl) {
-        if (!backlinksMap[linkedUrl]) {
-          backlinksMap[linkedUrl] = [];
+      if (linkUrl) {
+        if (!allLinks[linkUrl]) {
+          allLinks[linkUrl] = [];
         }
-        backlinksMap[linkedUrl].push({
-          frontmatter,
-          url
+        allLinks[linkUrl].push({
+          frontmatter: note.data,
+          url: `/notes/${note.slug}`
         });
       }
     });
   }
 });
 
-const currentBacklinks = backlinksMap[pathname] || [];
+const backlinks = allLinks[pathname] || [];
 ---
 <section class="backlinks">
-  {currentBacklinks.length > 0 && (
+  {backlinks.length > 0 && (
     <h2>Backlinks</h2>
     <ul class="pages-list">
-      {currentBacklinks.map(backlink => {
+      {backlinks.map(backlink => {
         return (
           <Note category={backlink.frontmatter.category} date={backlink.frontmatter.date} description={backlink.frontmatter.description} title={backlink.frontmatter.title} url={backlink.url} />
         )
