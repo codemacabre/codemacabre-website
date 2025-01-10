@@ -4,7 +4,7 @@ import { loadRenderers } from 'astro:container';
 import { getCollection } from 'astro:content';
 import rss from '@astrojs/rss';
 
-export async function GET(context) {
+export const GET = async (context) => {
   const renderers = await loadRenderers([getMDXRenderer()]);
   const container = await AstroContainer.create({ renderers });
   const notes = await getCollection('notes');

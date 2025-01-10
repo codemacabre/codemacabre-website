@@ -3,7 +3,7 @@ import { getCollection } from 'astro:content';
 import BaseLayout from '~/layouts/BaseLayout.astro';
 import Note from '~/components/Note.astro';
 
-export async function getStaticPaths() {
+export const getStaticPaths = async () => {
   const allNotes = await getCollection('notes');
   const uniqueTags = [...new Set(allNotes.map((note) => note.data.tags).flat())];
 
@@ -19,7 +19,7 @@ export async function getStaticPaths() {
   });
 }
 
-const { tag } = Astro.params;
+const { tag } = Astro.params as { tag: string };
 const { notes } = Astro.props;
 ---
 <BaseLayout pageTitle={`Notes tagged with '${tag.toLowerCase()}'`}>
