@@ -140,6 +140,12 @@ header {
           &.mobile-only {
             display: none;
           }
+
+          &:not(:last-of-type) {
+            &::after {
+              content: ' / ';
+            }
+          }
         }
       }
     }
@@ -944,6 +950,12 @@ img {
 
           &:first-of-type {
             margin: 0;
+          }
+
+          &:nth-of-type(n) {
+            &::after {
+              content: '';
+            }
           }
         }
 

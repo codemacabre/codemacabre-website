@@ -19,11 +19,9 @@ const { pathname } = Astro.url;
         <a class={pathname.includes('/projects') ? 'selected' : ''} href="/projects">Projects</a>
       </li>
       <li>
-        <span class="wide-only">/</span>
         <a class={pathname.includes('/notes') ? 'selected' : ''} href="/notes">Notes</a>
       </li>
       <li>
-        <span class="wide-only">/</span>
         <a class={pathname.includes('/about') ? 'selected' : ''} href="/about">About</a>
       </li>
     </ul>
