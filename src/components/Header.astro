@@ -50,6 +50,14 @@ const { pathname } = Astro.url;
     }
   });
 
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && menuInput.checked) {
+      menuInput.checked = !menuInput.checked;
+      menu.setAttribute('aria-hidden', 'true');
+      menuInput.focus();
+    }
+  });
+
   const trapFocus = (menu) => {
     const focusableElements = menu.querySelectorAll('a');
     
