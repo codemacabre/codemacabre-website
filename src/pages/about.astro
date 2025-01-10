@@ -2,7 +2,7 @@
 import { Image } from 'astro:assets';
 import { getCollection } from 'astro:content';
 import BaseLayout from '~/layouts/BaseLayout.astro';
-import selfImage from '~/assets/images/self.png';
+import selfImg from '~/assets/images/self.png';
 import selfData from '~/assets/data/self.json';
 import booksData from '~/assets/data/books.json';
 
@@ -28,13 +28,13 @@ booksData.forEach((book) => {
   <h2>{pageTitle}</h2>
   <p>Welcome to Code Macabre!</p>
   <p>
-    This is the portfolio and personal site of me, Myles Lewando (he&#8288;/&#8288;him), a developer, designer, and data visualisation and accessibility specialist.
+    This is the personal site of me, Myles Lewando (he&#8288;/&#8288;him), a developer, designer, and data visualisation and accessibility specialist.
   </p>
   <p>I began freelancing as a web developer in 2016, then formally changed career to become a full-time developer in 2019. My background is in education, data visualisation (particularly geospatial), and design.</p>
   <p>Inclusive, ethical technology and upholding data justice principles are core to my work and my values.</p>
   <Image
     class="small center circle"
-    src={selfImage}
+    src={selfImg}
     alt="A black and white grainy photo of my head and shoulders. I have a long pointy beard and a mohawk, with a black censored bar across my eyes"
   />
   <h3 id="now">Now</h3>
@@ -46,12 +46,12 @@ booksData.forEach((book) => {
   <ul class="indented">
     {selfData.pets.map((pet) => <li>{pet.count}x {pet.species_en} <em>({pet.species_la})</em></li>)}
   </ul>
-  <p>&hellip;and one human child.</p>
+  <p>...and one human child.</p>
   <p>
     As morbid as it sounds, I love <a href="/notes/on-graveyards">cemeteries</a>, crypts, and catacombs. Where possible, I try to visit weird and unusual ones, or just take a quiet walk around a local one.
   </p>
   <h3 id="contact">Contact</h3>
   <p>Get in touch via <span class="mail">email</span><noscript> at contact (at) codemacabre (dot) com</noscript>, or reach out on <a href="https://social.coop/@codemacabre">Mastodon</a> or <a href="https://www.linkedin.com/in/codemacabre/">LinkedIn</a>.</p>
   <h3 class="sr-only">Disclaimer</h3>
-  <p class="callout">The views, opinions, and projects on this site are my own, and do not necessarily reflect those of my employer.</p>
+  <p class="callout">The views and opinions on this site are my own, and do not necessarily reflect those of my employer.</p>
 </BaseLayout>
