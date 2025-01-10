@@ -36,7 +36,7 @@ const options: Intl.DateTimeFormatOptions = {
         {
           tags.length === 1 ? (
             <a class="custom-tag" href={`/tags/${tags[0].toLowerCase()}`}>{tags[0]}</a>
-          ) : frontmatter.tags.length === 2 ? (
+          ) : tags.length === 2 ? (
             <>
               <a class="custom-tag" href={`/tags/${tags[0].toLowerCase()}`}>{tags[0]}</a> and 
               <a class="custom-tag" href={`/tags/${tags[1].toLowerCase()}`}>{tags[1]}</a>

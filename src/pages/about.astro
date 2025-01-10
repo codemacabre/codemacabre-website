@@ -6,11 +6,22 @@ import selfImg from '~/assets/images/self.png';
 import selfData from '~/assets/data/self.json';
 import booksData from '~/assets/data/books.json';
 
+interface Project {
+  slug: string;
+  data: {
+    current: boolean;
+    date: Date;
+    title: string;
+  };
+}
+
 const pageTitle = 'About';
 const allNotes = await getCollection('notes');
+const allProjects = await getCollection('projects');
 
 let notesWritten = 0;
 let booksRead = 0;
+let currentProjects: Project[] = [];
 
 allNotes.forEach((note) => {
   if (note.data.date.getFullYear() === new Date().getFullYear()) {
@@ -22,6 +33,16 @@ booksData.forEach((book) => {
   if (Number(book.year) === new Date().getFullYear()) {
     booksRead++;
   }
+});
+
+allProjects.forEach((project) => {
+  if (project.data.current) {
+    currentProjects.push(project);
+  }
+});
+
+currentProjects.sort((a, b) => {
+  return a.data.title.localeCompare(b.data.title);
 });
 ---
 <BaseLayout pageTitle={pageTitle}>
@@ -39,7 +60,28 @@ booksData.forEach((book) => {
   />
   <h3 id="now">Now</h3>
   <p>
-    I've been working as a {selfData.organisation.position} at <a href={selfData.organisation.url}>{selfData.organisation.name}</a> since {selfData.organisation.startDate}.</p>
+    I've been working as a {selfData.organisation.position} at <a href={selfData.organisation.url}>{selfData.organisation.name}</a> since {selfData.organisation.startDate}. {currentProjects.length > 0 && (
+      <>Outside of work, I'm currently spending time on my personal project{currentProjects.length === 1 ? '' : 's'}
+        {
+          currentProjects.length === 1 ? (
+            <> <a href={`/projects/${currentProjects[0].slug}`}>{currentProjects[0].data.title}</a>.</>
+          ) : currentProjects.length === 2 ? (
+            <>
+              <a href={`/projects/${currentProjects[0].slug}`}>{currentProjects[0].data.title}</a> and 
+              <a href={`/projects/${currentProjects[1].slug}`}>{currentProjects[1].data.title}</a>.
+            </>
+          ) : (
+            <>
+              {currentProjects.map((project, index) => (
+                <>
+                  <a href={`/projects/${project.slug}`}>{project.data.title}</a>{index < currentProjects.length - 2 ? ', ' : index === currentProjects.length - 2 ? ', and ' : ''}
+                </>
+              ))}.</>
+          )
+        }
+      </>
+    )}
+  </p>
   <p>So far this year, I've <a href="/notes">written {notesWritten} {notesWritten === 1 ? 'note' : 'notes'}</a> and <a href="/reading">read {booksRead} {booksRead === 1 ? 'book' : 'books'}</a>.</p>
   <h3 id="fun-facts">Fun facts</h3>
   <p>My household includes a menagerie of multi-legged pets of various species, including:</p>

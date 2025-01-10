@@ -15,6 +15,7 @@ const notesCollection = defineCollection({
 const projectsCollection = defineCollection({
   type: 'content',
   schema: () => z.object({
+    current: z.boolean(),
     date: z.date(),
     description: z.string(),
     endDate: z.date().optional(),
