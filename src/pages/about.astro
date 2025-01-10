@@ -46,7 +46,7 @@ currentProjects.sort((a, b) => {
 });
 ---
 <BaseLayout pageTitle={pageTitle}>
-  <h2>{pageTitle}</h2>
+  <h1>{pageTitle}</h1>
   <p>Welcome to Code Macabre!</p>
   <p>
     This is the personal site of me, Myles Lewando (he&#8288;/&#8288;him), a developer, designer, and data visualisation and accessibility specialist.
@@ -58,7 +58,7 @@ currentProjects.sort((a, b) => {
     src={selfImg}
     alt="A black and white grainy photo of my head and shoulders. I have a long pointy beard and a mohawk, with a black censored bar across my eyes"
   />
-  <h3 id="now">Now</h3>
+  <h2 id="now">Now</h2>
   <p>
     I've been working as a {selfData.organisation.position} at <a href={selfData.organisation.url}>{selfData.organisation.name}</a> since {selfData.organisation.startDate}. {currentProjects.length > 0 && (
       <>Outside of work, I'm currently spending time on my personal project{currentProjects.length === 1 ? '' : 's'},
@@ -83,7 +83,7 @@ currentProjects.sort((a, b) => {
     )}
   </p>
   <p>So far this year, I've <a href="/notes">written {notesWritten} {notesWritten === 1 ? 'note' : 'notes'}</a> and <a href="/reading">read {booksRead} {booksRead === 1 ? 'book' : 'books'}</a>.</p>
-  <h3 id="fun-facts">Fun facts</h3>
+  <h2 id="fun-facts">Fun facts</h2>
   <p>My household includes a menagerie of multi-legged pets of various species, including:</p>
   <ul class="indented">
     {selfData.pets.map((pet) => <li>{pet.count}x {pet.species_en} <em>({pet.species_la})</em></li>)}
@@ -92,8 +92,8 @@ currentProjects.sort((a, b) => {
   <p>
     As morbid as it sounds, I love <a href="/notes/on-graveyards">cemeteries</a>, crypts, and catacombs. Whenever possible, I try to visit weird and unusual ones, or just take a quiet walk around a local one.
   </p>
-  <h3 id="contact">Contact</h3>
+  <h2 id="contact">Contact</h2>
   <p>Get in touch via <span class="mail">email</span><noscript> at contact (at) codemacabre (dot) com</noscript>, or reach out on <a href="https://social.coop/@codemacabre">Mastodon</a> or <a href="https://www.linkedin.com/in/codemacabre/">LinkedIn</a>.</p>
-  <h3 class="sr-only">Disclaimer</h3>
+  <h2 class="sr-only">Disclaimer</h2>
   <p class="callout">The views and opinions on this site are my own, and do not necessarily reflect those of my employer.</p>
 </BaseLayout>
