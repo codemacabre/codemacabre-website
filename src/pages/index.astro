@@ -18,7 +18,7 @@ const featuredProjects = sortedProjects.filter((project) => project.data.feature
 ---
 <BaseLayout>
   <h1 class="sr-only">Code Macabre</h1>
-  <h2>
+  <h2 class="front-page">
     Featured project{featuredProjects.length > 1 && 's'}
   </h2>
   {featuredProjects.map((project) => (
@@ -29,7 +29,7 @@ const featuredProjects = sortedProjects.filter((project) => project.data.feature
     </a>
   ))}
   <p class="right"><a href="/projects">See all projects</a></p>
-  <h2>
+  <h2 class="front-page">
     Latest notes
   </h2>
   <ul class="pages-list">
