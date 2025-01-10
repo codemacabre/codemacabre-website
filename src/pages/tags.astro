@@ -4,7 +4,7 @@ import BaseLayout from '~/layouts/BaseLayout.astro';
 
 const allNotes = await getCollection('notes');
 const uniqueTags = [...new Set(allNotes.map((note) => note.data.tags).flat())];
-const sortedTags = uniqueTags.sort((a, b) => a.localeCompare(b));
+uniqueTags.sort((a, b) => a.localeCompare(b));
 
 ---
 <BaseLayout pageTitle="All tags">
@@ -13,9 +13,9 @@ const sortedTags = uniqueTags.sort((a, b) => a.localeCompare(b));
   </div>
   <div class="tags">
   <p class="tag-page">Notes have been tagged with
-    {sortedTags.map((tag, index) => (
+    {uniqueTags.map((tag, index) => (
       <>
-        <a class="custom-tag" href={`/tags/${tag.toLowerCase()}`}>{tag}</a>{index < sortedTags.length - 2 ? ', ' : index === sortedTags.length - 2 ? ', and ' : ''}
+        <a class="custom-tag" href={`/tags/${tag.toLowerCase()}`}>{tag}</a>{index < uniqueTags.length - 2 ? ', ' : index === uniqueTags.length - 2 ? ', and ' : ''}
       </>
     ))}.</p>
   </div>
