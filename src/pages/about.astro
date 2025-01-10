@@ -61,7 +61,7 @@ currentProjects.sort((a, b) => {
   <h3 id="now">Now</h3>
   <p>
     I've been working as a {selfData.organisation.position} at <a href={selfData.organisation.url}>{selfData.organisation.name}</a> since {selfData.organisation.startDate}. {currentProjects.length > 0 && (
-      <>Outside of work, I'm currently spending time on my personal project{currentProjects.length === 1 ? '' : 's'}
+      <>Outside of work, I'm currently spending time on my personal project{currentProjects.length === 1 ? '' : 's'},
         {
           currentProjects.length === 1 ? (
             <> <a href={`/projects/${currentProjects[0].slug}`}>{currentProjects[0].data.title}</a>.</>
@@ -90,7 +90,7 @@ currentProjects.sort((a, b) => {
   </ul>
   <p>...and one human child.</p>
   <p>
-    As morbid as it sounds, I love <a href="/notes/on-graveyards">cemeteries</a>, crypts, and catacombs. Where possible, I try to visit weird and unusual ones, or just take a quiet walk around a local one.
+    As morbid as it sounds, I love <a href="/notes/on-graveyards">cemeteries</a>, crypts, and catacombs. Whenever possible, I try to visit weird and unusual ones, or just take a quiet walk around a local one.
   </p>
   <h3 id="contact">Contact</h3>
   <p>Get in touch via <span class="mail">email</span><noscript> at contact (at) codemacabre (dot) com</noscript>, or reach out on <a href="https://social.coop/@codemacabre">Mastodon</a> or <a href="https://www.linkedin.com/in/codemacabre/">LinkedIn</a>.</p>
