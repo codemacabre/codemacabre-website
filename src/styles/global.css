@@ -655,6 +655,11 @@ blockquote {
     transform: skew(10deg);
     z-index: -1;
   }
+
+  & sub,
+  & sup {
+    font-family: 'source-code-pro', monospace;
+  }
 }
 
 hr {
@@ -669,7 +674,8 @@ hr {
   }
 }
 
-sup, sub {
+sub,
+sup {
   font-size: 0.6rem;
   line-height: 1rem;
 }
