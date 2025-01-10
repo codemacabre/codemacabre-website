@@ -397,7 +397,7 @@ ul {
     width: 100px;
     z-index: -1;
     
-    .banner {
+    & .banner {
       font-size: 0.8rem;
       width: 200px;
       padding: 0 2rem;
@@ -534,7 +534,7 @@ strong {
   margin: 2rem 0;
   padding: 1rem;
 
-  > p:first-child {
+  & > p:first-child {
     margin: 0;
   }
 }
@@ -550,7 +550,7 @@ strong {
 .rss {
   margin: 1rem 0 0 0;
 
-  .rss-icon {
+  & .rss-icon {
     display: inline-block;
     height: 1rem;
     width: 1rem;
@@ -999,7 +999,7 @@ img {
       font-size: 2rem;
     }
     
-    h2 {
+    & h2 {
       font-size: 1.6rem;
     
       &.front-page {
@@ -1007,7 +1007,7 @@ img {
       }
     }
     
-    h3 {
+    & h3 {
       font-size: 1.2rem;
     }
 
