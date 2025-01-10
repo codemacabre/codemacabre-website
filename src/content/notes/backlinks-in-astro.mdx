@@ -4,24 +4,31 @@ date: 2025-01-08
 description: "A guide to automatic backlinking in Astro"
 tags: ["astro", "code", "guide", "pkm"]
 title: Backlinks in Astro
-update: 2025-01-09
+update: 2025-01-10
 ---
+import Callout from '~/components/Callout.astro';
 
-As part of my ongoing effort to [plant a digital garden](/notes/digital-garden), one feature I wanted to implement was backlinking.
+Backlinks display which notes reference other notes, and are a staple of most personal knowledge management systems and [digital gardens](/notes/digital-garden).
 
-A backlink displays other notes that reference the current note and is a staple of most personal knowledge systems (PKMs). However, it's not a feature that [Astro](https://astro.build) supports natively, so a bit of customisation is needed.
+This guide details how to add backlinks to [Astro](https://astro.build).
 
-## 1. Get the notes collection
+## 1. Get the notes
 
-Assuming you are using Astro's [content collections](https://docs.astro.build/en/guides/content-collections/), you first need to get your notes collection. My collection is simply called 'notes', so we can use the following:
+Let's begin by getting our notes. In the [component script](https://docs.astro.build/en/basics/astro-components/#the-component-script) at the top of our file, add the following:
 
-```js
+```astro
 import { getCollection } from 'astro:content';
 
 const allNotes = await getCollection('notes');
 ```
 
-## 2. Extract links from note content
+My collection is simply called 'notes', so adjust this to match your content collection name.
+
+<Callout>
+  **Note**: This assumes we're using [content collections](https://docs.astro.build/en/guides/content-collections/), but it can be adapted to work for [file-based routing](https://docs.astro.build/en/guides/routing/#static-routes) by importing notes using [`import.meta.glob`](https://docs.astro.build/en/guides/imports/#importmetaglob) instead.
+</Callout>
+
+## 2. Extract links from the note content
 
 Next, we need to find and extract any links in our notes. Regex is useful here, as markdown links follow a consistent format, `[text](url)`.
 
@@ -39,6 +46,10 @@ allNotes.forEach((note) => {
   const links = [...note.body.matchAll(linkRegex)];
 });
 ```
+
+<Callout>
+  **Note**: Again, if using file-based routing, we would need to use the `rawContent()` function to get the note content.
+</Callout>
 
 Each of these matched links comes with a few properties, but we want the URL of the link itself, which is the second property. Remember, this is zero-indexed, so we'll use `link[1]` to get it.
 
@@ -86,11 +97,28 @@ const backlinks = allLinks[pathname] || [];
 
 Now we have an array of backlinks for each note.
 
-## 4. Final code
+## 4. Generate HTML
+
+With this in the code fence at the top of a component, we can add some markup to the [component template](https://docs.astro.build/en/basics/astro-components/#the-component-template), iterating over the `backlinks` array to populate a list of backlinks for each note.
+
+```astro
+{backlinks.length > 0 && (
+  <ul>
+    {backlinks.map((backlink) => (
+      <li>
+        <a href={backlink.url}>{backlink.frontmatter.title}</a>
+      </li>
+    ))}
+  </ul>
+)}
+```
+
+## 5. Final code
 
 Here's the complete code.
 
-```js
+```astro
+---
 import { getCollection } from 'astro:content';
 
 const { pathname } = Astro.url;
@@ -119,6 +147,19 @@ allNotes.forEach((note) => {
 });
 
 const backlinks = allLinks[pathname] || [];
+---
+
+{backlinks.length > 0 && (
+  <ul>
+    {backlinks.map((backlink) => (
+      <li>
+        <a href={backlink.url}>{backlink.frontmatter.title}</a>
+      </li>
+    ))}
+  </ul>
+)}
 ```
 
- We could put this into the code fence at the top of a component, then iterate over the `backlinks` array to populate a list of backlinks for each note, which is exactly what I've done for my own notes.
+By adding this component to our note layout file, backlinks will start appearing as we interlink our notes.
+
+This is exactly how I've implemented backlinks into my own digital garden.
