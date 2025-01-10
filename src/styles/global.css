@@ -63,8 +63,8 @@ header {
     background: var(--dark);
     border: none;
     color: var(--haze);
-    font-size: clamp(2rem, 10vw, 3rem);
-    margin: 0;
+    font-size: 3rem;
+    margin: 0 2rem 0 0;
     transform: rotate(-2deg);
     padding: 0.4rem 0.8rem;
     position: absolute;
@@ -96,8 +96,8 @@ header {
       height: 32px;
       padding: 0.6rem 0.5rem 0.3rem 0.5rem;
       position: absolute;
-      right: 1rem;
-      top: 1rem;
+      right: 1.6rem;
+      top: 1.6rem;
       width: 32px;
       z-index: 10;
 
@@ -907,6 +907,10 @@ img {
   header {
     grid-column: 2 / 8;
 
+    & a.title {
+      font-size: 2.5rem;
+    }
+
     & nav {
       & ul.menu {
         align-items: center;
@@ -949,7 +953,9 @@ img {
     
       & #main-menu-toggle:checked ~ .hamburger {
         position: fixed;
-        right: 1rem;
+        padding: 0.6rem 0.5rem 0.3rem 0.55rem;
+        right: 1.6rem;
+        width: 32px;
 
         & .slice:nth-child(1) {
           transform: translateY(7px) rotate(45deg);
@@ -1046,12 +1052,23 @@ img {
     width: calc(100% - 2rem);
     
     & a.title {
-      font-size: 8vw;
+      font-size: clamp(1.4rem, 8vw, 2rem);
       left: 1rem;
       top: 1.2rem;
     }
 
     & nav {
+      & .hamburger {
+        right: 1rem;
+        top: 1rem;
+      }
+
+      & #main-menu-toggle:checked ~ .hamburger {
+        padding: 0.6rem 0.5rem 0.3rem 0.5rem;
+        right: 1rem;
+
+      }
+
       & ul.menu {
         display: none;
       }
