@@ -65,16 +65,30 @@ const { pageTitle } = Astro.props;
     });
   }
 
-  async function copyCode(block, button) {
+  const copyCode = async (block, button) => {
     let code = block.querySelector('code');
     let text = code.innerText;
 
-    await navigator.clipboard.writeText(text);
+    try {
+      await navigator.clipboard.writeText(text);
+    } catch (err) {
+      selectText(code);
+      document.execCommand('copy');
+      window.getSelection()?.removeAllRanges();
+    }
 
     button.innerText = "Copied";
 
     setTimeout(() => {
       button.innerText = copyButtonLabel;
     }, 1000);
+  }
+
+  const selectText = (element) => {
+    let range = document.createRange();
+    range.selectNodeContents(element);
+    let selection = window.getSelection();
+    selection?.removeAllRanges();
+    selection?.addRange(range);
   }
 </script>
