@@ -4,7 +4,7 @@ date: 2025-01-08
 description: "A guide to automatic backlinking in Astro"
 tags: ["astro", "code", "guide", "pkm"]
 title: Backlinks in Astro
-update: 2025-01-10
+update: 2025-01-11
 ---
 import Callout from '~/components/Callout.astro';
 
@@ -89,13 +89,13 @@ Now we have an object containing all the links in every note, we need to cross-r
 const { pathname } = Astro.url;
 ```
 
-We're destructuring the `pathname` from the current URL and we can use it to create a new array built by checking for matching entries in `allLinks`.
+By destructuring the `pathname` from the current URL, we can populate a new array with any matching entries in our `allLinks` object:
 
 ```js
 const backlinks = allLinks[pathname] || [];
 ```
 
-Now we have an array of backlinks for each note.
+This gives us an array of backlinks for each note.
 
 ## 4. Generate HTML
 
