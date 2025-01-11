@@ -48,7 +48,7 @@ allNotes.forEach((note) => {
 ```
 
 <Callout>
-  **Note**: Again, if using file-based routing, we would need to use the `rawContent()` function to get the note content.
+  **Note**: Again, if using file-based routing, we would need to use the [`rawContent()`](https://docs.astro.build/en/guides/markdown-content/#importing-markdown) function to get the note content.
 </Callout>
 
 Each of these matched links comes with a few properties, but we want the URL of the link itself, which is the second property. Remember, this is zero-indexed, so we'll use `link[1]` to get it.
