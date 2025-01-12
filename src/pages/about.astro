@@ -22,8 +22,12 @@ const allProjects = await getCollection('projects');
 let notesWritten = 0;
 let booksRead = 0;
 let currentProjects: Project[] = [];
+const isDev = import.meta.env.MODE === 'development';
 
-allNotes.forEach((note) => {
+const filteredNotes = allNotes.filter((note) => {
+  return isDev ? true : note.data.draft !== true;
+});
+filteredNotes.forEach((note) => {
   if (note.data.date.getFullYear() === new Date().getFullYear()) {
     notesWritten++;
   }
