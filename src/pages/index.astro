@@ -3,18 +3,22 @@ import { getCollection } from 'astro:content';
 import BaseLayout from '~/layouts/BaseLayout.astro';
 import Note from '~/components/Note.astro';
 
+const isDev = import.meta.env.MODE === 'development';
 const allNotes = await getCollection('notes');
 const allProjects = await getCollection('projects');
 
-allNotes.sort((a, b) => {
+const filteredNotes = allNotes.filter((note) => {
+  return isDev ? true : note.data.draft !== true;
+});
+const sortedNotes = filteredNotes.sort((a, b) => {
   return new Date(b.data.date).getTime() - new Date(a.data.date).getTime();
 });
-const latestNotes = allNotes.splice(0, 5);
+const latestNotes = sortedNotes.splice(0, 5);
 
-allProjects.sort((a, b) => {
+const sortedProjects = allProjects.sort((a, b) => {
   return new Date(b.data.date).getTime() - new Date(a.data.date).getTime();
 });
-const featuredProjects = allProjects.filter((project) => project.data.featured);
+const featuredProjects = sortedProjects.filter((project) => project.data.featured);
 ---
 <BaseLayout>
   <h1 class="sr-only">Code Macabre</h1>

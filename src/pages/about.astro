@@ -41,7 +41,7 @@ allProjects.forEach((project) => {
   }
 });
 
-currentProjects.sort((a, b) => {
+const sortedProjects = currentProjects.sort((a, b) => {
   return a.data.title.localeCompare(b.data.title);
 });
 ---
@@ -60,21 +60,21 @@ currentProjects.sort((a, b) => {
   />
   <h2 id="now">Now</h2>
   <p>
-    I've been working as a {selfData.organisation.position} at <a href={selfData.organisation.url}>{selfData.organisation.name}</a> since {selfData.organisation.startDate}. {currentProjects.length > 0 && (
-      <>Outside of work, I'm currently spending time on my personal project{currentProjects.length === 1 ? '' : 's'},
+    I've been working as a {selfData.organisation.position} at <a href={selfData.organisation.url}>{selfData.organisation.name}</a> since {selfData.organisation.startDate}. {sortedProjects.length > 0 && (
+      <>Outside of work, I'm currently spending time on my personal project{sortedProjects.length === 1 ? '' : 's'},
         {
-          currentProjects.length === 1 ? (
-            <> <a href={`/projects/${currentProjects[0].slug}`}>{currentProjects[0].data.title}</a>.</>
-          ) : currentProjects.length === 2 ? (
+          sortedProjects.length === 1 ? (
+            <> <a href={`/projects/${sortedProjects[0].slug}`}>{sortedProjects[0].data.title}</a>.</>
+          ) : sortedProjects.length === 2 ? (
             <>
-              <a href={`/projects/${currentProjects[0].slug}`}>{currentProjects[0].data.title}</a> and 
-              <a href={`/projects/${currentProjects[1].slug}`}>{currentProjects[1].data.title}</a>.
+              <a href={`/projects/${sortedProjects[0].slug}`}>{sortedProjects[0].data.title}</a> and 
+              <a href={`/projects/${sortedProjects[1].slug}`}>{sortedProjects[1].data.title}</a>.
             </>
           ) : (
             <>
-              {currentProjects.map((project, index) => (
+              {sortedProjects.map((project, index) => (
                 <>
-                  <a href={`/projects/${project.slug}`}>{project.data.title}</a>{index < currentProjects.length - 2 ? ', ' : index === currentProjects.length - 2 ? ', and ' : ''}
+                  <a href={`/projects/${project.slug}`}>{project.data.title}</a>{index < sortedProjects.length - 2 ? ', ' : index === sortedProjects.length - 2 ? ', and ' : ''}
                 </>
               ))}.</>
           )

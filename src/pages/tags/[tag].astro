@@ -4,17 +4,23 @@ import BaseLayout from '~/layouts/BaseLayout.astro';
 import Note from '~/components/Note.astro';
 
 export const getStaticPaths = async () => {
+  const isDev = import.meta.env.MODE === 'development';
   const allNotes = await getCollection('notes');
+
+  const filteredNotes = allNotes.filter((note) => {
+    return isDev ? true : note.data.draft !== true;
+  });
+
   const uniqueTags = [...new Set(allNotes.map((note) => note.data.tags).flat())];
 
   return uniqueTags.map((tag) => {
-    const filteredNotes = allNotes.filter((note) => note.data.tags.includes(tag));
-    filteredNotes.sort((a, b) => {
+    const taggedNotes = filteredNotes.filter((note) => note.data.tags.includes(tag));
+    const sortedNotes = taggedNotes.sort((a, b) => {
       return new Date(b.data.date).getTime() - new Date(a.data.date).getTime();
     });
     return {
       params: { tag },
-      props: { notes: filteredNotes }
+      props: { notes: sortedNotes }
     };
   });
 }

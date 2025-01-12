@@ -2,9 +2,24 @@
 import { getCollection } from 'astro:content';
 import BaseLayout from '~/layouts/BaseLayout.astro';
 
-const allNotes = await getCollection('notes');
-const uniqueTags = [...new Set(allNotes.map((note) => note.data.tags).flat())];
-uniqueTags.sort((a, b) => a.localeCompare(b));
+interface Note {
+  data: {
+    draft?: boolean;
+    tags?: string[];
+  }
+}
+
+const isDev = import.meta.env.MODE === 'development';
+const allNotes = await getCollection('notes') as Note[];
+const filteredNotes = allNotes.filter((note: Note) => {
+  return isDev ? true : note.data.draft !== true;
+});
+const uniqueTags: string[] = [...new Set(
+  filteredNotes
+    .map((note: Note) => note.data.tags || [])
+    .flat()
+)];
+const sortedTags = uniqueTags.sort((a, b) => a.localeCompare(b));
 
 ---
 <BaseLayout pageTitle="All tags">
@@ -13,9 +28,9 @@ uniqueTags.sort((a, b) => a.localeCompare(b));
   </div>
   <div class="tags">
   <p class="tag-page">Notes have been tagged with
-    {uniqueTags.map((tag, index) => (
+    {sortedTags.map((tag, index) => (
       <>
-        <a class="custom-tag" href={`/tags/${tag.toLowerCase()}`}>{tag}</a>{index < uniqueTags.length - 2 ? ', ' : index === uniqueTags.length - 2 ? ', and ' : ''}
+        <a class="custom-tag" href={`/tags/${tag.toLowerCase()}`}>{tag}</a>{index < sortedTags.length - 2 ? ', ' : index === sortedTags.length - 2 ? ', and ' : ''}
       </>
     ))}.</p>
   </div>
