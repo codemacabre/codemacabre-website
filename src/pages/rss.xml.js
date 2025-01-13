@@ -5,19 +5,28 @@ import { getCollection } from 'astro:content';
 import rss from '@astrojs/rss';
 
 export const GET = async (context) => {
+  const isDev = import.meta.env.MODE === 'development';
   const renderers = await loadRenderers([getMDXRenderer()]);
   const container = await AstroContainer.create({ renderers });
-  const notes = await getCollection('notes');
+  const allNotes = await getCollection('notes');
+
+  const filteredNotes = allNotes.filter((note) => {
+    return isDev ? true : note.data.draft !== true;
+  });
+  const sortedNotes = filteredNotes.sort((a, b) => {
+    return new Date(b.data.date).getTime() - new Date(a.data.date).getTime();
+  });
 
   const items = [];
-  for (const note of notes) {
+  for (const note of sortedNotes) {
     const { Content } = await note.render();
     let content = await container.renderToString(Content);
     const link = new URL(`/notes/${note.slug}`, context.url.origin).toString();
+    const pubDate = note.data.date;
     const customData = '<dc:creator>Myles Lewando</dc:creator>';
     
     content = content.replace('src="/', `src="${context.site}`).replace('href="/', `href="${context.site}`);
-    items.push({ ...note.data, link, customData, content });
+    items.push({ ...note.data, link, pubDate, customData, content });
   }
 
   return rss({
