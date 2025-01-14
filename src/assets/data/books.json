@@ -3,7 +3,7 @@
     "author": ["Jenny Odell"],
     "cover": {
       "alt": "How to Do Nothing book cover. The title is in white, partially obscured by a bed of pink and white flowers covering the background. The subtitle reads, 'Resisting the Attention Economy'.",
-      "height": 200,
+      "height": 300,
       "src": "/images/books/do-nothing.jpg",
       "width": 200
     },
@@ -21,7 +21,7 @@
       "src": "/images/books/ghost-station.jpg",
       "width": 200
     },
-    "format": ["ebook"],
+    "format": ["audiobook"],
     "rating": 3,
     "reread": false,
     "title": "Ghost Station",
