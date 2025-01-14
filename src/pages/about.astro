@@ -3,7 +3,7 @@ import { Image } from 'astro:assets';
 import { getCollection } from 'astro:content';
 import BaseLayout from '~/layouts/BaseLayout.astro';
 import selfImg from '~/assets/images/self.png';
-import selfUnredactedImg from '~/assets/images/self-unredacted.png';
+import self2Img from '~/assets/images/self2.png';
 import selfData from '~/assets/data/self.json';
 import booksData from '~/assets/data/books.json';
 
@@ -65,7 +65,7 @@ const sortedProjects = currentProjects.sort((a, b) => {
   />
   <Image
     class="small center circle"
-    src={selfUnredactedImg}
+    src={self2Img}
     alt=""
   />
   <h2 id="now">Now</h2>
