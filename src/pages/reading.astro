@@ -11,11 +11,11 @@ const years = Array
 const pageTitle = 'Reading';
 ---
 <BaseLayout pageTitle={pageTitle}>
-<h2>{pageTitle}</h2>
+<h1>{pageTitle}</h1>
 <p>The audiobooks, ebooks, paperbacks, and hardbacks I've read each year, as of 2024. I tend to prefer physical books, but when buying digital media, I favour DRM-free options.</p>
 
 {years.map((year) =>
-  <h3>{year}</h3>
+  <h2>{year}</h2>
   <ul class="card-container">
     {booksData.map((book) =>
       book.year.includes(year) &&
