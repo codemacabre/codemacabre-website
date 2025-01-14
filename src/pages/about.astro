@@ -3,6 +3,7 @@ import { Image } from 'astro:assets';
 import { getCollection } from 'astro:content';
 import BaseLayout from '~/layouts/BaseLayout.astro';
 import selfImg from '~/assets/images/self.png';
+import selfUnredactedImg from '~/assets/images/self-unredacted.png';
 import selfData from '~/assets/data/self.json';
 import booksData from '~/assets/data/books.json';
 
@@ -58,9 +59,14 @@ const sortedProjects = currentProjects.sort((a, b) => {
   <p>With a background in education, data visualisation, and design, I began freelancing as a web developer in 2016. I formally changed career in 2019 to become a full-time developer, specialising in data visualisation and accessibility.</p>
   <p>Inclusive, ethical technology and data justice are integral to my work and my values.</p>
   <Image
-    class="small center circle"
+    class="small center circle over"
     src={selfImg}
     alt="A black and white grainy photo of my head and shoulders. I have a long pointy beard and a mohawk, with a black censored bar across my eyes"
+  />
+  <Image
+    class="small center circle"
+    src={selfUnredactedImg}
+    alt=""
   />
   <h2 id="now">Now</h2>
   <p>

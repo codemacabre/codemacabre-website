@@ -880,6 +880,17 @@ img {
     }
   }
 
+  &.over {
+    left: 50%;
+    position: absolute;
+    transform: translateX(-50%);
+
+    &:hover {
+      opacity: 0;
+      transition: 200ms;
+    }
+  }
+
   &.extra-space {
     margin: 2rem 0 1rem 0;
   }
