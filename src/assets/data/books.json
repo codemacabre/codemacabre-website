@@ -1,11 +1,25 @@
 [
   {
+    "author": ["Jenny Odell"],
+    "cover": {
+      "alt": "How to Do Nothing book cover. The title is in white, partially obscured by a bed of pink and white flowers covering the background. The subtitle reads, 'Resisting the Attention Economy'.",
+      "height": 200,
+      "src": "/images/books/do-nothing.jpg",
+      "width": 200
+    },
+    "format": ["paperback"],
+    "rating": 5,
+    "reread": false,
+    "title": "How to Do Nothing",
+    "year": "2025"
+  },
+  {
     "author": ["S. A. Barnes"],
     "cover": {
-      "alt": "Ghost Station book cover. A space-suited figure walks across an abandoned room, with empty spacesuits hanging on the wall. A couple of drops of blood are on the floor in the foreground.",
+      "alt": "Ghost Station book cover. A figure wearing a spacesuit walks across an abandoned room, with empty spacesuits hanging on the wall. A couple of drops of blood are on the floor in the foreground.",
+      "height": 200,
       "src": "/images/books/ghost-station.jpg",
-      "width": 200,
-      "height": 200
+      "width": 200
     },
     "format": ["ebook"],
     "rating": 3,
@@ -17,9 +31,9 @@
     "author": ["Ola Ellnestam", "Daniel Brolund"],
     "cover": {
       "alt": "The Mikado Method book cover. An illustration of Japanese Emperor Seiwa sitting cross-legged in white clothes against a yellow-ochre background.",
+      "height": 251,
       "src": "/images/books/mikado-method.jpg",
-      "width": 200,
-      "height": 251
+      "width": 200
     },
     "format": ["ebook", "paperback"],
     "rating": 3,
@@ -31,9 +45,9 @@
     "author": ["Martha Wells"],
     "cover": {
       "alt": "System Collapse cover. The Murderbot character crouches in a field of crops, towered over by a gigantic many-limbed bot.",
+      "height": 200,
       "src": "/images/books/system-collapse.jpg",
-      "width": 200,
-      "height": 200
+      "width": 200
     },
     "format": ["audiobook"],
     "rating": 4,
@@ -45,9 +59,9 @@
     "author": ["Ben West"],
     "cover": {
       "alt": "This Book Could Save Your Life book cover. The title is in white on a plain black background. The subtitle, 'Breaking the silence around the mental health emergency' is in black text on an orange strip at the top.",
+      "height": 200,
       "src": "/images/books/book-save-life.jpg",
-      "width": 200,
-      "height": 200
+      "width": 200
     },
     "format": ["audiobook"],
     "rating": 2,
@@ -58,10 +72,10 @@
   {
     "author": ["Marianna Spring"],
     "cover": {
-      "alt": "Among the Trolls book cover. A white woman with long brown hair sits nonchalantly among various exasperated, angry and yelling people.",
+      "alt": "Among the Trolls book cover. A white woman with long brown hair sits nonchalantly among various exasperated, angry, and yelling people.",
+      "height": 314,
       "src": "/images/books/among-the-trolls.jpg",
-      "width": 200,
-      "height": 314
+      "width": 200
     },
     "format": ["hardback"],
     "rating": 4,
@@ -73,9 +87,9 @@
     "author": ["Danny Caine"],
     "cover": {
       "alt": "How to Resist Amazon and Why cover. A turquoise fist is raised in defiance clutching a scrap of paper against a bright yellow background. The word Amazon in the title has the iconic Amazon arrow downturned into a sort of sad face.",
+      "height": 200,
       "src": "/images/books/resist-amazon.jpg",
-      "width": 200,
-      "height": 200
+      "width": 200
     },
     "format": ["audiobook"],
     "rating": 3,
