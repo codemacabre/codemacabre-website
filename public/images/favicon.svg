@@ -7,7 +7,7 @@
    xmlns:svg="http://www.w3.org/2000/svg">
   <style>
     .bar {
-      fill: #222222;
+      fill: #111111;
     }
     @media (prefers-color-scheme: dark) {
       .bar {
