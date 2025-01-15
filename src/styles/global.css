@@ -90,7 +90,7 @@ header {
     width: 100%;
 
     & .hamburger {
-      background: var(--haze);
+      background-color: var(--haze);
       cursor: pointer;
       display: none;
       height: 32px;
@@ -102,7 +102,7 @@ header {
       z-index: 10;
 
       & .slice {
-        background: var(--dark);
+        background-color: var(--dark);
         border-radius: 1rem;
         margin: 4px auto 0 auto;
         display: block;
@@ -110,11 +110,11 @@ header {
         overflow: hidden;
         width: 1.2rem;
       }
-
+      
       &:active,
       &:hover {
         & .slice {
-          background: var(--haze);
+          background-color: var(--haze);
         }
       }
     }
@@ -985,10 +985,10 @@ img {
     
       & #main-menu-toggle:checked ~ .hamburger {
         position: fixed;
-        padding: 0.6rem 0.5rem 0.3rem 0.55rem;
+        padding: 0.6rem 0.5rem 0.3rem 0.5rem;
         right: 1.6rem;
         width: 32px;
-
+        
         & .slice:nth-child(1) {
           transform: translateY(7px) rotate(45deg);
         }
@@ -1006,9 +1006,11 @@ img {
       & #main-menu-toggle:checked:focus ~ .hamburger,
       & #main-menu-toggle:hover ~ .hamburger {
         background-color: var(--dark);
+        transition: background-color 200ms;
 
         & .slice {
           background-color: var(--haze);
+          transition: background-color 200ms;
         }
       }
     
