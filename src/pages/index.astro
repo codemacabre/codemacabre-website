@@ -25,13 +25,17 @@ const featuredProjects = sortedProjects.filter((project) => project.data.feature
   <h2 class="front-page">
     Featured project{featuredProjects.length > 1 && 's'}
   </h2>
-  {featuredProjects.map((project) => (
-    <a class="feature" href={`/projects/${project.slug}`}>
-      <div>
-        <span class="title">{project.data.title}</span><span class="dates">(<time datetime={project.data.date.toString()}>{project.data.date.getFullYear()}</time>{project.data.endDate && <>&nbsp;-&nbsp;<time datetime={project.data.endDate.toString()}>{project.data.endDate.getFullYear()}</time></>})</span>
-      </div>
-    </a>
-  ))}
+  <ul class="feature">
+    {featuredProjects.map((project) => (
+      <li>
+        <a href={`/projects/${project.slug}`}>
+          <div class="center">
+            <span class="title">{project.data.title}</span><span class="dates">(<time datetime={project.data.date.toString()}>{project.data.date.getFullYear()}</time>{project.data.endDate && <>&nbsp;-&nbsp;<time datetime={project.data.endDate.toString()}>{project.data.endDate.getFullYear()}</time></>})</span>
+          </div>
+        </a>
+      </li>
+    ))}
+  </ul>
   <p class="right"><a href="/projects">See all projects</a></p>
   <h2 class="front-page">
     Latest notes
