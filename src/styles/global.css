@@ -951,6 +951,7 @@ html {
       & a.title {
         background-color: var(--haze);
         color: var(--dark);
+        outline: 1px dashed transparent;
         
         &:active,
         &:focus,
@@ -985,7 +986,9 @@ html {
     & h4 {
       & a {
         background-color: var(--haze);
+        border: 1px dashed transparent;
         color: var(--dark);
+        border: 1px dashed transparent;
     
         &:active,
         &:focus,
@@ -1085,17 +1088,17 @@ html {
     & .feature {
       & li {
         & a {
-          background-color: var(--dark);
+          background-color: var(--haze);
           border: 1px dashed transparent;
-          color: var(--haze);
-          outline: 1px dashed var(--haze);
+          color: var(--dark);
+          outline: 1px dashed transparent;
           
           &:active,
           &:focus,
           &:hover {
-            background-color: var(--haze);
-            color: var(--dark);
-            outline: 1px dashed transparent;
+            background-color: var(--dark);
+            color: var(--haze);
+            outline: 1px dashed var(--haze);
           }
         }
       }
