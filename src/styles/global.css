@@ -739,7 +739,7 @@ html {
     }
 
     &.selected {
-      border: none;
+      border: 1px dashed transparent;
       outline: 1px dashed var(--dark);
     }
 
@@ -1089,6 +1089,7 @@ html {
       }
     
       &.selected {
+        border: 1px dashed transparent;
         outline: 1px dashed var(--haze);
       }
       
