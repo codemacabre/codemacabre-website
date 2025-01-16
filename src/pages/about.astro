@@ -8,7 +8,7 @@ import selfData from '~/assets/data/self.json';
 import booksData from '~/assets/data/books.json';
 
 interface Project {
-  slug: string;
+  id: string;
   data: {
     current: boolean;
     date: Date;
@@ -74,17 +74,17 @@ const sortedProjects = currentProjects.sort((a, b) => {
       <>Outside of work, I'm currently spending time on my personal project{sortedProjects.length === 1 ? '' : 's'},
         {
           sortedProjects.length === 1 ? (
-            <> <a href={`/projects/${sortedProjects[0].slug}`}>{sortedProjects[0].data.title}</a>.</>
+            <> <a href={`/projects/${sortedProjects[0].id}`}>{sortedProjects[0].data.title}</a>.</>
           ) : sortedProjects.length === 2 ? (
             <>
-              <a href={`/projects/${sortedProjects[0].slug}`}>{sortedProjects[0].data.title}</a> and 
-              <a href={`/projects/${sortedProjects[1].slug}`}>{sortedProjects[1].data.title}</a>.
+              <a href={`/projects/${sortedProjects[0].id}`}>{sortedProjects[0].data.title}</a> and 
+              <a href={`/projects/${sortedProjects[1].id}`}>{sortedProjects[1].data.title}</a>.
             </>
           ) : (
             <>
               {sortedProjects.map((project, index) => (
                 <>
-                  <a href={`/projects/${project.slug}`}>{project.data.title}</a>{index < sortedProjects.length - 2 ? ', ' : index === sortedProjects.length - 2 ? ', and ' : ''}
+                  <a href={`/projects/${project.id}`}>{project.data.title}</a>{index < sortedProjects.length - 2 ? ', ' : index === sortedProjects.length - 2 ? ', and ' : ''}
                 </>
               ))}.</>
           )

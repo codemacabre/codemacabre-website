@@ -74,12 +74,12 @@ if (linkUrl) {
   }
   allLinks[linkUrl].push({
     frontmatter: note.data,
-    url: `/notes/${note.slug}`
+    url: `/notes/${note.id}`
   });
 }
 ```
 
-Here, we're extracting the frontmatter with the note's `data` object, and building a URL with the note's `slug`. Adjust this to match your note URL format.
+Here, we're extracting the frontmatter with the note's `data` object, and building a URL with the note's `id`. Adjust this to match your note URL format.
 
 ## 3. Check for the current note
 
@@ -139,7 +139,7 @@ allNotes.forEach((note) => {
         }
         allLinks[linkUrl].push({
           frontmatter: note.data,
-          url: `/notes/${note.slug}`
+          url: `/notes/${note.id}`
         });
       }
     });

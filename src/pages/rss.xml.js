@@ -21,7 +21,7 @@ export const GET = async (context) => {
   for (const note of sortedNotes) {
     const { Content } = await render(note);
     let content = await container.renderToString(Content);
-    const link = new URL(`/notes/${note.slug}`, context.url.origin).toString();
+    const link = new URL(`/notes/${note.id}`, context.url.origin).toString();
     const pubDate = note.data.date;
     const customData = '<dc:creator>Myles Lewando</dc:creator>';
     

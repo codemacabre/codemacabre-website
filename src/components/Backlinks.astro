@@ -21,7 +21,7 @@ allNotes.forEach((note) => {
         }
         allLinks[linkUrl].push({
           frontmatter: note.data,
-          url: `/notes/${note.slug}`
+          url: `/notes/${note.id}`
         });
       }
     });
