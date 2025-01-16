@@ -11,7 +11,7 @@
     }
     @media (prefers-color-scheme: dark) {
       .bar {
-        fill: #3d3344;
+        fill: #3b2e44;
       }
     }
   </style>
