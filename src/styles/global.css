@@ -59,7 +59,7 @@ html {
 
     & a.title {
       background-color: var(--dark);
-      border: none;
+      border: 1px dashed transparent;
       color: var(--haze);
       font-size: 3rem;
       margin: 0 2rem 0 0;
@@ -71,7 +71,7 @@ html {
 
       &:link,
       &:visited {
-        border: none;
+        border: 1px dashed transparent;
       }
       
       &:active,
