@@ -942,6 +942,11 @@ html {
   }
 
   &.dark {
+    &:root {
+      --haze: #dddddd;
+      --murk: #adadad;
+    }
+
     & body {
       background-color: var(--dark);
       color: var(--haze);
@@ -949,16 +954,16 @@ html {
     
     & header {
       & a.title {
-        background-color: var(--dark);
-        color: var(--haze);
-        outline: 1px dashed var(--haze);
+        background-color: var(--haze);
+        color: var(--dark);
+        outline: 1px dashed transparent;
         
         &:active,
         &:focus,
         &:hover {
-          background-color: var(--haze);
-          color: var(--dark);
-          outline: 1px dashed transparent;
+          background-color: var(--dark);
+          color: var(--haze);
+          outline: 1px dashed var(--haze);
         }
       }
     
@@ -1088,17 +1093,17 @@ html {
     & .feature {
       & li {
         & a {
-          background-color: var(--dark);
+          background-color: var(--haze);
           border: 1px dashed transparent;
-          color: var(--haze);
-          outline: 1px dashed var(--haze);
+          color: var(--dark);
+          outline: 1px dashed transparent;
           
           &:active,
           &:focus,
           &:hover {
-            background-color: var(--haze);
-            color: var(--dark);
-            outline: 1px dashed transparent;
+            background-color: var(--dark);
+            color: var(--haze);
+            outline: 1px dashed var(--haze);
           }
         }
       }
