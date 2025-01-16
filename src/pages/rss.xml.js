@@ -1,7 +1,7 @@
 import { experimental_AstroContainer as AstroContainer } from 'astro/container';
 import { getContainerRenderer as getMDXRenderer } from '@astrojs/mdx';
 import { loadRenderers } from 'astro:container';
-import { getCollection } from 'astro:content';
+import { getCollection, render } from 'astro:content';
 import rss from '@astrojs/rss';
 
 export const GET = async (context) => {
@@ -19,7 +19,7 @@ export const GET = async (context) => {
 
   const items = [];
   for (const note of sortedNotes) {
-    const { Content } = await note.render();
+    const { Content } = await render(note);
     let content = await container.renderToString(Content);
     const link = new URL(`/notes/${note.slug}`, context.url.origin).toString();
     const pubDate = note.data.date;
