@@ -6,9 +6,10 @@
 }
 
 :root {
-  --accent: #555555;
+  --nightshade: #3d3344;
   --haze: #fafafa;
   --murk: #dddddd;
+  --mist: #434343;
   --gloom: #343434;
   --dark: #111111;
 }
@@ -954,7 +955,7 @@ html {
     
     & header {
       & a.title {
-        background-color: var(--accent);
+        background-color: var(--nightshade);
         color: var(--haze);
         outline: 1px dashed transparent;
         
@@ -990,7 +991,7 @@ html {
     & h3,
     & h4 {
       & a {
-        background-color: var(--accent);
+        background-color: var(--nightshade);
         border: 1px dashed transparent;
         color: var(--haze);
         border: 1px dashed transparent;
@@ -1007,7 +1008,7 @@ html {
     }
     
     & ::selection {
-      background-color: var(--accent);
+      background-color: var(--nightshade);
       color: var(--haze);
     }
     
@@ -1093,7 +1094,7 @@ html {
     & .feature {
       & li {
         & a {
-          background-color: var(--accent);
+          background-color: var(--nightshade);
           border: 1px dashed transparent;
           color: var(--haze);
           outline: 1px dashed transparent;
@@ -1116,7 +1117,7 @@ html {
       &:active,
       &:focus,
       &:hover {
-        background-color: var(--accent);
+        background-color: var(--nightshade);
         border-bottom: 1px dashed transparent;
         color: var(--haze);
       }
@@ -1134,7 +1135,7 @@ html {
       &:active code,
       &:focus code,
       &:hover code {
-        background-color: var(--accent);
+        background-color: var(--nightshade);
         border-bottom: 1px dashed transparent;
         color: var(--haze);
       }
@@ -1147,7 +1148,7 @@ html {
       &:active,
       &:focus,
       &:hover {
-        background-color: var(--accent);
+        background-color: var(--nightshade);
         color: var(--haze);
       }
     }
@@ -1158,7 +1159,7 @@ html {
           &:active,
           &:focus,
           &:hover {
-            background-color: var(--accent);
+            background-color: var(--nightshade);
           }
         }
       }
@@ -1341,7 +1342,7 @@ html {
           & #main-menu-toggle:focus ~ .hamburger,
           & #main-menu-toggle:checked:focus ~ .hamburger,
           & #main-menu-toggle:hover ~ .hamburger {
-            background-color: var(--accent);
+            background-color: var(--nightshade);
     
             & .slice {
               background-color: var(--haze);
