@@ -768,7 +768,7 @@ html {
 
   & .code-copy {
     position: absolute;
-    background-color: none;
+    background-color: transparent;
     border: none;
     border-radius: 0;
     color: var(--dark);
@@ -1107,6 +1107,7 @@ html {
     }
     
     & .code-copy {
+      background-color: transparent;
       color: var(--haze);
     
       &:active,
