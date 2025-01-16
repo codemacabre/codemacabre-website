@@ -2,14 +2,28 @@
 import { getCollection } from 'astro:content';
 import Note from '~/components/Note.astro';
 
+interface Note {
+  id: string;
+  body?: string;
+  data: {
+    category: string;
+    date: Date;
+    description: string;
+    tags: string[];
+    title: string;
+    draft?: boolean | undefined;
+    update?: Date | undefined;
+  }
+}
+
 const { pathname } = Astro.url;
 const currentUrl = pathname.toLowerCase().replace(/\/+$/g, '');
 const allLinks = {};
-const allNotes = await getCollection('notes');
+const allNotes: Note[] = await getCollection('notes');
 const linkRegex = /\[.*?\]\((.*?)\)/g;
 
 allNotes.forEach((note) => {
-  const links = [...note.body.matchAll(linkRegex)];
+  const links = [...(note.body || '').matchAll(linkRegex)];
   
   if (links) {
     links.forEach((link) => {

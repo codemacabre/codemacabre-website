@@ -9,11 +9,16 @@ import booksData from '~/assets/data/books.json';
 
 interface Project {
   id: string;
+  body?: string;
   data: {
-    current: boolean;
-    date: Date;
     title: string;
-  };
+    description: string;
+    date: Date;
+    status: string;
+    current: boolean;
+    featured: boolean;
+    endDate?: Date | undefined;
+  }
 }
 
 const pageTitle = 'About';
