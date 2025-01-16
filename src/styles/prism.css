@@ -1,6 +1,6 @@
 html {
-  code,
-  pre[class*="language-"] {
+  & code,
+  & pre[class*="language-"] {
     color: var(--dark);
     font-family: 'source-code-pro', monospace;
     direction: ltr;
@@ -20,7 +20,7 @@ html {
   }
 
   /* Code blocks */
-  pre[class*="language-"] {
+  & pre[class*="language-"] {
     background-color: var(--murk);
     font-size: 0.9rem;
     margin: 1rem 0;
@@ -30,7 +30,7 @@ html {
   }
 
   /* Inline code */
-  :not(pre) > code {
+  & :not(pre) > code {
     background-color: var(--murk);
     box-decoration-break: clone;
     margin: 0;
@@ -38,133 +38,133 @@ html {
     -webkit-box-decoration-break: clone;
   }
 
-  .token.comment,
-  .token.prolog,
-  .token.doctype,
-  .token.cdata {
+  & .token.comment,
+  & .token.prolog,
+  & .token.doctype,
+  & .token.cdata {
     color: var(--gloom);
     font-style: italic;
   }
 
-  .token.namespace {
+  & .token.namespace {
     opacity: 0.8;
   }
 
-  .token.string,
-  .token.attr-value {
+  & .token.string,
+  & .token.attr-value {
     color: var(--gloom);
   }
 
-  .token.punctuation,
-  .token.operator {
+  & .token.punctuation,
+  & .token.operator {
     color: var(--dark);
   }
 
-  .token.entity,
-  .token.url,
-  .token.symbol,
-  .token.number,
-  .token.boolean,
-  .token.variable,
-  .token.constant,
-  .token.property,
-  .token.regex,
-  .token.inserted {
+  & .token.entity,
+  & .token.url,
+  & .token.symbol,
+  & .token.number,
+  & .token.boolean,
+  & .token.variable,
+  & .token.constant,
+  & .token.property,
+  & .token.regex,
+  & .token.inserted {
     color: var(--gloom);
   }
 
-  .token.atrule,
-  .token.keyword,
-  .token.attr-name,
-  .language-autohotkey .token.selector {
+  & .token.atrule,
+  & .token.keyword,
+  & .token.attr-name,
+  & .language-autohotkey .token.selector {
     color: var(--gloom);
     font-weight: 600;
   }
 
-  .token.function,
-  .token.deleted,
-  .language-autohotkey .token.tag {
+  & .token.function,
+  & .token.deleted,
+  & .language-autohotkey .token.tag {
     color: var(--gloom);
   }
 
-  .token.tag,
-  .token.selector,
-  .language-autohotkey .token.keyword {
+  & .token.tag,
+  & .token.selector,
+  & .language-autohotkey .token.keyword {
     color: var(--dark);
   }
 
-  .token.important,
-  .token.function,
-  .token.bold {
+  & .token.important,
+  & .token.function,
+  & .token.bold {
     font-weight: 600;
   }
 
-  .token.italic {
+  & .token.italic {
     font-style: italic;
   }
 
   &.dark {
-    code,
-    pre[class*="language-"] {
+    & code,
+    & pre[class*="language-"] {
       color: var(--haze);
     }
 
     /* Code blocks */
-    pre[class*="language-"] {
+    & pre[class*="language-"] {
       background-color: var(--gloom);
     }
 
     /* Inline code */
-    :not(pre) > code {
+    & :not(pre) > code {
       background-color: var(--gloom);
     }
 
-    .token.comment,
-    .token.prolog,
-    .token.doctype,
-    .token.cdata {
+    & .token.comment,
+    & .token.prolog,
+    & .token.doctype,
+    & .token.cdata {
       color: var(--murk);
     }
 
-    .token.string,
-    .token.attr-value {
+    & .token.string,
+    & .token.attr-value {
       color: var(--murk);
     }
 
-    .token.punctuation,
-    .token.operator {
+    & .token.punctuation,
+    & .token.operator {
       color: var(--haze);
     }
 
-    .token.entity,
-    .token.url,
-    .token.symbol,
-    .token.number,
-    .token.boolean,
-    .token.variable,
-    .token.constant,
-    .token.property,
-    .token.regex,
-    .token.inserted {
+    & .token.entity,
+    & .token.url,
+    & .token.symbol,
+    & .token.number,
+    & .token.boolean,
+    & .token.variable,
+    & .token.constant,
+    & .token.property,
+    & .token.regex,
+    & .token.inserted {
       color: var(--murk);
     }
 
-    .token.atrule,
-    .token.keyword,
-    .token.attr-name,
-    .language-autohotkey .token.selector {
+    & .token.atrule,
+    & .token.keyword,
+    & .token.attr-name,
+    & .language-autohotkey .token.selector {
       color: var(--murk);
     }
 
-    .token.function,
-    .token.deleted,
-    .language-autohotkey .token.tag {
+    & .token.function,
+    & .token.deleted,
+    & .language-autohotkey .token.tag {
       color: var(--murk);
     }
 
-    .token.tag,
-    .token.selector,
-    .language-autohotkey .token.keyword {
+    & .token.tag,
+    & .token.selector,
+    & .language-autohotkey .token.keyword {
       color: var(--haze);
     }
   }
