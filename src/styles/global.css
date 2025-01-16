@@ -6,6 +6,7 @@
 }
 
 :root {
+  --accent: #4a3f51;
   --haze: #fafafa;
   --murk: #dddddd;
   --gloom: #343434;
@@ -953,8 +954,8 @@ html {
     
     & header {
       & a.title {
-        background-color: var(--haze);
-        color: var(--dark);
+        background-color: var(--accent);
+        color: var(--haze);
         outline: 1px dashed transparent;
         
         &:active,
@@ -977,7 +978,7 @@ html {
           &:active,
           &:hover {
             & .slice {
-              background-color: var(--dark);
+              background-color: var(--haze);
             }
           }
         }
@@ -989,9 +990,9 @@ html {
     & h3,
     & h4 {
       & a {
-        background-color: var(--haze);
+        background-color: var(--accent);
         border: 1px dashed transparent;
-        color: var(--dark);
+        color: var(--haze);
         border: 1px dashed transparent;
     
         &:active,
@@ -1006,8 +1007,8 @@ html {
     }
     
     & ::selection {
-      background-color: var(--haze);
-      color: var(--dark);
+      background-color: var(--accent);
+      color: var(--haze);
     }
     
     & .card {
@@ -1062,15 +1063,15 @@ html {
       &:active,
       &:hover {
         & .inner-circle {
-          background-color: var(--dark);
+          background-color: var(--haze);
         }
     
         & .middle-arc {
-          border: 1px solid var(--dark);
+          border: 1px solid var(--haze);
         }
     
         & .outer-arc {
-          border: 1px solid var(--dark);
+          border: 1px solid var(--haze);
         }
       }
     }
@@ -1092,9 +1093,9 @@ html {
     & .feature {
       & li {
         & a {
-          background-color: var(--haze);
+          background-color: var(--accent);
           border: 1px dashed transparent;
-          color: var(--dark);
+          color: var(--haze);
           outline: 1px dashed transparent;
           
           &:active,
@@ -1115,9 +1116,9 @@ html {
       &:active,
       &:focus,
       &:hover {
-        background-color: var(--haze);
+        background-color: var(--accent);
         border-bottom: 1px dashed transparent;
-        color: var(--dark);
+        color: var(--haze);
       }
     
       &.selected {
@@ -1133,9 +1134,9 @@ html {
       &:active code,
       &:focus code,
       &:hover code {
-        background-color: var(--haze);
+        background-color: var(--accent);
         border-bottom: 1px dashed transparent;
-        color: var(--dark);
+        color: var(--haze);
       }
     }
     
@@ -1146,8 +1147,8 @@ html {
       &:active,
       &:focus,
       &:hover {
-        background-color: var(--haze);
-        color: var(--dark);
+        background-color: var(--accent);
+        color: var(--haze);
       }
     }
     
@@ -1157,7 +1158,7 @@ html {
           &:active,
           &:focus,
           &:hover {
-            background-color: var(--haze);
+            background-color: var(--accent);
           }
         }
       }
@@ -1340,10 +1341,10 @@ html {
           & #main-menu-toggle:focus ~ .hamburger,
           & #main-menu-toggle:checked:focus ~ .hamburger,
           & #main-menu-toggle:hover ~ .hamburger {
-            background-color: var(--haze);
+            background-color: var(--accent);
     
             & .slice {
-              background-color: var(--dark);
+              background-color: var(--haze);
             }
           }
         }
