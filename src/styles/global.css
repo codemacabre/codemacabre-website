@@ -943,6 +943,7 @@ html {
     &:root {
       --haze: #dddddd;
       --murk: #adadad;
+      --gloom: #232323;
     }
 
     & body {
