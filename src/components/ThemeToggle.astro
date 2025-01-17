@@ -3,7 +3,9 @@
 <span class="theme">
   <input class="sr-only" id="theme-toggle" type="checkbox" checked="">
   <label id="theme-toggle-label" for="theme-toggle">
-    Toggle theme
+    <span>
+      Toggle theme
+    </span>
     <span class="icon"></span>
   </label>
 </span>
@@ -11,32 +13,43 @@
 <style>
   html {
     & .theme {
-      display: inline;
+      display: inline-block;
       position: relative;
-
+      
       & label {
-        margin: 0 0 0 -1.5rem;
+        align-items: center;
+        cursor: pointer;
+        display: inline-flex;
+        gap: 0.5rem;
+        margin: 0;
+        overflow: hidden;
+        padding: 0 0.4rem 0 0;
       }
 
       & #theme-toggle:checked ~ label > .icon {
         background: var(--dark);
         border-radius: 6px;
-        bottom: 2px;
         height: 12px;
-        right: -20px;
-        position: absolute;
-        transition: 200ms;
+        position: relative;
         width: 12px;
-      }
 
+        &::after {
+          background: var(--dark);
+          border-radius: 6px;
+          bottom: 3px;
+          content: '';
+          height: 12px;
+          left: 20px;
+          position: absolute;
+          width: 12px;
+        }
+      }
+      
       & #theme-toggle:not(:checked) ~ label > .icon {
         background: var(--haze);
         border-radius: 6px;
-        bottom: 2px;
-        right: -20px;
         height: 12px;
-        position: absolute;
-        transition: 200ms;
+        position: relative;
         width: 12px;
 
         &::after {
@@ -47,7 +60,6 @@
           height: 12px;
           left: 4px;
           position: absolute;
-          transition: 200ms;
           width: 12px;
         }
       }
@@ -57,17 +69,25 @@
       & label {
         border-bottom: 1px dashed var(--dark);
         color: var(--dark);
-        padding: 0.2rem 0.4rem;
-        cursor: pointer;
+        padding: 0.2rem 0.4rem 0.2rem 0.4rem;
       }
+
       & #theme-toggle:active ~ label,
       & #theme-toggle:focus ~ label,
       & #theme-toggle:hover ~ label {
         background-color: var(--dark);
         border-bottom: 1px dashed transparent;
         color: var(--haze);
-        outline: none;
         transition: 200ms;
+
+        & .icon {
+          background-color: var(--haze);
+          transition: 200ms;
+
+          &::after {
+            transition: 200ms;
+          }
+        }
       }
     }
     
@@ -85,6 +105,17 @@
           background-color: var(--murk);
           border-bottom: 1px dashed transparent;
           color: var(--haze);
+          transition: 200ms;
+          
+          & .icon {
+            background-color: var(--haze);
+            transition: 200ms;
+            
+            &::after {
+              background-color: var(--murk);
+              transition: 200ms;
+            }
+          }
         }
       }
     }
