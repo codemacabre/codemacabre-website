@@ -1259,17 +1259,14 @@ html {
           
           & .slice:nth-child(1) {
             transform: translateY(7px) rotate(45deg);
-            transition: 200ms;
           }
           
           & .slice:nth-child(2) {
             opacity: 0;
-            transition: 200ms;
           }
           
           & .slice:nth-child(3) {
             transform: translateY(-7px) rotate(-45deg);
-            transition: 200ms;
           }
         }
 
@@ -1281,7 +1278,7 @@ html {
 
           & .slice {
             background-color: var(--haze);
-            transition: 200ms;
+            transition: 100ms;
           }
         }
       
