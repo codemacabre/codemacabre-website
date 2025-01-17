@@ -21,7 +21,7 @@ html {
 
   /* Code blocks */
   & pre[class*="language-"] {
-    background-color: var(--murk);
+    background-color: var(--mist);
     font-size: 0.9rem;
     margin: 1rem 0;
     padding: 2rem;
@@ -31,7 +31,7 @@ html {
 
   /* Inline code */
   & :not(pre) > code {
-    background-color: var(--murk);
+    background-color: var(--mist);
     box-decoration-break: clone;
     margin: 0;
     padding: 0.2rem 0.4rem;
@@ -123,12 +123,12 @@ html {
     & .token.prolog,
     & .token.doctype,
     & .token.cdata {
-      color: var(--murk);
+      color: var(--mist);
     }
 
     & .token.string,
     & .token.attr-value {
-      color: var(--murk);
+      color: var(--mist);
     }
 
     & .token.punctuation,
@@ -146,20 +146,20 @@ html {
     & .token.property,
     & .token.regex,
     & .token.inserted {
-      color: var(--murk);
+      color: var(--mist);
     }
 
     & .token.atrule,
     & .token.keyword,
     & .token.attr-name,
     & .language-autohotkey .token.selector {
-      color: var(--murk);
+      color: var(--mist);
     }
 
     & .token.function,
     & .token.deleted,
     & .language-autohotkey .token.tag {
-      color: var(--murk);
+      color: var(--mist);
     }
 
     & .token.tag,
