@@ -15,6 +15,9 @@ export default defineConfig({
       footnoteLabelProperties: {
         className: ''
       }
-    },
+    }
+  },
+  experimental: {
+    svg: true
   }
 });
