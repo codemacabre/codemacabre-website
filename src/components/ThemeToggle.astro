@@ -10,15 +10,15 @@
 
 <style>
   html {
-    .theme {
+    & .theme {
       display: inline;
       position: relative;
 
-      label {
+      & label {
         margin: 0 0 0 -1.5rem;
       }
 
-      #theme-toggle:checked ~ label > .icon {
+      & #theme-toggle:checked ~ label > .icon {
         background: var(--dark);
         border-radius: 8px;
         bottom: 0;
@@ -29,7 +29,7 @@
         width: 16px;
       }
 
-      #theme-toggle:not(:checked) ~ label > .icon {
+      & #theme-toggle:not(:checked) ~ label > .icon {
         background: var(--haze);
         border-radius: 8px;
         bottom: 0;
@@ -53,16 +53,16 @@
       }
 
 
-      #theme-toggle ~ label,
-      label {
+      & #theme-toggle ~ label,
+      & label {
         border-bottom: 1px dashed var(--dark);
         color: var(--dark);
         padding: 0.2rem 0.4rem;
         cursor: pointer;
       }
-      #theme-toggle:active ~ label,
-      #theme-toggle:focus ~ label,
-      #theme-toggle:hover ~ label {
+      & #theme-toggle:active ~ label,
+      & #theme-toggle:focus ~ label,
+      & #theme-toggle:hover ~ label {
         background-color: var(--dark);
         border-bottom: 1px dashed transparent;
         color: var(--haze);
@@ -72,16 +72,16 @@
     }
     
     &.dark {
-      .theme {
-        #theme-toggle ~ label,
-        label {
+      & .theme {
+        & #theme-toggle ~ label,
+        & label {
           border-bottom: 1px dashed var(--haze);
           color: var(--haze);
         }
         
-        #theme-toggle:active ~ label,
-        #theme-toggle:focus ~ label,
-        #theme-toggle:hover ~ label {
+        & #theme-toggle:active ~ label,
+        & #theme-toggle:focus ~ label,
+        & #theme-toggle:hover ~ label {
           background-color: var(--murk);
           border-bottom: 1px dashed transparent;
           color: var(--haze);
