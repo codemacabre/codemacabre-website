@@ -7,10 +7,6 @@
       background-color: #fafafa;
     }
 
-    .output {
-      transform: translateY(-3px);
-    }
-
     text {
       fill: #111111;
     }
@@ -43,7 +39,7 @@
       fill: #ddd;
     }
   </style>
-  <g transform="translate(140.4500503540039,194) scale(18)">
+  <g transform="translate(140,140) scale(18)">
     <g class="output">
       <g class="clusters" />
       <g class="edgePaths">
@@ -60,7 +56,7 @@
       </g>
       <g class="edgeLabels">
         <g class="edgeLabel" transform="translate(63.716668128967285,42)">
-          <g transform="translate(-11,-11)" class="label">
+          <g transform="translate(-14,-12)" class="label">
             <text role="presentation" aria-hidden="true">
               <tspan xml:space="preserve" dy="1em" x="1">to</tspan>
             </text></g>
