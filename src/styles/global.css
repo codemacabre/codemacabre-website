@@ -1009,7 +1009,7 @@ html {
     }
     
     & ::selection {
-      background-color: var(--gloom);
+      background-color: var(--murk);
       color: var(--haze);
     }
     
