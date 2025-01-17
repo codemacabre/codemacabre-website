@@ -1,0 +1,93 @@
+<svg id="graph" width="2560" height="1130" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink"
+  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2560 1130" preserveAspectRatio="xMidYMid meet" aria-labelledby="dag-title dag-desc" role="img">
+  <title id="dag-title">A DAG example</title>
+  <desc id="dag-desc">A rectangle containing the letter 'A', joined by an arrow to another rectangle containing the letter 'B'.</desc>
+  <style>
+    svg {
+      background-color: #fafafa;
+    }
+
+    .output {
+      transform: translateY(-3px);
+    }
+
+    text {
+      fill: #111111;
+    }
+
+    .node rect {
+      stroke: #111;
+      fill: #fafafa;
+    }
+
+    .edgePath path {
+      stroke: #111111;
+      fill: #111111;
+    }
+
+    svg.dark {
+      background-color: #111111;
+    }
+
+    svg.dark text {
+      fill: #dddddd;
+    }
+
+    svg.dark .node rect {
+      stroke: #dddddd;
+      fill: #111111;
+    }
+
+    svg.dark .edgePath path {
+      stroke: #dddddd;
+      fill: #ddd;
+    }
+  </style>
+  <g transform="translate(140.4500503540039,194) scale(18)">
+    <g class="output">
+      <g class="clusters" />
+      <g class="edgePaths">
+        <g class="edgePath">
+          <path class="path" d="M31.283334732055664,21L63.716668128967285,21L96.1500015258789,21"
+            marker-end="url(#arrowhead8)" />
+          <defs>
+            <marker id="arrowhead8" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8"
+              markerHeight="6" orient="auto">
+              <path d="M 0 0 L 10 5 L 0 10 z" />
+            </marker>
+          </defs>
+        </g>
+      </g>
+      <g class="edgeLabels">
+        <g class="edgeLabel" transform="translate(63.716668128967285,42)">
+          <g transform="translate(-11,-11)" class="label">
+            <text role="presentation" aria-hidden="true">
+              <tspan xml:space="preserve" dy="1em" x="1">to</tspan>
+            </text></g>
+        </g>
+      </g>
+      <g class="nodes">
+        <g class="node" transform="translate(15.641667366027832,21)">
+          <rect rx="0" ry="0" x="-15.641666889190674" y="-21" width="31.283333778381348" height="42"
+            class="label-container" />
+          <g class="label" transform="translate(0,0)">
+            <g transform="translate(-6,-11)">
+              <text role="presentation" aria-hidden="true">
+                <tspan xml:space="preserve" dy="1em" x="1">A</tspan>
+              </text></g>
+          </g>
+        </g>
+        <g class="node" transform="translate(111.38333415985107,21)">
+          <rect rx="0" ry="0" x="-15.233333110809326" y="-21" width="30.466666221618652" height="42"
+            class="label-container" />
+          <g class="label" transform="translate(0,0)">
+            <g transform="translate(-6,-11)">
+              <text role="presentation" aria-hidden="true">
+                <tspan xml:space="preserve" dy="1em" x="1">B</tspan>
+              </text></g>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

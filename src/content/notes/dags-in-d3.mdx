@@ -8,13 +8,13 @@ update: 2025-01-04
 ---
 import { Image } from 'astro:assets';
 import Callout from '~/components/Callout.astro';
-import dagImg from '~/assets/images/notes/dag.png';
+import DagSvg from '~/assets/images/notes/dag.svg';
 
 A directed acyclic graph, or DAG, is a graph formed of edges and nodes which flows in one dominant direction, like a family tree or a flow chart.
 
 In this guide, I'll describe how to setup a project with [D3](https://d3js.org) and how to write a basic DAG using the [dagre-d3](https://www.npmjs.com/package/dagre-d3) library.
 
-<Image class="outline greyscale extra-space" src={dagImg} alt="DAG example" />
+<DagSvg class="outline extra-space toggleable-theme" />
 
 ## 1. Create the HTML base
 
