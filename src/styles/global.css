@@ -1278,7 +1278,7 @@ html {
 
           & .slice {
             background-color: var(--haze);
-            transition: 100ms;
+            transition: 200ms;
           }
         }
       
