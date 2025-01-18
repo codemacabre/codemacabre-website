@@ -959,6 +959,7 @@ html {
     & body {
       background-color: var(--dark);
       color: var(--haze);
+      font-weight: 350;
     }
     
     & header {
