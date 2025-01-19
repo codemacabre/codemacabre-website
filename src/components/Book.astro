@@ -1,7 +1,7 @@
 ---
 import { Image } from 'astro:assets';
 
-const { author, cover, rating, reread, title } = Astro.props;
+const { author, cover, rating, status, title } = Astro.props;
 ---
 
 <li class="card">
@@ -25,7 +25,7 @@ const { author, cover, rating, reread, title } = Astro.props;
     <p class="rating"><span class="wide-only">Rating: </span><span aria-label={`${rating} out of 5`}>{'*'.repeat(rating)}<span class="faded" aria-hidden="true">{'*'.repeat(5 - rating)}</span></span></p>
   </div>
   <div class="banner-container">
-    {reread && (
+    {status === 're-read' && (
       <div class="banner">Re-read</div>
     )}
     </div>

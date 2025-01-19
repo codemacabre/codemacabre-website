@@ -18,8 +18,8 @@ const pageTitle = 'Reading';
   <h2>{year}</h2>
   <ul class="card-container">
     {booksData.map((book) =>
-      book.year.includes(year) &&
-        <Book author={book.author} cover={book.cover} rating={book.rating} reread={book.reread} title={book.title} />
+      book.year.includes(year) && (book.status === 'read' || book.status === 're-read') &&
+        <Book author={book.author} cover={book.cover} rating={book.rating} status={book.status} title={book.title} />
     )}
   </ul>
 )}
