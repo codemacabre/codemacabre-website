@@ -40,7 +40,7 @@ filteredNotes.forEach((note) => {
 });
 
 booksData.forEach((book) => {
-  if (Number(book.year) === new Date().getFullYear()) {
+  if (Number(book.year) === new Date().getFullYear() && (book.status === 'read' || book.status === 're-read')) {
     booksRead++;
   }
 });
