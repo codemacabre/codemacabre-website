@@ -1,5 +1,19 @@
 [
   {
+    "author": ["Sheldon Solomon", "Jeff Greenberg", "Tom Pyszczynski"],
+    "cover": {
+      "alt": "The Worm at the Core book cover. Atop an illustration of a red apple with a green leaf is a tiny figure in black sliding down a worm-like path. The subtitle reads, 'On the Role of Death in Life'.",
+      "height": 307,
+      "src": "/images/books/worm-core.jpg",
+      "width": 200
+    },
+    "format": ["paperback"],
+    "rating": 5,
+    "status": "to-read",
+    "title": "The Worm at the Core",
+    "year": "2025"
+  },
+  {
     "author": ["Jenny Odell"],
     "cover": {
       "alt": "How to Do Nothing book cover. The title is in white, partially obscured by a bed of pink and white flowers covering the background. The subtitle reads, 'Resisting the Attention Economy'.",
@@ -9,7 +23,7 @@
     },
     "format": ["paperback"],
     "rating": 5,
-    "reread": false,
+    "status": "read",
     "title": "How to Do Nothing",
     "year": "2025"
   },
@@ -23,7 +37,7 @@
     },
     "format": ["audiobook"],
     "rating": 3,
-    "reread": false,
+    "status": "read",
     "title": "Ghost Station",
     "year": "2024"
   },
@@ -37,7 +51,7 @@
     },
     "format": ["ebook", "paperback"],
     "rating": 3,
-    "reread": false,
+    "status": "read",
     "title": "The Mikado Method",
     "year": "2024"
   },
@@ -51,7 +65,7 @@
     },
     "format": ["audiobook"],
     "rating": 4,
-    "reread": false,
+    "status": "read",
     "title": "System Collapse",
     "year": "2024"
   },
@@ -65,7 +79,7 @@
     },
     "format": ["audiobook"],
     "rating": 2,
-    "reread": false,
+    "status": "read",
     "title": "This Book Could Save Your Life",
     "year": "2024"
   },
@@ -79,7 +93,7 @@
     },
     "format": ["hardback"],
     "rating": 4,
-    "reread": false,
+    "status": "read",
     "title": "Among the Trolls",
     "year": "2024"
   },
@@ -93,7 +107,7 @@
     },
     "format": ["audiobook"],
     "rating": 3,
-    "reread": false,
+    "status": "read",
     "title": "How to Resist Amazon and Why",
     "year": "2024"
   }
