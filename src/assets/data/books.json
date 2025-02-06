@@ -1,16 +1,16 @@
 [
   {
-    "author": ["Sheldon Solomon", "Jeff Greenberg", "Tom Pyszczynski"],
+    "author": ["Office of Strategic Services"],
     "cover": {
-      "alt": "The Worm at the Core book cover. Atop an illustration of a red apple with a green leaf is a tiny figure in black sliding down a worm-like path. The subtitle reads, 'On the Role of Death in Life'.",
-      "height": 307,
-      "src": "/images/books/worm-core.jpg",
+      "alt": "Simple Sabotage Field Manual cover. The text is printed in black on a blue background. The  word 'secret' at both the top and bottom of the page have been redacted with a black marker.",
+      "height": 319,
+      "src": "/images/books/simple-sabotage.jpg",
       "width": 200
     },
-    "format": ["paperback"],
-    "rating": 5,
-    "status": "to-read",
-    "title": "The Worm at the Core",
+    "format": ["ebook"],
+    "rating": 4,
+    "status": "read",
+    "title": "Simple Sabotage Field Manual",
     "year": "2025"
   },
   {
