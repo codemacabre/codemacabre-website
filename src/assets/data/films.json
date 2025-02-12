@@ -1,0 +1,142 @@
+[
+  {
+    "cover": {
+      "alt": "Nosferatu poster.",
+      "height": 296,
+      "src": "/images/films/nosferatu-2024.jpg",
+      "width": 200
+    },
+    "format": ["cinema"],
+    "rating": 5,
+    "release": 2024,
+    "status": "watched",
+    "title": "Nosferatu",
+    "year": "2025"
+  },
+  {
+    "cover": {
+      "alt": "Beetlejuice Beetlejuice poster.",
+      "height": 296,
+      "src": "/images/films/beetlejuice-beetlejuice.jpg",
+      "width": 200
+    },
+    "format": ["cinema"],
+    "rating": 4,
+    "release": 2024,
+    "status": "watched",
+    "title": "Beetlejuice Beetlejuice",
+    "year": "2024"
+  },
+  {
+    "cover": {
+      "alt": "Alien: Romulus poster.",
+      "height": 296,
+      "src": "/images/films/alien-romulus.jpg",
+      "width": 200
+    },
+    "format": ["cinema"],
+    "rating": 3,
+    "release": 2024,
+    "status": "watched",
+    "title": "Alien: Romulus",
+    "year": "2024"
+  },
+  {
+    "cover": {
+      "alt": "Underwater poster.",
+      "height": 300,
+      "src": "/images/films/underwater.jpg",
+      "width": 200
+    },
+    "format": ["streaming"],
+    "rating": 2,
+    "release": 2020,
+    "status": "watched",
+    "title": "Underwater",
+    "year": "2024"
+  },
+  {
+    "cover": {
+      "alt": "Indiana Jones and the Dial of Destiny poster.",
+      "height": 296,
+      "src": "/images/films/indy-dod.jpg",
+      "width": 200
+    },
+    "format": ["streaming"],
+    "rating": 3,
+    "release": 2023,
+    "status": "watched",
+    "title": "Indiana Jones and the Dial of Destiny",
+    "year": "2024"
+  },
+  {
+    "cover": {
+      "alt": "Rogue One: A Star Wars Story poster.",
+      "height": 296,
+      "src": "/images/films/rogue-one.jpg",
+      "width": 200
+    },
+    "format": ["streaming"],
+    "rating": 4,
+    "release": 2016,
+    "status": "re-watched",
+    "title": "Rogue One: A Star Wars Story",
+    "year": "2024"
+  },
+  {
+    "cover": {
+      "alt": "Prey poster.",
+      "height": 296,
+      "src": "/images/films/prey-2022.jpg",
+      "width": 200
+    },
+    "format": ["streaming"],
+    "rating": 4,
+    "release": 2022,
+    "status": "watched",
+    "title": "Prey",
+    "year": "2024"
+  },
+  {
+    "cover": {
+      "alt": "They Cloned Tyrone poster.",
+      "height": 296,
+      "src": "/images/films/they-cloned-tyrone.jpg",
+      "width": 200
+    },
+    "format": ["streaming"],
+    "rating": 5,
+    "release": 2023,
+    "status": "watched",
+    "title": "They Cloned Tyrone",
+    "year": "2024"
+  },
+  {
+    "cover": {
+      "alt": "Ghostbusters: Afterlife poster.",
+      "height": 296,
+      "src": "/images/films/ghostbusters-afterlife.jpg",
+      "width": 200
+    },
+    "format": ["streaming"],
+    "rating": 4,
+    "release": 2022,
+    "status": "watched",
+    "title": "Ghostbusters: Afterlife",
+    "year": "2024"
+  },
+  {
+    "cover": {
+      "alt": "JUNG_E poster.",
+      "height": 296,
+      "src": "/images/films/jung-e.jpg",
+      "width": 200
+    },
+    "format": ["streaming"],
+    "rating": 3,
+    "release": 2023,
+    "status": "watched",
+    "title": "JUNG_E",
+    "year": "2024"
+  }
+]
