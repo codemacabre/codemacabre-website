@@ -492,6 +492,12 @@ html {
     }
   }
 
+  & .info {
+    display: inline;
+    font-family: 'source-code-pro-italic', monospace;
+    font-size: 0.8rem;
+  }
+
   & .dates {
     display: inline;
     font-family: 'source-code-pro-italic', monospace;

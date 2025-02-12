@@ -1,10 +1,10 @@
 ---
 import BaseLayout from '~/layouts/BaseLayout.astro';
-import Film from '~/components/Film.astro';
-import filmsData from '~/assets/data/films.json';
+import Video from '~/components/Video.astro';
+import videosData from '~/assets/data/videos.json';
 
 const years = Array
-  .from(new Set(filmsData.map((film) => film.year)))
+  .from(new Set(videosData.map((video) => video.year)))
   .sort((a, b) => {
     return new Date(b).getTime() - new Date(a).getTime();
   });
@@ -12,14 +12,14 @@ const pageTitle = 'Watching';
 ---
 <BaseLayout pageTitle={pageTitle}>
 <h1>{pageTitle}</h1>
-<p>The films I've watched each year, as of 2024.</p>
+<p>The films and TV series I've watched each year, as of 2024. I generally favour the cinema or physical media, wherever possible.</p>
 
 {years.map((year) =>
   <h2>{year}</h2>
   <ul class="card-container">
-    {filmsData.map((film) =>
-      film.year.includes(year) && (film.status === 'watched' || film.status === 're-watched') &&
-        <Film cover={film.cover} rating={film.rating} release={film.release} status={film.status} title={film.title} />
+    {videosData.map((video) =>
+      video.year.includes(year) && (video.status === 'watched' || video.status === 're-watched') &&
+        <Video cover={video.cover} rating={video.rating} release={video.release} seasons={video.seasons} status={video.status} title={video.title} />
     )}
   </ul>
 )}
