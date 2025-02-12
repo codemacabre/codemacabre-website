@@ -1,7 +1,7 @@
 [
   {
     "cover": {
-      "alt": "Nosferatu poster.",
+      "alt": "Nosferatu poster. A clawed hand caresses a woman's face.",
       "height": 296,
       "src": "/images/films/nosferatu-2024.jpg",
       "width": 200
@@ -15,7 +15,7 @@
   },
   {
     "cover": {
-      "alt": "Beetlejuice Beetlejuice poster.",
+      "alt": "Beetlejuice Beetlejuice poster. Beetlejuice sits on an old house, surrounded by the film's characters.",
       "height": 296,
       "src": "/images/films/beetlejuice-beetlejuice.jpg",
       "width": 200
@@ -29,7 +29,7 @@
   },
   {
     "cover": {
-      "alt": "Alien: Romulus poster.",
+      "alt": "Alien: Romulus poster. A facehugger alien is attached to a person's face, its tail wrapped around their neck.",
       "height": 296,
       "src": "/images/films/alien-romulus.jpg",
       "width": 200
@@ -43,7 +43,7 @@
   },
   {
     "cover": {
-      "alt": "Underwater poster.",
+      "alt": "Underwater poster. A woman wears a fretful expression inside a sci-fi diving helmet surrounded by bubbles, lit with a glow amidst darkness.",
       "height": 300,
       "src": "/images/films/underwater.jpg",
       "width": 200
@@ -57,13 +57,13 @@
   },
   {
     "cover": {
-      "alt": "Indiana Jones and the Dial of Destiny poster.",
+      "alt": "Indiana Jones and the Dial of Destiny poster. An illustration of an older Indiana Jones poses with his iconic costume and whip, surrounded by the film's characters.",
       "height": 296,
       "src": "/images/films/indy-dod.jpg",
       "width": 200
     },
     "format": ["streaming"],
-    "rating": 3,
+    "rating": 2,
     "release": 2023,
     "status": "watched",
     "title": "Indiana Jones and the Dial of Destiny",
@@ -71,7 +71,7 @@
   },
   {
     "cover": {
-      "alt": "Rogue One: A Star Wars Story poster.",
+      "alt": "Rogue One: A Star Wars Story poster. An illustration of the main character Jyn Erso, surrounded by Rebel and Empire forces. The Death Star and Darth Vader's mask loom in the background.",
       "height": 296,
       "src": "/images/films/rogue-one.jpg",
       "width": 200
@@ -85,7 +85,7 @@
   },
   {
     "cover": {
-      "alt": "Prey poster.",
+      "alt": "Prey poster. The main character Naru's face is smeared in the Predator's green glowing blood. The three red laser beams of the Predator's weapon are reflected in her eye.",
       "height": 296,
       "src": "/images/films/prey-2022.jpg",
       "width": 200
@@ -99,7 +99,7 @@
   },
   {
     "cover": {
-      "alt": "They Cloned Tyrone poster.",
+      "alt": "They Cloned Tyrone poster. Several character's heads are arranged in an arc, most of which are the main character's, Tyrone. The tagline reads, 'Damn...'.",
       "height": 296,
       "src": "/images/films/they-cloned-tyrone.jpg",
       "width": 200
@@ -113,7 +113,7 @@
   },
   {
     "cover": {
-      "alt": "Ghostbusters: Afterlife poster.",
+      "alt": "Ghostbusters: Afterlife poster. Under a supernatural stormy sky, the iconic Ecto-1 vintage Ghostbusters ambulance is parked in a field, surrounded by the main characters looking around cautiously.",
       "height": 296,
       "src": "/images/films/ghostbusters-afterlife.jpg",
       "width": 200
@@ -127,7 +127,7 @@
   },
   {
     "cover": {
-      "alt": "JUNG_E poster.",
+      "alt": "JUNG_E poster. A humanoid robot stands menacingly in the centre holding an assault rifle, flanked on either side by other characters and attack robots. A close-up of the titular main character's face is above them, all against a futuristic backdrop.",
       "height": 296,
       "src": "/images/films/jung-e.jpg",
       "width": 200
