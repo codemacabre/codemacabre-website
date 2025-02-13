@@ -1,6 +1,35 @@
 [
   {
     "cover": {
+      "alt": "Parasyte: The Grey poster. A crowd of characters stand in the street. Some hold weapons, while others have mutated faces with vicious-looking alien growths.",
+      "height": 296,
+      "src": "/images/videos/parasyte-the-grey.jpg",
+      "width": 200
+    },
+    "format": ["streaming"],
+    "rating": 3,
+    "release": 2024,
+    "seasons": ["01"],
+    "status": "watching",
+    "title": "Parasyte: The Grey",
+    "year": "2025"
+  },
+  {
+    "cover": {
+      "alt": "Split poster. A close-up of the main character, Kevin, frowning. A shattered glass effect splits his face into multiple fragments.",
+      "height": 296,
+      "src": "/images/videos/split.jpg",
+      "width": 200
+    },
+    "format": ["streaming"],
+    "rating": 4,
+    "release": 2016,
+    "status": "watched",
+    "title": "Split",
+    "year": "2025"
+  },
+  {
+    "cover": {
       "alt": "Nosferatu poster. A clawed hand caresses a woman's face.",
       "height": 296,
       "src": "/images/videos/nosferatu-2024.jpg",
