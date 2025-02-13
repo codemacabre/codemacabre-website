@@ -28,7 +28,8 @@ const allProjects = await getCollection('projects');
 
 let notesWritten = 0;
 let booksRead = 0;
-let videosWatched = 0;
+let filmsWatched = 0;
+let seriesWatched = 0;
 let currentProjects: Project[] = [];
 const isDev = import.meta.env.MODE === 'development';
 
@@ -49,7 +50,11 @@ booksData.forEach((book) => {
 
 videosData.forEach((video) => {
   if (Number(video.year) === new Date().getFullYear() && (video.status === 'watched' || video.status === 're-watched')) {
-    videosWatched++;
+    if (video.seasons) {
+      seriesWatched++;
+    } else {
+      filmsWatched++;
+    }
   }
 });
 
@@ -105,7 +110,7 @@ const sortedProjects = currentProjects.sort((a, b) => {
       </>
     )}
   </p>
-  <p>So far this year, I've <a href="/notes">written {notesWritten} {notesWritten === 1 ? 'note' : 'notes'}</a>, <a href="/reading">read {booksRead} {booksRead === 1 ? 'book' : 'books'}</a>, and  <a href="/watching">watched {videosWatched} {videosWatched === 1 ? 'film' : 'films'} and/or series</a>.</p>
+  <p>So far this year, I've <a href="/notes">written {notesWritten} {notesWritten === 1 ? 'note' : 'notes'}</a>, <a href="/reading">read {booksRead} {booksRead === 1 ? 'book' : 'books'}</a>, and <a href="/watching">watched {filmsWatched} {filmsWatched === 1 ? 'film' : 'films'}{seriesWatched > 0 && <> and {seriesWatched} series</></a>.</p>
   <h2 id="fun-facts">Fun facts</h2>
   <p>My household includes a menagerie of multi-legged pets of various species, including:</p>
   <ul class="indented">
