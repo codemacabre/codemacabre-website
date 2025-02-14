@@ -16,7 +16,7 @@
   },
   {
     "cover": {
-      "alt": "Unbreakable poster. Characters David Dunn and Elijah Price look moodily in opposite directions into the darkness. Between them is a cloaked figure. A shattered glass effect separates the two characters.",
+      "alt": "Unbreakable poster. Characters David Dunn and Elijah Price look moodily in opposite directions into the darkness. Between them is a cloaked, silhouetted figure. A shattered glass effect separates the two characters.",
       "height": 296,
       "src": "/images/videos/unbreakable.jpg",
       "width": 200
@@ -24,7 +24,7 @@
     "format": ["streaming"],
     "rating": 3,
     "release": 2000,
-    "status": "re-watching",
+    "status": "re-watched",
     "title": "Unbreakable",
     "year": "2025"
   },
