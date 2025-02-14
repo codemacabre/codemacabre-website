@@ -28,6 +28,20 @@
     "year": "2025"
   },
   {
+    "author": ["Naomi Klein"],
+    "cover": {
+      "alt": "Doppleganger cover. The title repeats down the black cover, becoming more glitched and obscured as it descends.",
+      "height": 200,
+      "src": "/images/books/doppleganger.jpg",
+      "width": 200
+    },
+    "format": ["audiobook"],
+    "rating": 4,
+    "status": "reading",
+    "title": "Doppleganger",
+    "year": "2025"
+  },
+  {
     "author": ["Office of Strategic Services"],
     "cover": {
       "alt": "Simple Sabotage Field Manual cover. The text is printed in black on a blue background. The  word 'secret' at both the top and bottom of the page have been redacted with a black marker.",
