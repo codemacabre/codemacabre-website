@@ -14,20 +14,6 @@
     "year": "2025"
   },
   {
-    "author": ["Gerry McGovern"],
-    "cover": {
-      "alt": "World Wide Waste cover. An abstract dotted world map leaks black oily drops downwards, filling up the bottom of the white page. The subtitle reads 'How digital is killing our planet - and what we can do about it'.",
-      "height": 300,
-      "src": "/images/books/world-wide-waste.jpg",
-      "width": 200
-    },
-    "format": ["paperback"],
-    "rating": 4,
-    "status": "reading",
-    "title": "World Wide Waste",
-    "year": "2025"
-  },
-  {
     "author": ["Naomi Klein"],
     "cover": {
       "alt": "Doppleganger cover. The title repeats down the black cover, becoming more glitched and obscured as it descends.",
@@ -39,6 +25,20 @@
     "rating": 4,
     "status": "reading",
     "title": "Doppleganger",
+    "year": "2025"
+  },
+  {
+    "author": ["Gerry McGovern"],
+    "cover": {
+      "alt": "World Wide Waste cover. An abstract dotted world map leaks black oily drops downwards, filling up the bottom of the white page. The subtitle reads 'How digital is killing our planet - and what we can do about it'.",
+      "height": 300,
+      "src": "/images/books/world-wide-waste.jpg",
+      "width": 200
+    },
+    "format": ["paperback"],
+    "rating": 3,
+    "status": "read",
+    "title": "World Wide Waste",
     "year": "2025"
   },
   {
