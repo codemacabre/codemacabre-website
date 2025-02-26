@@ -1,7 +1,21 @@
 [
   {
     "cover": {
-      "alt": "Parasyte: The Grey poster. A crowd of characters stand in the street. Some hold weapons, while others have mutated faces with vicious-looking alien growths.",
+      "alt": "The Substance poster. A naked woman lies on the floor of a white tiled bathroom. Along her spine is a large red surgical scar.",
+      "height": 293,
+      "src": "/images/videos/substance.jpg",
+      "width": 200
+    },
+    "format": ["streaming"],
+    "rating": 4,
+    "release": 2024,
+    "status": "watched",
+    "title": "The Substance",
+    "year": "2025"
+  },
+  {
+    "cover": {
+      "alt": "Parasyte: The Grey poster. Various characters stand in a street. Some hold weapons, while others have mutated faces with vicious-looking alien growths. The main character, Jeong Soo-in, has half of her face mutated with an alien parasite.",
       "height": 296,
       "src": "/images/videos/parasyte-the-grey.jpg",
       "width": 200
