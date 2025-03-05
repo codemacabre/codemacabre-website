@@ -1,0 +1,131 @@
+---
+category: "sprout"
+date: 2025-03-05
+description: "Installing and configuring minimal Debian Testing with Xfce"
+tags: ["guide", "linux", "self"]
+title: My Linux setup
+---
+import { Image } from 'astro:assets';
+import DesktopImg from '~/assets/images/notes/xfce-desktop.png';
+
+I love Linux, and I'm especially fond of having a minimal system with no bloatware. I've distro-hopped a number of times and alternated between Debian and Arch a few times before finally trying [Debian Testing](https://wiki.debian.org/DebianTesting). This rolling release version of Debian is exactly what I was looking for and I've been very happy with it for months.
+
+To install a minimal Xfce desktop environment, I use a similar process to [Craig Coonrad's guide](https://github.com/coonrad/Debian-Xfce4-Minimal-Install), where I install Debian 12 (bookworm), then update sources to use Debian Testing (trixie).
+
+## 1. Install minimal Debian Testing
+
+When installing Debian via the [ISO](https://www.debian.org/releases/bookworm/debian-installer/), we will encounter a screen titled 'Software selection'. Here, we can select which desktop environment we prefer; I want Xfce, but the checkbox here will install a lot of additional software I don't want, so we should uncheck everything except 'standard system utilities'.
+
+Once installation has finished, we will reboot into a shell environment.
+
+Log in as a root user, then run the edit the `sources.list` file with,
+
+```sh
+sudo nano /etc/apt/sources.list
+```
+
+Now, update the file to include the following sources:
+
+```
+deb http://deb.debian.org/debian testing main contrib non-free-firmware non-free
+deb http://security.debian.org/debian-security testing-security main contrib non-free-firmware non-free
+```
+
+Press `Ctrl` + `x` to exit, and save the file. Update the system with,
+
+```sh
+sudo apt update && apt upgrade
+```
+
+then reboot.
+
+## 2. Install minimal Xfce
+
+Rather than installing the standard `xfce` package, which installs a lot of additional utilities, we can install only the essential packages with:
+
+```sh
+sudo apt install libxfce4ui-utils thunar xfce4-appfinder xfce4-panel xfce4-session xfce4-settings xfce4-terminal xfconf xfdesktop4 xfwm4
+```
+
+Reboot, and we will be greeted by a LightDM login screen which will open up a working minimal Xfce desktop environment.
+
+## 3. Connecting to the internet
+
+There may still be a few essential utilities required to make things run smoothly, such as the Network Manager. Install with,
+
+```sh
+sudo apt install network-manager-gnome
+```
+
+This will require configuring. Edit the `NetworkManager.conf` file with,
+
+```sh
+sudo nano /etc/NetworkManager/NetworkManager.conf
+```
+
+In this file, under the `[ifupdown]` section, amend the line from `managed=false` to `managed=true`. Save and exit this file and then restart the Network Manager with,
+
+```sh
+sudo service network-manager restart
+```
+
+## 4. Theming and adding custom CSS
+
+I like to tweak Xfce to have a nice, clean, single panel.
+
+<Image src={DesktopImg} alt="A minimal Xfce desktop environment with a narrow dark grey panel along the bottom. The background wallpaper features a still from the series 'Scavengers Reign'." class="greyscale" />
+
+This can be achieved by modifying the panel properies and moving the items around. I use the [Matcha GTK Theme](https://github.com/vinceliuice/Matcha-gtk-theme) to theme the desktop and [Flat Remix](https://github.com/daniruiz/Flat-Remix) for my icons.
+
+We can add a small amount of CSS to adjust the panel spacing. These values work for me, but we can modify them as appropriate to our taste.
+
+Create a file called `gtk.css` in the `~/.config/gtk-3.0/` directory, and add the following CSS:
+
+```css
+.tasklist button, #clock-button, #whiskermenu-button, #xfce4-notification-plugin, #xfce4-power-manager-plugin, #pulseaudio-button {
+	border-radius: 0;
+}
+
+#whiskermenu-button {
+  padding: 0 5px;
+}
+
+#xfce4-power-manager-plugin image {
+  color: #ffffff;
+  opacity: 1;
+}
+
+#pulseaudio-button image {
+	-gtk-icon-transform: scale(0.9);
+  color: #ffffff;
+  opacity: 1;
+}
+
+#pulseaudio-button .recording-indicator {
+  -gtk-icon-transform: scale(0.6);
+  padding: 0 5px 0 0;
+}
+
+#xfce-panel-toggle-button {
+  border-radius: 0;
+  padding: 0 5px;
+}
+```
+ 
+This removes rounded edges from buttons, scales some of the panel icons to make them feel more consistent, makes the semi-transparent icons opaque, and adds some spacing to make the buttons flow better next to each other.
+
+To see these changes, we can restart the panel with the command,
+
+```sh
+xfce4-panel -r
+```
+
+## 5. Additional applications
+
+These are some of the applications I always install.
+
+- I like to use [LibreWolf](https://librewolf.net/installation/debian/) for my main browser
+- I use [Polypane](https://polypane.app/download/) as an additional development browser
+- For my code editor, I use [VSCodium](https://vscodium.com/#install-on-debian-ubuntu-deb-package)
+- I'm fond of the default Xfce Terminal, but I use [ZSH](https://github.com/ohmyzsh/ohmyzsh/wiki/Installing-ZSH#install-and-set-up-zsh-as-default) and [Oh My ZSH!](https://github.com/ohmyzsh/ohmyzsh?tab=readme-ov-file#basic-installation) with the [Spaceship prompt](https://github.com/spaceship-prompt/spaceship-prompt?tab=readme-ov-file#-installation) and the [`zsh-autosuggestions`](https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md) and [`zsh-syntax-highlighting`](https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md) add-ons
+- I prefer to download MP3s locally and use the terminal music player, [`kew`](https://github.com/ravachol/kew?tab=readme-ov-file#installing)
