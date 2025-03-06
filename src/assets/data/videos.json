@@ -1,6 +1,20 @@
 [
   {
     "cover": {
+      "alt": "The Monkey poster. A creepy, grimacing toy monkey glares ominously from the darkness.",
+      "height": 296,
+      "src": "/images/videos/monkey.jpg",
+      "width": 200
+    },
+    "format": ["cinema"],
+    "rating": 3,
+    "release": 2025,
+    "status": "watched",
+    "title": "The Monkey",
+    "year": "2025"
+  },
+  {
+    "cover": {
       "alt": "The Substance poster. A naked woman lies on the floor of a white tiled bathroom. Along her spine is a large red surgical scar.",
       "height": 293,
       "src": "/images/videos/substance.jpg",
@@ -15,7 +29,7 @@
   },
   {
     "cover": {
-      "alt": "Parasyte: The Grey poster. Various characters stand in a street. Some hold weapons, while others have mutated faces with vicious-looking alien growths. The main character, Jeong Soo-in, has half of her face mutated with an alien parasite.",
+      "alt": "Parasyte: The Grey poster. Various characters stand in a street. Some hold weapons, while others have vicious-looking alien growths instead of faces. The main character, Jeong Soo-in, has half of her face mutated with an alien parasite.",
       "height": 296,
       "src": "/images/videos/parasyte-the-grey.jpg",
       "width": 200
@@ -72,7 +86,7 @@
   },
   {
     "cover": {
-      "alt": "Nosferatu poster. Main character Ellen Hutter is reclined amongst lilac flowers as a clawed hand caresses her face. The title is in gothic script below the subtitle, which reads 'Succumb to the darkness'.",
+      "alt": "Nosferatu poster. Main character Ellen Hutter is reclined amongst lilac flowers as a clawed hand caresses her face. The title is in gothic script below the tagline, which reads 'Succumb to the darkness'.",
       "height": 296,
       "src": "/images/videos/nosferatu-2024.jpg",
       "width": 200
@@ -114,7 +128,7 @@
   },
   {
     "cover": {
-      "alt": "Underwater poster. A woman wears a fretful expression inside a sci-fi diving helmet surrounded by bubbles, lit with a glow amidst darkness.",
+      "alt": "Underwater poster. The main character, Norah, wears a fretful expression inside a sci-fi diving helmet surrounded by bubbles, lit with a glow amidst darkness.",
       "height": 300,
       "src": "/images/videos/underwater.jpg",
       "width": 200
