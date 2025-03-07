@@ -1,6 +1,21 @@
 [
   {
     "cover": {
+      "alt": "The Fall of the House of Usher poster. A woman holds a black raven masquerade mask, peering out from behind it in pitch darkness.",
+      "height": 296,
+      "src": "/images/videos/fall-of-usher.jpg",
+      "width": 200
+    },
+    "format": ["streaming"],
+    "rating": 3,
+    "release": 2023,
+    "seasons": ["01"],
+    "status": "watching",
+    "title": "The Fall of the House of Usher",
+    "year": 2025
+  },
+  {
+    "cover": {
       "alt": "The Monkey poster. A creepy, grimacing toy monkey glares ominously from the darkness.",
       "height": 296,
       "src": "/images/videos/monkey.jpg",
