@@ -22,7 +22,9 @@ const { author, cover, rating, status, title } = Astro.props;
             : `${author.slice(0, -1).join(', ')}, and ${author[author.length - 1]}`
       }
     </p>
-    <p class="rating"><span class="wide-only">Rating: </span><span aria-label={`${rating} out of 5`}>{'*'.repeat(rating)}<span class="faded" aria-hidden="true">{'*'.repeat(5 - rating)}</span></span></p>
+    {status !== 'reading' &&
+      <p class="rating"><span class="wide-only">Rating: </span><span aria-label={`${rating} out of 5`}>{'*'.repeat(rating)}<span class="faded" aria-hidden="true">{'*'.repeat(5 - rating)}</span></span></p>
+    }
   </div>
   {status === 're-read' && (
     <div class="banner-container">

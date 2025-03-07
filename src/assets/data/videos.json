@@ -1,6 +1,20 @@
 [
   {
     "cover": {
+      "alt": "Don't Look Up poster. An off-white background with the title in large cutout letters, through which a crowd of faces are looking up and to the left.",
+      "height": 250,
+      "src": "/images/videos/dont-look-up.jpg",
+      "width": 200
+    },
+    "format": ["streaming"],
+    "rating": 4,
+    "release": 2021,
+    "status": "watching",
+    "title": "Don't Look Up",
+    "year": "2025"
+  },
+  {
+    "cover": {
       "alt": "The Monkey poster. A creepy, grimacing toy monkey glares ominously from the darkness.",
       "height": 296,
       "src": "/images/videos/monkey.jpg",

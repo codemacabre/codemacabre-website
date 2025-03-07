@@ -16,7 +16,9 @@ const { cover, rating, release, seasons, status, title } = Astro.props;
     <p>
       <span class="title">{title}</span> {seasons && seasons.length > 0 ? <span class="info">(S{seasons.length > 1 ? seasons[0] + ' - S' + seasons[seasons.length - 1] : seasons[0]})</span> : <span class="dates">(<time datetime={release}>{release}</time>)</span>}
     </p>
-    <p class="rating"><span class="wide-only">Rating: </span><span aria-label={`${rating} out of 5`}>{'*'.repeat(rating)}<span class="faded" aria-hidden="true">{'*'.repeat(5 - rating)}</span></span></p>
+    {status !== 'watching' &&
+      <p class="rating"><span class="wide-only">Rating: </span><span aria-label={`${rating} out of 5`}>{'*'.repeat(rating)}<span class="faded" aria-hidden="true">{'*'.repeat(5 - rating)}</span></span></p>
+    }
   </div>
   {status === 're-watched' && (
     <div class="banner-container">

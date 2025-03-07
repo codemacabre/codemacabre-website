@@ -1,36 +1,22 @@
 [
   {
-    "author": ["Sheldon Solomon", "Jeff Greenberg", "Tom Pyszczynski"],
+    "author": ["Ruha Benjamin"],
     "cover": {
-      "alt": "The Worm at the Core book cover. Atop an illustration of a red apple with a green leaf is a tiny figure in black sliding down a worm-like path. The subtitle reads, 'On the Role of Death in Life'.",
-      "height": 307,
-      "src": "/images/books/worm-core.jpg",
-      "width": 200
-    },
-    "format": ["paperback"],
-    "rating": 5,
-    "status": "to-read",
-    "title": "The Worm at the Core",
-    "year": "2025"
-  },
-  {
-    "author": ["Naomi Klein"],
-    "cover": {
-      "alt": "Doppleganger cover. The title repeats down the black cover, becoming more glitched and obscured as it descends.",
+      "alt": "Imagination book cover. A Black woman wears a calm expression, her hair braided into loops and coils, and decorated with flowers. She has an ornate high-necked, beaded, floral garment, and she is surrounded by clouds of light blue fabric.",
       "height": 200,
-      "src": "/images/books/doppleganger.jpg",
+      "src": "/images/books/imagination.jpg",
       "width": 200
     },
     "format": ["audiobook"],
-    "rating": 4,
+    "rating": 5,
     "status": "reading",
-    "title": "Doppleganger",
+    "title": "Imagination",
     "year": "2025"
   },
   {
     "author": ["Gerry McGovern"],
     "cover": {
-      "alt": "World Wide Waste cover. An abstract dotted world map leaks black oily drops downwards, filling up the bottom of the white page. The subtitle reads 'How digital is killing our planet - and what we can do about it'.",
+      "alt": "World Wide Waste cover. An abstract dotted world map leaks black oily drips downwards, filling up the bottom of the white page. The subtitle reads 'How digital is killing our planet - and what we can do about it'.",
       "height": 300,
       "src": "/images/books/world-wide-waste.jpg",
       "width": 200
