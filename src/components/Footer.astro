@@ -13,32 +13,32 @@ import ThemeToggle from '~/components/ThemeToggle.astro';
 
 <script>
 const addEmail = (text) => {
-  const e = 'contact'
-  const at = '@'
-  const d = 'codemacabre'
-  const dot = '.'
-  const c = 'com'
-  const h = e + at + d + dot + c
+  const e = 'contact';
+  const at = '@';
+  const d = 'codemacabre';
+  const dot = '.';
+  const c = 'com';
+  const h = e + at + d + dot + c;
 
   if (text === '') {
-    text = h
+    text = h;
   }
 
-  return `<a href="mailto: ${h}">${text}</a>`
-}
+  return `<a href="mailto: ${h}">${text}</a>`;
+};
 
 // Insert current year
-const date = document.querySelector('#date')
+const date = document.querySelector('#date');
 if (date) {
   date.innerHTML = new Date().getFullYear().toString();
 }
 
 // Insert email address
-const mail = document.querySelectorAll('.mail')
+const mail = document.querySelectorAll('.mail');
 if (mail.length > 0) {
   mail.forEach((e) => {
-    const text = e.textContent
-    e.innerHTML = addEmail(text)
-  })
+    const text = e.textContent;
+    e.innerHTML = addEmail(text);
+  });
 }
 </script>

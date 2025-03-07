@@ -23,7 +23,7 @@ export const getStaticPaths = async () => {
       props: { notes: sortedNotes }
     };
   });
-}
+};
 
 const { tag } = Astro.params as { tag: string };
 const { notes } = Astro.props;

@@ -110,7 +110,9 @@ const sortedProjects = currentProjects.sort((a, b) => {
       </>
     )}
   </p>
-  <p>So far this year, I've <a href="/notes">written {notesWritten} {notesWritten === 1 ? 'note' : 'notes'}</a>, <a href="/reading">read {booksRead} {booksRead === 1 ? 'book' : 'books'}</a>, and <a href="/watching">watched {filmsWatched} {filmsWatched === 1 ? 'film' : 'films'}{seriesWatched > 0 && <> and {seriesWatched} series</></a>.</p>
+  <p>So far this year, I've <a href="/notes">written {notesWritten} {notesWritten === 1 ? 'note' : 'notes'}</a>, <a href="/reading">read {booksRead} {booksRead === 1 ? 'book' : 'books'}</a>, and <a href="/watching">watched {filmsWatched} {filmsWatched === 1 ? 'film' : 'films'}{seriesWatched > 0 && (
+    <> and {seriesWatched} series</>
+  )}</a>.</p>
   <h2 id="fun-facts">Fun facts</h2>
   <p>My household includes a menagerie of multi-legged pets of various species, including:</p>
   <ul class="indented">

@@ -2,7 +2,7 @@
 import { getCollection } from 'astro:content';
 import Note from '~/components/Note.astro';
 
-interface Note {
+interface NoteType {
   id: string;
   body?: string;
   data: {
@@ -19,7 +19,7 @@ interface Note {
 const { pathname } = Astro.url;
 const currentUrl = pathname.toLowerCase().replace(/\/+$/g, '');
 const allLinks = {};
-const allNotes: Note[] = await getCollection('notes');
+const allNotes: NoteType[] = await getCollection('notes');
 const linkRegex = /\[.*?\]\((.*?)\)/g;
 
 allNotes.forEach((note) => {

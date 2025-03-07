@@ -2,7 +2,7 @@ import { glob } from 'astro/loaders';
 import { defineCollection, z } from 'astro:content';
 
 const notesCollection = defineCollection({
-  loader: glob({ pattern: '**/[^_]*.mdx', base: "./src/content/notes" }),
+  loader: glob({ pattern: '**/[^_]*.mdx', base: './src/content/notes' }),
   schema: () => z.object({
     category: z.string(),
     date: z.date(),
@@ -10,12 +10,12 @@ const notesCollection = defineCollection({
     draft: z.boolean().optional(),
     tags: z.array(z.string()),
     title: z.string(),
-    update: z.date().optional(),
+    update: z.date().optional()
   })
 });
 
 const projectsCollection = defineCollection({
-  loader: glob({ pattern: '**/[^_]*.mdx', base: "./src/content/projects" }),
+  loader: glob({ pattern: '**/[^_]*.mdx', base: './src/content/projects' }),
   schema: () => z.object({
     current: z.boolean(),
     date: z.date(),
@@ -29,5 +29,5 @@ const projectsCollection = defineCollection({
 
 export const collections = {
   'notes': notesCollection,
-  'projects': projectsCollection,
+  'projects': projectsCollection
 };

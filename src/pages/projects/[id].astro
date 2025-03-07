@@ -6,9 +6,9 @@ export const getStaticPaths = async () => {
   const projects = await getCollection('projects');
   console.log(projects[0].id);
   return projects.map((project) => ({
-    params: { id: project.id }, props: { project },
+    params: { id: project.id }, props: { project }
   }));
-}
+};
 
 const { project } = Astro.props;
 const { Content } = await render(project);

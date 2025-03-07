@@ -8,17 +8,17 @@ const { pageTitle } = Astro.props;
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<meta name="generator" content={Astro.generator} />
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="generator" content={Astro.generator} />
     <meta name="description" content="The notes and projects of Myles Lewando, data visualisation developer and designer.">
     <meta name="author" content="Myles Lewando">
     <meta name="color-scheme" content="light dark">
     <meta name="theme-color" content="#111111">
-    
+  
     <link rel="canonical" href={Astro.url}>
-		<link rel="icon" type="image/svg+xml" href="/images/favicon.svg?v=14" />
+    <link rel="icon" type="image/svg+xml" href="/images/favicon.svg?v=14" />
 
     <slot name="head">
       <meta property="og:title" content={pageTitle ? pageTitle : 'Code Macabre'} />
@@ -26,32 +26,32 @@ const { pageTitle } = Astro.props;
       <meta property="og:url" content={Astro.url} />
       <meta property="og:type" content="website" />
       <meta property="og:image" content="https://codemacabre.com/images/self.png" />
-      
+
       <meta name="twitter:title" content={pageTitle ? `${pageTitle} / Code Macabre` : 'Code Macabre'} />
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:image" content="https://codemacabre.com/images/self.png" />
     </slot>
-		
+
     <title>{pageTitle ? `${pageTitle} / Code Macabre` : 'Code Macabre'}</title>
-	</head>
-	<body>
+  </head>
+  <body>
     <Header />
     <main>
       <slot />
     </main>
     <Footer />
-	</body>
+  </body>
 </html>
 
 <script>
-  let copyButtonLabel = 'Copy';
-  let codeBlocks = Array.from(document.querySelectorAll('pre'));
+  const copyButtonLabel = 'Copy';
+  const codeBlocks = Array.from(document.querySelectorAll('pre'));
 
-  for (let codeBlock of codeBlocks) {
-    let wrapper = document.createElement('div');
-    wrapper.className = 'code-wrapper'
+  for (const codeBlock of codeBlocks) {
+    const wrapper = document.createElement('div');
+    wrapper.className = 'code-wrapper';
 
-    let copyButton = document.createElement('button');
+    const copyButton = document.createElement('button');
     copyButton.className = 'code-copy';
     copyButton.innerHTML = `<span>${copyButtonLabel}</span>`;
 
@@ -66,29 +66,30 @@ const { pageTitle } = Astro.props;
   }
 
   const copyCode = async (block, button) => {
-    let code = block.querySelector('code');
-    let text = code.innerText;
+    const code = block.querySelector('code');
+    const text = code.innerText;
 
     try {
       await navigator.clipboard.writeText(text);
     } catch (err) {
+      console.error(err);
       selectText(code);
       document.execCommand('copy');
       window.getSelection()?.removeAllRanges();
     }
 
-    button.innerText = "Copied";
+    button.innerText = 'Copied';
 
     setTimeout(() => {
       button.innerText = copyButtonLabel;
     }, 1000);
-  }
+  };
 
   const selectText = (element) => {
-    let range = document.createRange();
+    const range = document.createRange();
     range.selectNodeContents(element);
-    let selection = window.getSelection();
+    const selection = window.getSelection();
     selection?.removeAllRanges();
     selection?.addRange(range);
-  }
+  };
 </script>

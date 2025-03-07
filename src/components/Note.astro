@@ -1,11 +1,11 @@
 ---
 import Tag from '~/components/Tag.astro';
 
-const { category, date, description, title, url } = Astro.props
+const { category, date, description, title, url } = Astro.props;
 const options: Intl.DateTimeFormatOptions = {
   year: 'numeric',
   month: 'short',
-  day: '2-digit',
+  day: '2-digit'
 };
 ---
 <li>

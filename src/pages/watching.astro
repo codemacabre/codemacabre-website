@@ -11,24 +11,24 @@ const years = Array
 const pageTitle = 'Watching';
 ---
 <BaseLayout pageTitle={pageTitle}>
-<h1>{pageTitle}</h1>
-<p>The films and TV series I've watched each year, as of 2024. I generally favour the cinema or physical media, wherever possible.</p>
+  <h1>{pageTitle}</h1>
+  <p>The films and TV series I've watched each year, as of 2024. I generally favour the cinema or physical media, wherever possible.</p>
 
-{videosData.map((video) =>
-  video.status === 'watching' &&
-  <>
-    <h2>Currently watching</h2>
-    <Video cover={video.cover} rating={video.rating} release={video.release} seasons={video.seasons} status={video.status} title={video.title} />
-  </>
-)}
+  {videosData.map((video) =>
+    video.status === 'watching' &&
+    <>
+      <h2>Currently watching</h2>
+      <Video cover={video.cover} rating={video.rating} release={video.release} seasons={video.seasons} status={video.status} title={video.title} />
+    </>
+  )}
 
-{years.map((year) =>
-  <h2>{year}</h2>
-  <ul class="card-container">
-    {videosData.map((video) =>
-      video.year === year && (video.status === 'watched' || video.status === 're-watched') &&
-        <Video cover={video.cover} rating={video.rating} release={video.release} seasons={video.seasons} status={video.status} title={video.title} />
-    )}
-  </ul>
-)}
+  {years.map((year) =>
+    <h2>{year}</h2>
+    <ul class="card-container">
+      {videosData.map((video) =>
+        video.year === year && (video.status === 'watched' || video.status === 're-watched') &&
+          <Video cover={video.cover} rating={video.rating} release={video.release} seasons={video.seasons} status={video.status} title={video.title} />
+      )}
+    </ul>
+  )}
 </BaseLayout>
