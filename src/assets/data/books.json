@@ -11,7 +11,7 @@
     "rating": 5,
     "status": "reading",
     "title": "Imagination",
-    "year": "2025"
+    "year": 2025
   },
   {
     "author": ["Gerry McGovern"],
@@ -25,7 +25,7 @@
     "rating": 3,
     "status": "read",
     "title": "World Wide Waste",
-    "year": "2025"
+    "year": 2025
   },
   {
     "author": ["Office of Strategic Services"],
@@ -39,7 +39,7 @@
     "rating": 3,
     "status": "read",
     "title": "Simple Sabotage Field Manual",
-    "year": "2025"
+    "year": 2025
   },
   {
     "author": ["Jenny Odell"],
@@ -53,7 +53,7 @@
     "rating": 5,
     "status": "read",
     "title": "How to Do Nothing",
-    "year": "2025"
+    "year": 2025
   },
   {
     "author": ["S. A. Barnes"],
@@ -67,7 +67,7 @@
     "rating": 3,
     "status": "read",
     "title": "Ghost Station",
-    "year": "2024"
+    "year": 2024
   },
   {
     "author": ["Ola Ellnestam", "Daniel Brolund"],
@@ -81,7 +81,7 @@
     "rating": 3,
     "status": "read",
     "title": "The Mikado Method",
-    "year": "2024"
+    "year": 2024
   },
   {
     "author": ["Martha Wells"],
@@ -95,7 +95,7 @@
     "rating": 4,
     "status": "read",
     "title": "System Collapse",
-    "year": "2024"
+    "year": 2024
   },
   {
     "author": ["Ben West"],
@@ -109,7 +109,7 @@
     "rating": 2,
     "status": "read",
     "title": "This Book Could Save Your Life",
-    "year": "2024"
+    "year": 2024
   },
   {
     "author": ["Marianna Spring"],
@@ -123,7 +123,7 @@
     "rating": 4,
     "status": "read",
     "title": "Among the Trolls",
-    "year": "2024"
+    "year": 2024
   },
   {
     "author": ["Danny Caine"],
@@ -137,6 +137,6 @@
     "rating": 3,
     "status": "read",
     "title": "How to Resist Amazon and Why",
-    "year": "2024"
+    "year": 2024
   }
 ]

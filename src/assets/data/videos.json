@@ -11,7 +11,7 @@
     "release": 2025,
     "status": "watched",
     "title": "The Monkey",
-    "year": "2025"
+    "year": 2025
   },
   {
     "cover": {
@@ -25,7 +25,7 @@
     "release": 2024,
     "status": "watched",
     "title": "The Substance",
-    "year": "2025"
+    "year": 2025
   },
   {
     "cover": {
@@ -40,7 +40,7 @@
     "seasons": ["01"],
     "status": "watched",
     "title": "Parasyte: The Grey",
-    "year": "2025"
+    "year": 2025
   },
   {
     "cover": {
@@ -54,7 +54,7 @@
     "release": 2019,
     "status": "watched",
     "title": "Glass",
-    "year": "2025"
+    "year": 2025
   },
   {
     "cover": {
@@ -68,7 +68,7 @@
     "release": 2000,
     "status": "re-watched",
     "title": "Unbreakable",
-    "year": "2025"
+    "year": 2025
   },
   {
     "cover": {
@@ -82,7 +82,7 @@
     "release": 2016,
     "status": "watched",
     "title": "Split",
-    "year": "2025"
+    "year": 2025
   },
   {
     "cover": {
@@ -96,7 +96,7 @@
     "release": 2024,
     "status": "watched",
     "title": "Nosferatu",
-    "year": "2025"
+    "year": 2025
   },
   {
     "cover": {
@@ -110,7 +110,7 @@
     "release": 2024,
     "status": "watched",
     "title": "Beetlejuice Beetlejuice",
-    "year": "2024"
+    "year": 2024
   },
   {
     "cover": {
@@ -124,7 +124,7 @@
     "release": 2024,
     "status": "watched",
     "title": "Alien: Romulus",
-    "year": "2024"
+    "year": 2024
   },
   {
     "cover": {
@@ -138,7 +138,7 @@
     "release": 2020,
     "status": "watched",
     "title": "Underwater",
-    "year": "2024"
+    "year": 2024
   },
   {
     "cover": {
@@ -152,7 +152,7 @@
     "release": 2023,
     "status": "watched",
     "title": "Indiana Jones and the Dial of Destiny",
-    "year": "2024"
+    "year": 2024
   },
   {
     "cover": {
@@ -166,7 +166,7 @@
     "release": 2016,
     "status": "re-watched",
     "title": "Rogue One: A Star Wars Story",
-    "year": "2024"
+    "year": 2024
   },
   {
     "cover": {
@@ -181,7 +181,7 @@
     "seasons": ["01"],
     "status": "watched",
     "title": "Andor",
-    "year": "2024"
+    "year": 2024
   },
   {
     "cover": {
@@ -195,7 +195,7 @@
     "release": 2022,
     "status": "watched",
     "title": "Prey",
-    "year": "2024"
+    "year": 2024
   },
   {
     "cover": {
@@ -210,7 +210,7 @@
     "seasons": ["01"],
     "status": "watched",
     "title": "Scavengers Reign",
-    "year": "2024"
+    "year": 2024
   },
   {
     "cover": {
@@ -224,7 +224,7 @@
     "release": 2023,
     "status": "watched",
     "title": "They Cloned Tyrone",
-    "year": "2024"
+    "year": 2024
   },
   {
     "cover": {
@@ -238,7 +238,7 @@
     "release": 2022,
     "status": "watched",
     "title": "Ghostbusters: Afterlife",
-    "year": "2024"
+    "year": 2024
   },
   {
     "cover": {
@@ -252,6 +252,6 @@
     "release": 2023,
     "status": "watched",
     "title": "JUNG_E",
-    "year": "2024"
+    "year": 2024
   }
 ]

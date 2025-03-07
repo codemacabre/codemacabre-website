@@ -43,13 +43,13 @@ filteredNotes.forEach((note) => {
 });
 
 booksData.forEach((book) => {
-  if (Number(book.year) === new Date().getFullYear() && (book.status === 'read' || book.status === 're-read')) {
+  if (book.year === new Date().getFullYear() && (book.status === 'read' || book.status === 're-read')) {
     booksRead++;
   }
 });
 
 videosData.forEach((video) => {
-  if (Number(video.year) === new Date().getFullYear() && (video.status === 'watched' || video.status === 're-watched')) {
+  if (video.year === new Date().getFullYear() && (video.status === 'watched' || video.status === 're-watched')) {
     if (video.seasons) {
       seriesWatched++;
     } else {
