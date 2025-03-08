@@ -11,11 +11,6 @@
   --murk: #606060;
   --gloom: #343434;
   --dark: #111111;
-
-  --background: var(--haze);
-  --foreground: var(--dark);
-
-  --concrete: url("data:image/svg+xml,%3Csvg width='500' height='500' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.5' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='500' height='500' filter='url(%23noiseFilter)' opacity='0.3'/%3E%3C/svg%3E");
 }
 
 @font-face {
@@ -957,9 +952,6 @@ html {
       --haze: #dddddd;
       --mist: #adadad;
       --gloom: #232323;
-
-      --background: var(--dark);
-      --foreground: var(--haze);
     }
 
     & body {
