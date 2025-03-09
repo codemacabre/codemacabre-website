@@ -8,29 +8,13 @@ import selfData from '~/assets/data/self.json';
 import booksData from '~/assets/data/books.json';
 import videosData from '~/assets/data/videos.json';
 
-interface Project {
-  id: string;
-  body?: string;
-  data: {
-    title: string;
-    description: string;
-    date: Date;
-    status: string;
-    current: boolean;
-    featured: boolean;
-    endDate?: Date | undefined;
-  }
-}
-
 const pageTitle = 'About';
 const allNotes = await getCollection('notes');
-const allProjects = await getCollection('projects');
 
 let notesWritten = 0;
 let booksRead = 0;
 let filmsWatched = 0;
 let seriesWatched = 0;
-let currentProjects: Project[] = [];
 const isDev = import.meta.env.MODE === 'development';
 
 const filteredNotes = allNotes.filter((note) => {
@@ -57,16 +41,6 @@ videosData.forEach((video) => {
     }
   }
 });
-
-allProjects.forEach((project) => {
-  if (project.data.current) {
-    currentProjects.push(project);
-  }
-});
-
-const sortedProjects = currentProjects.sort((a, b) => {
-  return a.data.title.localeCompare(b.data.title);
-});
 ---
 <BaseLayout pageTitle={pageTitle}>
   <h1>{pageTitle}</h1>
@@ -88,27 +62,7 @@ const sortedProjects = currentProjects.sort((a, b) => {
   />
   <h2 id="now">Now</h2>
   <p>
-    I've been working as a {selfData.organisation.position} at <a href={selfData.organisation.url}>{selfData.organisation.name}</a> since {selfData.organisation.startDate}. {sortedProjects.length > 0 && (
-      <>Outside of work, I'm currently spending time on my personal project{sortedProjects.length === 1 ? '' : 's'},
-        {
-          sortedProjects.length === 1 ? (
-            <> <a href={`/projects/${sortedProjects[0].id}`}>{sortedProjects[0].data.title}</a>.</>
-          ) : sortedProjects.length === 2 ? (
-            <>
-              <a href={`/projects/${sortedProjects[0].id}`}>{sortedProjects[0].data.title}</a> and 
-              <a href={`/projects/${sortedProjects[1].id}`}>{sortedProjects[1].data.title}</a>.
-            </>
-          ) : (
-            <>
-              {sortedProjects.map((project, index) => (
-                <>
-                  <a href={`/projects/${project.id}`}>{project.data.title}</a>{index < sortedProjects.length - 2 ? ', ' : index === sortedProjects.length - 2 ? ', and ' : ''}
-                </>
-              ))}.</>
-          )
-        }
-      </>
-    )}
+    I've been working as a {selfData.organisation.position} at <a href={selfData.organisation.url}>{selfData.organisation.name}</a> since {selfData.organisation.startDate}. I'm also a proud member of the <a href="https://utaw.tech">United Tech and Allied Workers</a> tech union and the <a href="https://www.datavisualizationsociety.org">Data Visualization Society</a>.
   </p>
   <p>So far this year, I've <a href="/notes">written {notesWritten} {notesWritten === 1 ? 'note' : 'notes'}</a>, <a href="/reading">read {booksRead} {booksRead === 1 ? 'book' : 'books'}</a>, and <a href="/watching">watched {filmsWatched} {filmsWatched === 1 ? 'film' : 'films'}{seriesWatched > 0 && (
     <> and {seriesWatched} series</>
