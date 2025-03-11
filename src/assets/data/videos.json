@@ -171,20 +171,6 @@
   },
   {
     "cover": {
-      "alt": "Indiana Jones and the Dial of Destiny poster. An illustration of an older Indiana Jones poses with his iconic costume and whip, surrounded by the film's characters.",
-      "height": 296,
-      "src": "/images/videos/indy-dod.jpg",
-      "width": 200
-    },
-    "format": ["streaming"],
-    "rating": 2,
-    "release": 2023,
-    "status": "watched",
-    "title": "Indiana Jones and the Dial of Destiny",
-    "year": 2024
-  },
-  {
-    "cover": {
       "alt": "Rogue One: A Star Wars Story poster. An illustration of the main character Jyn Erso, surrounded by Rebel and Empire forces. The Death Star and Darth Vader's mask loom in the background.",
       "height": 296,
       "src": "/images/videos/rogue-one.jpg",
@@ -224,6 +210,34 @@
     "release": 2022,
     "status": "watched",
     "title": "Prey",
+    "year": 2024
+  },
+  {
+    "cover": {
+      "alt": "Indiana Jones and the Dial of Destiny poster. An illustration of an older Indiana Jones poses with his iconic costume and whip, surrounded by the film's characters.",
+      "height": 296,
+      "src": "/images/videos/indy-dod.jpg",
+      "width": 200
+    },
+    "format": ["streaming"],
+    "rating": 2,
+    "release": 2023,
+    "status": "watched",
+    "title": "Indiana Jones and the Dial of Destiny",
+    "year": 2024
+  },
+  {
+    "cover": {
+      "alt": "The Creator poster. A man, Joshua, armed with multiple guns, walks alongside a young android child, Alphie, through grassy wetlands. Above, a vast orbital ship beams a blue light down to Earth as smaller ships soar, one of them discharging its weapons.",
+      "height": 296,
+      "src": "/images/videos/creator.jpg",
+      "width": 200
+    },
+    "format": ["streaming"],
+    "rating": 3,
+    "release": 2023,
+    "status": "watched",
+    "title": "The Creator",
     "year": 2024
   },
   {
