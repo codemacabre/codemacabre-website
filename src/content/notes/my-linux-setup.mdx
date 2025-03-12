@@ -4,7 +4,7 @@ date: 2025-03-05
 description: "Installing and configuring minimal Debian Testing with Xfce"
 tags: ["guide", "linux", "self"]
 title: My Linux setup
-update: 2025-03-06
+update: 2025-03-12
 ---
 import { Image } from 'astro:assets';
 import DesktopImg from '~/assets/images/notes/xfce-desktop.png';
@@ -35,7 +35,7 @@ deb http://security.debian.org/debian-security testing-security main contrib non
 Save and exit, then update the system with,
 
 ```sh
-sudo apt update && apt upgrade
+sudo apt update && sudo apt upgrade
 ```
 
 Then reboot.
@@ -121,11 +121,14 @@ xfce4-panel -r
 
 ## 5. Additional applications
 
-These are some of the applications I always install.
+These are some of the additional applications I always install; I keep bloat to a minimum by being very selective.
 
-- I like to use [LibreWolf](https://librewolf.net/installation/debian/) for my main browser
-- I use [Polypane](https://polypane.app/download/) as an additional development browser
-- For my code editor, I use [VSCodium](https://vscodium.com/#install-on-debian-ubuntu-deb-package)
-- I'm fond of the default Xfce Terminal, but I use [ZSH](https://github.com/ohmyzsh/ohmyzsh/wiki/Installing-ZSH#install-and-set-up-zsh-as-default) and [Oh My ZSH!](https://github.com/ohmyzsh/ohmyzsh?tab=readme-ov-file#basic-installation) with the [Spaceship prompt](https://github.com/spaceship-prompt/spaceship-prompt?tab=readme-ov-file#-installation) and the [`zsh-autosuggestions`](https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md) and [`zsh-syntax-highlighting`](https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md) add-ons
-- I prefer to download MP3s locally and use the terminal music player, [`kew`](https://github.com/ravachol/kew?tab=readme-ov-file#installing)
-- I use IRC, and my favourite client is [WeeChat](https://weechat.org/download/debian/)
+- [calibre](https://calibre-ebook.com/download_linux) to manage my ebooks
+- [kew](https://github.com/ravachol/kew?tab=readme-ov-file#installing) terminal music player to play my locally-downloaded MP3s 
+- [LibreWolf](https://librewolf.net/installation/debian/) as my primary browser
+- [Obsidian](https://obsidian.md/download) for notes and organising my thoughts
+- [Polypane](https://polypane.app/download/) as my development browser
+- [ungoogled-chromium](https://github.com/ungoogled-software/ungoogled-chromium-debian) as a supplementary browser
+- [VSCodium](https://vscodium.com/#install-on-debian-ubuntu-deb-package) code editor
+- [WeeChat](https://weechat.org/download/debian/) terminal IRC client
+- Xfce Terminal (already installed), along with [ZSH](https://github.com/ohmyzsh/ohmyzsh/wiki/Installing-ZSH#install-and-set-up-zsh-as-default) and [Oh My ZSH!](https://github.com/ohmyzsh/ohmyzsh?tab=readme-ov-file#basic-installation) with the [Spaceship prompt](https://github.com/spaceship-prompt/spaceship-prompt?tab=readme-ov-file#-installation) and the [`zsh-autosuggestions`](https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md#oh-my-zsh) and [`zsh-syntax-highlighting`](https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md#oh-my-zsh) add-ons
