@@ -4,14 +4,16 @@ import { Image } from 'astro:assets';
 const { cover, rating, release, seasons, status, title } = Astro.props;
 ---
 
-<li class="card">
-  <Image
-    class="greyscale"
-    src={cover.src}
-    width={cover.width / 2}
-    height={cover.height / 2}
-    alt={cover.alt}
-  />
+<li class={cover ? 'card' : 'card no-image'}>
+  {cover && (
+    <Image
+      class="greyscale"
+      src={cover.src}
+      width={cover.width / 2}
+      height={cover.height / 2}
+      alt={cover.alt}
+    />
+  )}
   <div class="card-content">
     <p>
       <span class="title">{title}</span> {seasons && seasons.length > 0 ? <span class="info">(S{seasons.length > 1 ? seasons[0] + ' - S' + seasons[seasons.length - 1] : seasons[0]})</span> : <span class="dates">(<time datetime={release}>{release}</time>)</span>}

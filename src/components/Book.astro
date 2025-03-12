@@ -4,14 +4,16 @@ import { Image } from 'astro:assets';
 const { author, cover, rating, status, title } = Astro.props;
 ---
 
-<li class="card">
-  <Image
-    class="greyscale"
-    src={cover.src}
-    width={cover.width / 2}
-    height={cover.height / 2}
-    alt={cover.alt}
-  />
+<li class={cover ? 'card' : 'card no-image'}>
+  {cover && (
+    <Image
+      class="greyscale"
+      src={cover.src}
+      width={cover.width / 2}
+      height={cover.height / 2}
+      alt={cover.alt}
+    />
+  )}
   <div class="card-content">
     <p>
       <span class="title">{title}</span> by {
