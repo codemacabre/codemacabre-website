@@ -15,6 +15,20 @@
   },
   {
     "cover": {
+      "alt": "Dune: Part One poster. Various characters are arranged around a moon, looking in various directions. Beneath them all is Paul Atreides, standing on the desert planet Arrakis.",
+      "height": 295,
+      "src": "/images/videos/dune-part-1.jpg",
+      "width": 200
+    },
+    "format": ["bluray"],
+    "rating": 4,
+    "release": 2021,
+    "status": "watched",
+    "title": "Dune: Part One",
+    "year": 2025
+  },
+  {
+    "cover": {
       "alt": "The Fall of the House of Usher poster. A woman holds a black raven masquerade mask, peering out from behind it in pitch darkness.",
       "height": 296,
       "src": "/images/videos/fall-of-usher.jpg",
