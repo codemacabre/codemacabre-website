@@ -1,20 +1,6 @@
 [
   {
     "cover": {
-      "alt": "The Witcher: Nightmare of the Wolf poster. A young bearded man, Vesemir, wears a wolf medallion as he looks pensively down surrounded by snowy mountains, resting a sword on his shoulder. Hoards of red-eyed monsters are superimposed across his cloaks.",
-      "height": 296,
-      "src": "/images/videos/witcher-notw.jpg",
-      "width": 200
-    },
-    "format": ["streaming"],
-    "rating": 4,
-    "release": 2021,
-    "status": "watching",
-    "title": "The Witcher: Nightmare of the Wolf",
-    "year": 2025
-  },
-  {
-    "cover": {
       "alt": "Dune: Part One poster. Various characters are arranged around a moon, looking in various directions. Beneath them all is Paul Atreides, standing on the desert planet Arrakis.",
       "height": 295,
       "src": "/images/videos/dune-part-1.jpg",
