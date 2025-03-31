@@ -1,5 +1,19 @@
 [
   {
+    "author": ["Ethan Marcotte"],
+    "cover": {
+      "alt": "You Deserve a Tech Union book cover. A Book Apart's signature stark design, with a white band at the top, the rest of the cover bright red. Inside a black circle is the number 47.",
+      "height": 309,
+      "src": "/images/books/ydatu.jpg",
+      "width": 200
+    },
+    "format": ["paperback"],
+    "rating": 0,
+    "status": "reading",
+    "title": "You Deserve a Tech Union",
+    "year": 2025
+  },
+  {
     "author": ["Ruha Benjamin"],
     "cover": {
       "alt": "Imagination book cover. A Black woman wears a calm expression, her hair braided into loops and coils, and decorated with flowers. She has an ornate high-necked, beaded, floral garment, and she is surrounded by clouds of light blue fabric.",
@@ -7,7 +21,7 @@
       "src": "/images/books/imagination.jpg",
       "width": 200
     },
-    "format": ["audiobook"],
+    "format": ["audiobook", "ebook"],
     "rating": 5,
     "status": "read",
     "title": "Imagination",
