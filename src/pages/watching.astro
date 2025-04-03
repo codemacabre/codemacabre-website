@@ -8,19 +8,22 @@ const years = Array
   .sort((a, b) => {
     return new Date(b).getTime() - new Date(a).getTime();
   });
+const current = videosData.some((video) => (video.status === 'watching'));
 const pageTitle = 'Watching';
 ---
 <BaseLayout pageTitle={pageTitle}>
   <h1>{pageTitle}</h1>
   <p>The films and TV series I've watched each year, as of 2024. I generally favour the cinema or physical media, whenever possible.</p>
 
-  {videosData.map((video) =>
-    video.status === 'watching' &&
-    <>
-      <h2>Currently watching</h2>
-      <Video cover={video.cover} rating={video.rating} release={video.release} seasons={video.seasons} status={video.status} title={video.title} />
-    </>
-  )}
+  {current &&
+    <h2>Currently watching</h2>
+    <ul class="card-container">
+      {videosData.map((video) =>
+        video.status === 'watching' &&
+        <Video cover={video.cover} rating={video.rating} release={video.release} seasons={video.seasons} status={video.status} title={video.title} />
+      )}
+    </ul>
+  }
 
   {years.map((year) =>
     <h2>{year}</h2>
