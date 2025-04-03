@@ -1,5 +1,19 @@
 [
   {
+    "author": ["Baldur Bjarnason"],
+    "cover": {
+      "alt": "The Intelligence Illusion book cover. A stylised, geometrically-sketched figure looks off the page to the upper-left, against a black background.",
+      "height": 283,
+      "src": "/images/books/intelligence-illusion.jpg",
+      "width": 200
+    },
+    "format": ["ebook"],
+    "rating": 0,
+    "status": "reading",
+    "title": "The Intelligence Illusion",
+    "year": 2025
+  },
+  {
     "author": ["Ethan Marcotte"],
     "cover": {
       "alt": "You Deserve a Tech Union book cover. A Book Apart's signature stark design, with a white band at the top, the rest of the cover bright red. Inside a black circle is the number 47.",
