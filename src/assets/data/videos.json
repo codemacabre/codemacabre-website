@@ -1,6 +1,20 @@
 [
   {
     "cover": {
+      "alt": "The Blair Witch Project poster. A close up of main character Haether's panicked face. Above are the silhouetted trees of the forest.",
+      "height": 298,
+      "src": "/images/videos/blair-witch-project.jpg",
+      "width": 200
+    },
+    "format": ["bluray"],
+    "rating": 3,
+    "release": 1999,
+    "status": "re-watched",
+    "title": "The Blair Witch Project",
+    "year": 2025
+  },
+  {
+    "cover": {
       "alt": "Dune: Part One poster. Various characters are arranged around a moon, looking in various directions. Beneath them all is Paul Atreides, standing on the desert planet Arrakis.",
       "height": 295,
       "src": "/images/videos/dune-part-1.jpg",
