@@ -15,7 +15,21 @@
   },
   {
     "cover": {
-      "alt": "The Blair Witch Project poster. A close up of main character Haether's panicked face. Above are the silhouetted trees of the forest.",
+      "alt": "Sinners poster. Gripping a pistol and surrounded by embers, main character Smoke looks dishevelled and determined. Behind him are shadowy silhouettes and a giant rising sun.",
+      "height": 296,
+      "src": "/images/videos/sinners.jpg",
+      "width": 200
+    },
+    "format": ["cinema"],
+    "rating": 5,
+    "release": 2025,
+    "status": "watched",
+    "title": "Sinners",
+    "year": 2025
+  },
+  {
+    "cover": {
+      "alt": "The Blair Witch Project poster. A close up of main character Heather's panicked face. Above are the silhouetted trees of the forest.",
       "height": 298,
       "src": "/images/videos/blair-witch-project.jpg",
       "width": 200
