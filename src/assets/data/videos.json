@@ -1,15 +1,15 @@
 [
   {
     "cover": {
-      "alt": "UNION poster. A long line of people wait outside a warehouse, under a blue sky.",
+      "alt": "UNION poster. A long line of people wait outside a warehouse under a blue sky.",
       "height": 300,
       "src": "/images/videos/union.jpg",
       "width": 200
     },
     "format": ["streaming"],
-    "rating": 0,
+    "rating": 4,
     "release": 2024,
-    "status": "watching",
+    "status": "watched",
     "title": "UNION",
     "year": 2025
   },
