@@ -1,6 +1,21 @@
 [
   {
     "cover": {
+      "alt": "Andor poster. An illustration of the main character Cassian Andor, surrounded by other characters. The sun rises behind him and various starships fly around the various characters.",
+      "height": 296,
+      "src": "/images/videos/andor.jpg",
+      "width": 200
+    },
+    "format": ["streaming"],
+    "rating": 0,
+    "release": 2025,
+    "seasons": ["02"],
+    "status": "watching",
+    "title": "Andor",
+    "year": 2025
+  },
+  {
+    "cover": {
       "alt": "UNION poster. A long line of people wait outside a warehouse under a blue sky.",
       "height": 300,
       "src": "/images/videos/union.jpg",
