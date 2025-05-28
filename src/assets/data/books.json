@@ -1,5 +1,19 @@
 [
   {
+    "author": ["The DISCO Network"],
+    "cover": {
+      "alt": "Technoskepticism book cover. A surreal, blurred, abstract greyscale image, possible a photo collage, is at the bottom of the cover, under a light blue sky.",
+      "height": 292,
+      "src": "/images/books/technoskepticism.jpg",
+      "width": 200
+    },
+    "format": ["paperback"],
+    "rating": 0,
+    "status": "reading",
+    "title": "Technoskepticism",
+    "year": 2025
+  },
+  {
     "author": ["Baldur Bjarnason"],
     "cover": {
       "alt": "The Intelligence Illusion book cover. A stylised, geometrically-sketched figure looks off the page to the upper-left, against a black background.",
