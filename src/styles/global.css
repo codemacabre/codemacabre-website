@@ -189,6 +189,14 @@ html {
     & p {
       margin: 0.5rem 0 0 0;
     }
+
+    & svg {
+      display: inline-block;
+      height: 0.8rem;
+      margin: 0;
+      padding: 0;
+      width: auto;
+    }
   }
 
   & h1 {

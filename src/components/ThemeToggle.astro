@@ -122,9 +122,9 @@
   }
 </style>
 
-<script is:inline>
-  const themeInput = document.querySelector('#theme-toggle');
-  const toggleableElements = document.querySelectorAll('.toggleable-theme');
+<script>
+  const themeInput = document.querySelector('#theme-toggle') as HTMLInputElement;
+  const toggleableElements = document.querySelectorAll('svg');
 
   const theme = (() => {
     if (typeof sessionStorage !== 'undefined' && sessionStorage.getItem('theme')) {

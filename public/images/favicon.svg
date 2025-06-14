@@ -1,15 +1,20 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg version="1.1" width="300" height="300" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+<svg width="600" height="600" version="1.1" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
   <style>
-    .bar {
+    #logo {
       fill: #111111;
+      fill-rule:evenodd;
     }
 
     @media (prefers-color-scheme: dark) {
-      .bar {
-        fill: #606060;
+      #logo {
+        fill: #fafafa;
       }
     }
   </style>
-  <rect x="5.8782015" y="115.91584" width="260" height="90" class="bar" transform="rotate(-4)" />
+  <g transform="matrix(0.5,0,0,0.5,-10,0)" id="logo">
+    <path
+      d="M 840,620 V 440 l 240,-240 v 800 L 960,880 V 500 Z M 780,200 v 800 L 660,880 V 500 L 540,620 V 440 Z m -300,0 v 800 L 80,600 Z M 260,600 360,500 v 200 z"
+    />
+  </g>
 </svg>
