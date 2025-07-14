@@ -28,20 +28,6 @@
     "year": 2025
   },
   {
-    "author": ["Ethan Marcotte"],
-    "cover": {
-      "alt": "You Deserve a Tech Union book cover. A Book Apart's signature stark design, with a white band at the top, the rest of the cover bright red. Inside a black circle is the number 47.",
-      "height": 309,
-      "src": "/images/books/ydatu.jpg",
-      "width": 200
-    },
-    "format": ["paperback"],
-    "rating": 0,
-    "status": "reading",
-    "title": "You Deserve a Tech Union",
-    "year": 2025
-  },
-  {
     "author": ["Baldur Bjarnason"],
     "cover": {
       "alt": "The Intelligence Illusion book cover. A stylised, geometrically-sketched figure looks off the page to the upper-left, against a black background.",
