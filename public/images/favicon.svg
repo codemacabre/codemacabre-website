@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+  width="3600"
+  height="3600"
+  viewBox="0 0 3600.0001 3600"
+  version="1.1"
+  id="svg12"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:svg="http://www.w3.org/2000/svg"
+>
+  <style>
+    .crossbar {
+      fill: #343434;
+    }
+    .bar {
+      fill: #111111;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      .crossbar {
+        fill: #dddddd;
+      }
+      .bar {
+        fill: #fafafa;
+      }
+    }
+  </style>
+  <g transform="translate(356.1491,736.3803)">
+    <path
+      class="crossbar"
+      d="m 2330.2314,861.19071 h -898.8855 l 505.7173,-505.71732 h 393.1682 z"
+    />
+    <path
+      class="crossbar"
+      d="M 1443.8501,861.19071 H 544.96458 L 1050.6819,355.47339 h 393.1682 z"
+    />
+    <path
+      class="crossbar"
+      d="M 544.96577,861.19091 H 39.248482 V 355.47353 H 544.96577 Z"
+    />
+    <path
+      class="bar"
+      d="m 2330.2314,1771.7656 505.7171,505.7173 V 861.19121 L 2330.2314,355.47382 Z"
+    />
+    <path
+      class="bar"
+      d="m 1443.8509,1771.7656 505.717,505.7173 V 861.19121 l -505.717,-505.71739 z"
+    />
+    <path
+      class="bar"
+      d="m 544.9648,1771.7656 505.7171,505.7173 V 861.19121 L 544.9648,355.47382 Z"
+    />
+  </g>
+</svg>

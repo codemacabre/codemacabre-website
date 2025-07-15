@@ -19,9 +19,7 @@ const { pageTitle } = Astro.props;
   
     <link rel="canonical" href={Astro.url}>
 
-    <link rel="icon" type="image/svg+xml" href="/images/favicon-light.svg" media="(prefers-color-scheme:no-preference)">
-    <link rel="icon" type="image/svg+xml" href="/images/favicon-dark.svg"  media="(prefers-color-scheme:dark)">
-    <link rel="icon" type="image/svg+xml" href="/images/favicon-light.svg" media="(prefers-color-scheme:light)">
+    <link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
 
     <slot name="head">
       <meta property="og:title" content={pageTitle ? pageTitle : 'Code Macabre'} />
