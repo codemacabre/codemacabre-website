@@ -1,19 +1,5 @@
 [
   {
-    "author": ["Oliver Burkeman"],
-    "cover": {
-      "alt": "Meditations for Mortals cover. A man is mid-dive, suspended horizontally with arms outstretched between a clear blue sky and a deep blue sea. The subtitle reads, 'Four weeks to embrace your limitations and make time for what counts'. ",
-      "height": 200,
-      "src": "/images/books/meditations-mortals.jpg",
-      "width": 200
-    },
-    "format": ["audiobook"],
-    "rating": 0,
-    "status": "reading",
-    "title": "Meditations for Mortals",
-    "year": 2025
-  },
-  {
     "author": ["DISCO Network"],
     "cover": {
       "alt": "Technoskepticism book cover. A surreal, blurred, abstract greyscale image, possible a photo collage, is at the bottom of the cover, under a light blue sky.",
@@ -25,6 +11,20 @@
     "rating": 0,
     "status": "reading",
     "title": "Technoskepticism",
+    "year": 2025
+  },
+  {
+    "author": ["Oliver Burkeman"],
+    "cover": {
+      "alt": "Meditations for Mortals cover. A man is mid-dive, suspended horizontally with arms outstretched between a clear blue sky and a deep blue sea. The subtitle reads, 'Four weeks to embrace your limitations and make time for what counts'. ",
+      "height": 200,
+      "src": "/images/books/meditations-mortals.jpg",
+      "width": 200
+    },
+    "format": ["audiobook"],
+    "rating": 3,
+    "status": "read",
+    "title": "Meditations for Mortals",
     "year": 2025
   },
   {
