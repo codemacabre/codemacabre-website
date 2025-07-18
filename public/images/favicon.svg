@@ -2,10 +2,8 @@
 <svg
   width="3600"
   height="3600"
-  viewBox="0 0 3600.0001 3600"
+  viewBox="0 0 3600 3600"
   version="1.1"
-  id="svg12"
-  xmlns:xlink="http://www.w3.org/1999/xlink"
   xmlns="http://www.w3.org/2000/svg"
   xmlns:svg="http://www.w3.org/2000/svg"
 >
@@ -26,7 +24,7 @@
       }
     }
   </style>
-  <g transform="translate(356.1491,736.3803)">
+  <g transform="translate(362.40151,483.52186)">
     <path
       class="crossbar"
       d="m 2330.2314,861.19071 h -898.8855 l 505.7173,-505.71732 h 393.1682 z"
