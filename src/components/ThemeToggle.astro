@@ -130,9 +130,6 @@
     if (typeof sessionStorage !== 'undefined' && sessionStorage.getItem('theme')) {
       return sessionStorage.getItem('theme') ?? 'light';
     }
-    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-      return 'dark';
-    }
     return 'light';
   })();
 
