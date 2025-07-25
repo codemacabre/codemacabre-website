@@ -1,0 +1,33 @@
+---
+current: false
+date: 2016-10-18
+description: 'A natural disaster and event icon set'
+endDate: 2017-04-05
+featured: false
+status: 'active'
+title: Worldview
+---
+import { Image } from 'astro:assets';
+import landslideIcon from '~/assets/images/projects/wv-landslide.svg';
+import sandstormIcon from '~/assets/images/projects/wv-sandstorm.svg';
+import waterColorIcon from '~/assets/images/projects/wv-water-color.svg';
+import screenshot1 from '~/assets/images/projects/wv-screenshot-01.jpg';
+
+This natural disaster and event icon set was originally designed for RemotePixel's now-archived DisasterWatch project.
+
+<div class="gallery">
+  <Image class="small greyscale" alt="White rocks tumble down a rocky decline on a rusty brown background" src={landslideIcon} width="200" height="200" />
+  <Image class="small greyscale" alt="White speckled clouds blow across a flat plain on a sandy yellow background" src={sandstormIcon} width="200" height="200" />
+  <Image class="small greyscale" alt="A white layer of hatched waves on top of the sea on a green-blue background" src={waterColorIcon} width="200" height="200" />
+</div>
+
+Icons were later refined and expanded upon at the request of NASA's Earth Science Data and Information System (ESDIS) team for their Worldview application, and provided alongside some tweaks to the Worldview interface.
+
+<div class="gallery">
+  <Image class="large greyscale" alt="Screenshot of Worldview, showing various volcanoes in the interface, beside some pixellated colours and a green landmass on a map of satellite imagery" src={screenshot1} width="1920" />
+</div>
+
+## Links
+- [Worldview](https://worldview.earthdata.nasa.gov)
+- [Worldview GitHub](https://github.com/nasa-gibs/worldview)
+- [DisasterWatch GitHub](https://github.com/RemotePixel/disasterwatch) (archive)
