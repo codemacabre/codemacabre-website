@@ -2,8 +2,7 @@
 import { Image } from 'astro:assets';
 import { getCollection } from 'astro:content';
 import BaseLayout from '~/layouts/BaseLayout.astro';
-import selfImg from '~/assets/images/self.png';
-import self2Img from '~/assets/images/self2.png';
+import selfImg from '~/assets/images/self.jpg';
 import selfData from '~/assets/data/self.json';
 import booksData from '~/assets/data/books.json';
 
@@ -39,14 +38,9 @@ booksData.forEach((book) => {
   <p>Skilled in JavaScript, including frameworks like Vue and React, and advanced styling with CSS, I have contributed to the development of design systems and component libraries to ensure consistency and efficiency across projects. I focus on building inclusive, scalable, and high-performing digital experiences that make the web better for everyone.</p>
   <p>Inclusive, ethical technology and data justice are integral to my work and my values.</p>
   <Image
-    class="small center circle over"
-    src={selfImg}
-    alt="A black and white grainy photo of my head and shoulders. I have a long pointy beard and a mohawk, with a black censored bar across my eyes"
-  />
-  <Image
     class="small center circle"
-    src={self2Img}
-    alt=""
+    src={selfImg}
+    alt="A black and white photo of my head and shoulders, a white man with short blond hair and a beard, looking at the camera with a neutral expression."
   />
   <h2 id="now">Now</h2>
   <p>
