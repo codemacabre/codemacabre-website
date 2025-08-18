@@ -4,32 +4,5 @@
     "position": "Senior Frontend Developer, specialising in data visualisation and accessibility,",
     "startDate": 2022,
     "url": "https://opendataservices.coop/"
-  },
-  "pets": [
-    {
-      "species_en": "Blue death-feigning beetle",
-      "species_la": "Asbolus verrucosus",
-      "count": 1
-    },
-    {
-      "species_en": "Chilean Rose tarantula",
-      "species_la": "Grammostola rosea",
-      "count": 1
-    },
-    {
-      "species_en": "Chilean Flame tarantula",
-      "species_la": "Homeomma chilensis",
-      "count": 1
-    },
-    {
-      "species_en": "Curly Hair tarantula",
-      "species_la": "Tliltocatl albopilosus",
-      "count": 1
-    },
-    {
-      "species_en": "Pink Zebra Beauty tarantula",
-      "species_la": "Eupalaestrus campestratus",
-      "count": 1
-    }
-  ]
+  }
 }
