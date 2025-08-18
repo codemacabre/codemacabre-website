@@ -2,7 +2,7 @@
   {
     "author": ["DISCO Network"],
     "cover": {
-      "alt": "Technoskepticism book cover. A surreal, blurred, abstract greyscale image, possible a photo collage, is at the bottom of the cover, under a light blue sky.",
+      "alt": "Technoskepticism book cover. A surreal, blurred, abstract greyscale image, possibly a photo collage, is at the bottom of the cover, under a light blue sky.",
       "height": 292,
       "src": "/images/books/technoskepticism.jpg",
       "width": 200
@@ -11,6 +11,20 @@
     "rating": 0,
     "status": "reading",
     "title": "Technoskepticism",
+    "year": 2025
+  },
+  {
+    "author": ["Jessie Greengrass"],
+    "cover": {
+      "alt": "Sight book cover. A textured, desaturated photo of a woman's face turned to one side, her eyes closed.",
+      "height": 309,
+      "src": "/images/books/sight.jpg",
+      "width": 200
+    },
+    "format": ["paperback"],
+    "rating": 0,
+    "status": "reading",
+    "title": "Sight",
     "year": 2025
   },
   {
