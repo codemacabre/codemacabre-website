@@ -1,6 +1,12 @@
 [
     {
     "author": ["Lafcadio Hearn"],
+    "cover": {
+      "alt": "Some Japanese Ghosts book cover. The Penguin Archive design of a plain white background with vivid red text.",
+      "height": 326,
+      "src": "/images/books/japanese-ghosts.jpg",
+      "width": 200
+    },
     "format": ["paperback"],
     "rating": 0,
     "status": "reading",
